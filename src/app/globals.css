@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "MIGRA";
+    src: url('../../public/fonts/Migra-Extralight.otf')
+}
+
+body {
+    background-color: #111;
+    color: #e5e5e5;
+    padding: 1rem;
+}
