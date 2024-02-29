@@ -12,7 +12,6 @@ export default function Home() {
       <Projects />
       <BlogPreview />
       {/* <div className="flex flex-grow" /> */}
-      <Footer />
     </main>
   );
 }

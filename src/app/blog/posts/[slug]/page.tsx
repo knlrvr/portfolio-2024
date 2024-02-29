@@ -130,7 +130,7 @@ const PostPage = (props: PostPageProps) => {
                 <div className="mt-2 mb-2">
                     <Reveal>
                         <div className="flex flex-col">
-                            <span className="mt-2 mb-6 font-migra text-4xl sm:text-5xl tracking-wider">
+                            <span className="my-2 font-migra text-4xl sm:text-5xl tracking-wider">
                                 {post.data.title}
                             </span>
                             <span className="w-fit font-light tracking-wider text-sm">
@@ -148,7 +148,7 @@ const PostPage = (props: PostPageProps) => {
                     {/* <hr className="bg-neutral-500 border-0 h-[0.05rem]"/> */}
                     {/* <span className="text-xs">Tags &mdash;</span> */}
                     <Reveal>
-                        <div className="flex flex-wrap gap-y-2 pt-4">
+                        <div className="flex flex-wrap gap-y-2 mt-2">
                             {post.data.tags.map((tag: string) => (
                                 <p key={tag} className="mr-4 font-mono text-xs text-neutral-500 underline underline-offset-4">#{tag}</p>
                             ))}
