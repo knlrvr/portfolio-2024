@@ -8,7 +8,7 @@ export default function Projects() {
                 <span className="font-migra text-xl tracking-widest">Projects</span>
             </Reveal>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 mt-8 gap-x-12 gap-y-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 mt-8 gap-8">
                 <ProjectCard
                     url='https://github.com/knlrvr/ttrpcompanion'
                     title='TTRPCompanion'

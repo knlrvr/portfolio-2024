@@ -17,14 +17,14 @@ export default function Header() {
     return (
         <div className="flex justify-between items-center font-light mb-12 text-neutral-500 text-sm">
             {path?.includes('/blog') || path?.includes('/guestbook') ? (
-                <Link href="/" className=" hover:underline underline-offset-4">&larr; Back</Link>
+                <Link href="/" className="hover:underline underline-offset-4">&larr; Back</Link>
             ) : (
-                <Link href="/" className="font-migra text-lg">knlrvr</Link>
+                <Link href="/" className="hover:underline underline-offset-4">knlrvr</Link>
             )}
             <ul className="flex gap-8">
                 {items.map((item) => (
                     <li key={item.href} className="">
-                        <Link href={item.href}>
+                        <Link href={item.href} className="hover:underline underline-offset-4">
                             {item.label}
                         </Link>
                     </li>
