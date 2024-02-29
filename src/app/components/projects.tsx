@@ -25,11 +25,6 @@ export default function Projects() {
                     description='A blog built with Next.js & Sanity.io for content management. '
                 />
                 <ProjectCard
-                    url='https://github.com/knlrvr/keepup'
-                    title='KeepUp'
-                    description='A social media platform that wasn&apos;t supposed to be a twitter clone but is. Built with T3.'
-                />
-                <ProjectCard
                     url='https://github.com/knlrvr/ttrpcompanion'
                     title='Abstract'
                     description='An ecommerce store that offers conceptual products related to consumerism and materialism. Built with Next.kjs & MongoDB.'
