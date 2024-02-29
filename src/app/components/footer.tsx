@@ -23,7 +23,7 @@ export default function Footer() {
         <Reveal>
             <div className="flex flex-col">
                 <div className="grow"></div>
-                <div className="mt-12 border-t border-neutral-200 flex flex-col sm:flex-row space-y-12 sm:space-y-0 justify-between items-start pt-8 text-xs font-light tracking-wider text-neutral-500">
+                <div className="mt-12 border-t border-neutral-500 flex flex-col sm:flex-row space-y-12 sm:space-y-0 justify-between items-start pt-8 text-xs font-light tracking-wider text-neutral-500">
                     <div className="flex flex-col space-y-2">
                         <div className="flex items-center gap-1">
                             <FiSmile />
