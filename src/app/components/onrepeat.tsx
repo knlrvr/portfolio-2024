@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
+import { Reveal } from '../utils/reveal';
+
 import { 
   BsSpotify,
   BsBoxArrowUpRight
@@ -52,22 +54,24 @@ const OnRepeat: React.FC = () => {
   const songLink = randomSong?.link || '';
 
   return (
-    <Link href={songLink} target="_blank" rel="noopener noreferrer"
-      className="py-4 flex items-center justify-between">
-      <div className="flex items-center">
-        <BsSpotify 
-          className="text-green-500 text-4xl" />
-        <div className="flex flex-col ml-4">
-          <p className="font-migra text-base tracking-widest">On Repeat</p>
-          <p className="font-light text-xs tracking-wide">
-            {randomSong ? `${randomSong.title} by ${randomSong.artist}` : 'No song selected'}
-          </p>
+    <Reveal>
+      <Link href={songLink} target="_blank" rel="noopener noreferrer"
+        className="py-4 flex items-center justify-between">
+        <div className="flex items-center">
+          <BsSpotify 
+            className="text-green-500 text-4xl" />
+          <div className="flex flex-col ml-4">
+            <p className="font-migra text-base tracking-widest">On Repeat</p>
+            <p className="font-light text-xs tracking-wide">
+              {randomSong ? `${randomSong.title} by ${randomSong.artist}` : 'No song selected'}
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="mr-2">
-        <BsBoxArrowUpRight />
-      </div>
-    </Link>
+        <div className="mr-2">
+          <BsBoxArrowUpRight />
+        </div>
+      </Link>
+    </Reveal>
   );
 };
 

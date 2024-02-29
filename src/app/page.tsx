@@ -3,9 +3,15 @@ import Header from "./components/header";
 import About from "./components/about";
 import Projects from "./components/projects";
 import BlogPreview from "./components/blog";
-import Footer from "./components/footer";
 import OnRepeat from "./components/onrepeat";
 import Contact from "./components/contact";
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Kane Lariviere | Portfolio',
+  description: 'Kane Lariviere • Software Engineer. Full Stack Developer. Designer.',
+}
 
 export default function Home() {
   return (

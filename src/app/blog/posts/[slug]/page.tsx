@@ -1,5 +1,4 @@
 import { Reveal } from '@/app/utils/reveal';
-import Link from 'next/link'
 
 import { notFound } from "next/navigation";
 
@@ -14,7 +13,6 @@ import ReactMarkdown from "react-markdown";
 
 import type { Metadata } from "next";
 import PostPreview from '@/app/components/homepostpreview';
-import AuthorCard from '@/app/components/authorcard';
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
