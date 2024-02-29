@@ -5,7 +5,9 @@ import { notFound } from "next/navigation";
 import getPostMetadata from '@/app/utils/PostMetadata';
 
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
-import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+import { srcery } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import fs from 'fs'
 import matter from "gray-matter";
@@ -41,7 +43,7 @@ interface CodeBlockProps {
 }
 
 const CodeBlock = ({ language, value }: CodeBlockProps) => {
-    return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
+    return <SyntaxHighlighter language={language} style={srcery}>{value}</SyntaxHighlighter>
 }
 
 export async function generateMetadata({ 
@@ -154,9 +156,9 @@ const PostPage = (props: PostPageProps) => {
                     </Reveal>
                 </div>
 
-                <article className="prose text-neutral-200 prose-strong:text-neutral-200 prose-headings:text-neutral-200
-                                    prose-[15px] prose-pre:bg-[#2b2b2b] prose-pre:my-2 prose-a:text-blue-500 max-w-full
-                                    prose-h6:text-xs prose-p:font-light
+                <article className="blog prose text-neutral-200 prose-strong:text-neutral-200 prose-headings:text-neutral-200 max-w-full
+                                    prose-sm prose-code:text-sm prose-pre:bg-[#1c1b19] prose-pre:my-2 prose-a:underline prose-a:underline-offset-4
+                                    prose-h6:text-xs prose-h6:text-neutral-500 prose-p:font-light
                                     prose-h5:text-xs prose-h5:border prose-h5:border-b-none prose-h5:border-neutral-500 prose-h5:p-4 prose-h5:rounded-lg prose-h5:bg-opacity-25 prose-h5:border-opacity-50
                                     prose-h4:text-lg prose-h4:tracking-wider prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-medium prose-h3:tracking-wide

@@ -27,7 +27,7 @@ export default function Projects() {
                 <ProjectCard
                     url='https://github.com/knlrvr/ttrpcompanion'
                     title='Abstract'
-                    description='An ecommerce store that offers conceptual products related to consumerism and materialism. Built with Next.kjs & MongoDB.'
+                    description='An ecommerce store that offers conceptual products related to consumerism and materialism. Built with Next.js & MongoDB.'
                 />
                 <ProjectCard
                     url='https://github.com/knlrvr/ttrpcompanion'

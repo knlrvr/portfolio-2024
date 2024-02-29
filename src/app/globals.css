@@ -12,3 +12,20 @@ body {
     color: #e5e5e5;
     padding: 1rem;
 }
+
+.blog {
+    line-height: 1.75rem;
+}
+
+/* 
+    I wish I could properly articulate how much having to use @apply pisses me off.
+    It defeats the entire purpose of Tailwind, but I can't seem to get the a:hover to 
+    behave correctly inline w prose, so I've resorted to this god awful abstraction. 
+    Don't call, don't text. 
+*/
+
+.prose {
+    a {
+      @apply text-neutral-200 hover:text-neutral-500 transition-colors duration-200;
+    }
+}
