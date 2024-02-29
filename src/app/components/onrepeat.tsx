@@ -5,9 +5,10 @@ import Link from 'next/link';
 
 import { Reveal } from '../utils/reveal';
 
+import { RxArrowTopRight } from 'react-icons/rx';
+
 import { 
   BsSpotify,
-  BsBoxArrowUpRight
 } from 'react-icons/bs';
 
 const songs = [
@@ -56,7 +57,7 @@ const OnRepeat: React.FC = () => {
   return (
     <Reveal>
       <Link href={songLink} target="_blank" rel="noopener noreferrer"
-        className="py-4 flex items-center justify-between">
+        className="py-4 flex items-center justify-between group">
         <div className="flex items-center">
           <BsSpotify 
             className="text-green-500 text-4xl" />
@@ -68,7 +69,7 @@ const OnRepeat: React.FC = () => {
           </div>
         </div>
         <div className="mr-2">
-          <BsBoxArrowUpRight />
+          <RxArrowTopRight className="group-hover:text-neutral-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-200" />
         </div>
       </Link>
     </Reveal>

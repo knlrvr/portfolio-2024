@@ -10,12 +10,12 @@ export default function Contact() {
             </Reveal>
             
             <Reveal>
-                <p className="mt-8 font-light tracking-wide">Find me at &nbsp;
+                <p className="mt-8 font-light tracking-wide">Find me at&nbsp;
                     <Link href="https://twitter.com/knlrvr"
-                        className="underline underline-offset-4 text-neutral-500 hover:text-neutral-200 transition-colors duration-200">@knlrvr</Link> 
+                        className="underline underline-offset-4 hover:text-neutral-500 text-neutral-200 transition-colors duration-200">@knlrvr</Link> 
                     &nbsp;or&nbsp;
                     <Link href="mailto:hello@knlrvr.com"
-                        className="underline underline-offset-4 text-neutral-500 hover:text-neutral-200 transition-colors duration-200">hello@knlrvr.com</Link> 
+                        className="underline underline-offset-4 hover:text-neutral-500 text-neutral-200 transition-colors duration-200">hello@knlrvr.com</Link> 
                 </p>
             </Reveal>
         </div>
