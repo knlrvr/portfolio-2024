@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
   const title = searchParams.get('title');
 
   const font = fetch(
-    new URL('../../../public/Migra-Extralight.otf', import.meta.url)
+    new URL('../../../public/fonts/Migra-Extralight.otf', import.meta.url)
   ).then((res) => res.arrayBuffer());
   const fontData = await font;
     
