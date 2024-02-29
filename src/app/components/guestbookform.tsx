@@ -61,7 +61,7 @@ const GuestbookForm = () => {
                 placeholder='Leave a message here!'
               />
               <button
-                className="px-6 uppercase py-1.5 w-20 flex justify-center items-center font-light text-sm border rounded-md">sign</button>
+                className="px-6 uppercase py-1.5 w-20 flex justify-center items-center font-light text-sm border rounded-md hover:text-neutral-500 transition-colors duration-200">sign</button>
             </form>
             <div className=" text-xs text-neutral-500">
               <SignOutButton />
