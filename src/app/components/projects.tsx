@@ -10,6 +10,11 @@ export default function Projects() {
             
             <div className="grid grid-cols-2 md:grid-cols-2 mt-8 gap-8">
                 <ProjectCard
+                    url='https://github.com/knlrvr/create-exwind-app'
+                    title='create-exwind-app'
+                    description='A CLI tool for generating React projects with Next.js, Tailwind, Convex, & Jest.'
+                />
+                <ProjectCard
                     url='https://github.com/knlrvr/ttrpcompanion'
                     title='TTRPCompanion'
                     description='A gaming utility app that allows users to track full campaign stats in D&D & other TTRPGs. Built with T3.'
@@ -20,19 +25,9 @@ export default function Projects() {
                     description='An image sharing platform dedicated to pictures of the sky that just don&apos;t seem real. Built with Next.js & Convex.'
                 />
                 <ProjectCard
-                    url='https://github.com/knlrvr/theviewfrominside'
-                    title='The View From Inside'
-                    description='A blog built with Next.js & Sanity.io for content management. '
-                />
-                <ProjectCard
-                    url='https://github.com/knlrvr/ttrpcompanion'
-                    title='Abstract'
-                    description='An ecommerce store that offers conceptual products related to consumerism and materialism. Built with Next.js & MongoDB.'
-                />
-                <ProjectCard
-                    url='https://github.com/knlrvr/ttrpcompanion'
-                    title='knlrvr.dev'
-                    description='My previous portfolio.'
+                    url='https://knlrvr.com'
+                    title='knlrvr.com'
+                    description='My previous portfolio. Design heavy. Dark mode optional.'
                 />
             </div>
         </div>
