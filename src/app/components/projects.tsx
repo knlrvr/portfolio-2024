@@ -1,10 +1,14 @@
+import { Reveal } from "../utils/reveal"
 import ProjectCard from "./projectCard"
 
 export default function Projects() {
     return (
         <div className="text-sm">
-            <span className="font-migra text-xl">Projects</span>
-            <div className="grid grid-cols-2 md:grid-cols-3 mt-4 gap-x-12 gap-y-8">
+            <Reveal>
+                <span className="font-migra text-xl tracking-widest">Projects</span>
+            </Reveal>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 mt-8 gap-x-12 gap-y-8">
                 <ProjectCard
                     url='https://github.com/knlrvr/ttrpcompanion'
                     title='TTRPCompanion'
