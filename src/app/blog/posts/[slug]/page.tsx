@@ -15,6 +15,7 @@ import ReactMarkdown from "react-markdown";
 
 import type { Metadata } from "next";
 import PostPreview from '@/app/components/homepostpreview';
+import AuthorCard from '@/app/components/authorcard';
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -133,9 +134,12 @@ const PostPage = (props: PostPageProps) => {
                             <span className="my-2 font-migra text-4xl sm:text-5xl tracking-wider">
                                 {post.data.title}
                             </span>
-                            <span className="w-fit font-light tracking-wider text-sm">
-                                {post.data.date}
-                            </span>
+                            <div className="flex flex-col justify-between items-start md:items-center md:flex-row-reverse">
+                                <span className="mb-8 md:mb-0 w-fit font-light tracking-wider text-sm">
+                                    {post.data.date}
+                                </span>
+                                <AuthorCard />
+                            </div>
                         </div>
                     </Reveal>
                 </div>
