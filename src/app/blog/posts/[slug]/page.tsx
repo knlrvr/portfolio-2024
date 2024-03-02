@@ -169,6 +169,7 @@ const PostPage = (props: PostPageProps) => {
                                     prose-h2:font-light prose-h2:tracking-wider
                                     prose-quoteless prose-blockquote:border prose-blockquote:rounded-2xl prose-blockquote:not-italic prose-blockquote:border-neutral-500 prose-blockquote:bg-neutral-500 prose-blockquote:bg-opacity-10 prose-blockquote:text-xs prose-blockquote:text-neutral-500 prose-blockquote:px-4
                                     prose-hr:border-neutral-500
+                                    prose-img:rounded-lg
                 ">
                     <Reveal>
                         <ReactMarkdown className=""

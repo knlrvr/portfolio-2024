@@ -23,7 +23,7 @@ const GuestbookForm = () => {
 
         {!user && (
           <Reveal>
-            <div className="mt-5 rounded-full text-sm py-2 mb-4 w-fit">
+            <div className="mt-4 rounded-full text-sm mb-[2.15rem] w-fit">
               <SignInButton mode='modal' afterSignInUrl='/guestbook'>
                 <div className="flex items-center gap-1 text-sm text-neutral-500 group cursor-pointer">
                   <span className="underline underline-offset-4 group-hover:text-neutral-200 transition-colors duration-200">Sign in to leave a message</span>
