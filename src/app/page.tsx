@@ -7,6 +7,7 @@ import OnRepeat from "./components/onrepeat";
 import Contact from "./components/contact";
 
 import type { Metadata } from 'next'
+import Gallery from "./components/gallery";
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Portfolio',
@@ -15,11 +16,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="space-y-14">
+    <main className="space-y-28">
       <About />
       <Projects />
       <BlogPreview />
       <Contact />
+      <Gallery />
       <OnRepeat />
       {/* <div className="flex flex-grow" /> */}
     </main> 
