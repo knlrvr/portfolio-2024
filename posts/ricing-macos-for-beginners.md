@@ -2,7 +2,7 @@
 title: Ricing MacOS (For Beginners)
 description: My first attempt at ricing MacOS 
 date: March 5, 2024
-tags: ['webdev', 'workflow', 'Apple', +? ]
+tags: ['webdev', 'workflow', 'Apple' ]
 ---
 
 One thing I always felt was lackluster regarding Apple was their lack of customization. Apple has *great* UI principles, though, so at some point, I stopped caring very much. It looks great out-of-the-box, so why bother trying to change it?  
