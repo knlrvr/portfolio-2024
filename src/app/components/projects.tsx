@@ -25,6 +25,11 @@ export default function Projects() {
                     description='An image sharing platform dedicated to pictures of the sky that just don&apos;t seem real. Built with Next.js & Convex.'
                 />
                 <ProjectCard
+                    url='https://portfolio-template-knlrvr.vercel.app/'
+                    title='Portfolio Template'
+                    description='A portfolio template inspired by Bartosz Jarocki&apos;s shadcn/ui CV. Built with HTML, CSS, & JS.'
+                />
+                <ProjectCard
                     url='https://knlrvr.com'
                     title='knlrvr.com'
                     description='My previous portfolio. Design heavy. Dark mode optional.'
