@@ -29,6 +29,8 @@ Here's what I did.
 **widgets**: Übersicht     
 **bar**: simple-bar           
  
+ & that's pretty much it!
+ 
 ---
 
 ## Window Management
