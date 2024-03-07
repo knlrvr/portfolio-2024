@@ -167,6 +167,8 @@ I don't have Neovim on this machine (yet), but here's Zed & VSCode side by side 
 
 As you can see, Zed is familiar. I like what Zed promises, so I definitely plan to use it here and there and continue to learn about it (& Neovim), but VSCode is my go-to for the foreseeable future. 
 
+I use VSCode with the [Vitesse Black &nearr;](https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse) theme. 
+
 ## Terminal
 I use [Warp &nearr;](https://www.warp.dev/) for my terminal. It's fast, and feels more intuitive to me than other terminals. It's also very customizable. There are a lot of solid options for terminals, but it really just comes down to personal preference and what you're actually using it for. I definitely recommend trying a few out, at least. 
 
