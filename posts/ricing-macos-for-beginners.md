@@ -9,6 +9,7 @@ One thing I always felt was lackluster regarding Apple was their lack of customi
 
 Then I discovered [r/unixporn &nearr;](https://www.reddit.com/r/unixporn/). If you're not familiar, it's a popular subreddit where people can share their &ast;NIX customizations. After looking through the top posts for what felt like *hours*, I decided to make my machine *my* machine.
 
+
 ![screenshot](/blog-images/full.jpeg)
 
 ###### A screenshot of how everything looks together with the obligatory neofetch.
@@ -18,6 +19,17 @@ Most of what I accomplished was from compiling various resources from the specs 
 
 Here's what I did. 
 
+---
+## TL;DR &mdash;
+
+**WM**: Yabai      
+**Hotkey Daemon**: skhd   
+**IDE**: VSCode     
+**terminal**: Warp  
+**widgets**: Übersicht     
+**bar**: simple-bar           
+ 
+---
 
 ## Window Management
 I wasn't sure what exactly I was looking for here. I tried [Rectangle &nearr;](https://rectangleapp.com/), which was really solid since it behaved similarly to Windows, but ultimately settled on [yabai &nearr;](https://github.com/koekeishiya/yabai).
@@ -142,6 +154,17 @@ ctrl + alt - r : brew services restart yabai
 
 I didn't really feel like I *needed* to configure yabai + skhd too much, but after getting used to it in my workflow and updating it as needed, I have no idea how I could ever go back to *not* using it.
 
+## IDE
+I use VSCode for my IDE. I've tinkered with [Neovim &nearr;](https://neovim.io/), and [Zed &nearr;](https://zed.dev/) and I think either one would be a solid replacement for VSCode. Personally, I'm leaning more towards Neovim lately just because I *really* like the idea of not using a mouse, especially after getting accustomed to skhd. 
+
+I don't have Neovim on this machine (yet), but here's Zed & VSCode side by side &mdash; 
+
+![zed vs vsc](/blog-images/zed-vs-vsc.png)
+
+###### Light - Zed, Dark - VSCode.
+
+As you can see, Zed is familiar. I like what Zed promises, so I definitely plan to use it here and there and continue to learn about it (& Neovim), but VSCode is my go-to for the foreseeable future. 
+
 ## Terminal
 I use [Warp &nearr;](https://www.warp.dev/) for my terminal. It's fast, and feels more intuitive to me than other terminals. It's also very customizable. There are a lot of solid options for terminals, but it really just comes down to personal preference and what you're actually using it for. I definitely recommend trying a few out, at least. 
 
@@ -187,17 +210,6 @@ Here's what it looks like -
 ![simple-bar](/blog-images/simple-bar.png)
 
 ###### A screenshot of just the simple-bar. If you're on mobile, I'm so sorry.
-
-## IDE
-I use VSCode for my IDE. I've tinkered with [Neovim &nearr;](https://neovim.io/), and [Zed &nearr;](https://zed.dev/) and I think either one would be a solid replacement for VSCode. Personally, I'm leaning more towards Neovim lately just because I *really* like the idea of not using a mouse, especially after getting accustomed to skhd. 
-
-I don't have Neovim on this machine (yet), but here's Zed & VSCode side by side &mdash; 
-
-![zed vs vsc](/blog-images/zed-vs-vsc.png)
-
-###### Light - Zed, Dark - VSCode.
-
-As you can see, Zed is familiar. I like what Zed promises, so I definitely plan to use it here and there and continue to learn about it (& Neovim), but VSCode is my go-to for the foreseeable future. 
 
 ## Conclusion
 I don't think I did as much as I could have, but I really enjoy my experience on my Macbook now. It feels more like I'm using something that belongs to me rather than something that Apple has provided. I don't know that there's much else I would do, but if I find anything, I'll be sure to add updates to this post. 
