@@ -177,7 +177,7 @@ const fetchWorksData = (url: string): Project => {
 }
 ```
 
-As of January 8th, 2024, everything in my portfolio was migrated to the new app router with the support of [these Next.js docs](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration). It was a relatively easy process, but there are some important notes about behaviors that can make or break an experience that I went through during the migration. 
+As of January 8th, 2024, everything in my portfolio was migrated to the new app router with the support of [these Next.js docs &nearr;](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration). It was a relatively easy process, but there are some important notes about behaviors that can make or break an experience that I went through during the migration. 
 
 For example, if you changed the theme and then navigated to any of the **/work** pages, the theme would revert to it's default setting, which is dependent on the time of day. The theme wasn't persisting between my projects in the pages router, and the rest of the site in the app router. 
 
@@ -255,12 +255,12 @@ I certainly wouldn't *recommend* using both routers, but it's certainly possible
 
 ## More about Next.js
 **Always read the docs!**   
-For more information about Next.js version 13, visit [nextjs.org](https://nextjs.org/blog/next-13).    
-For more information about migrating from Pages to App, visit [the Incremental Adoption Guide from Next.js](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration).  
-For more information about what the app router offers over the pages router, please visit [nextjs.org](https://nextjs.org/).
+For more information about Next.js version 13, visit [nextjs.org &nearr;](https://nextjs.org/blog/next-13).    
+For more information about migrating from Pages to App, visit [the Incremental Adoption Guide from Next.js &nearr;](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration).  
+For more information about what the app router offers over the pages router, please visit [nextjs.org &nearr;](https://nextjs.org/).
 
 ## This Portfolio
-As always, all of my work is open source. Visit [the repo for this portfolio](https://github.com/knlrvr/kanelariviere-new) and take a look around! If you stumble upon any commits from before 01/08/24, you'll be able to see both routers in action! 
+As always, all of my work is open source. Visit [the repo for this portfolio &nearr;](https://github.com/knlrvr/kanelariviere-new) and take a look around! If you stumble upon any commits from before 01/08/24, you'll be able to see both routers in action! 
 
 ## Conclusion 
 Choosing the right tools can make all the difference when creating efficient and scalable applications, and nearly every approach comes with its own set of considerations. It's important to address these considerations and figure out what will work best for you. 

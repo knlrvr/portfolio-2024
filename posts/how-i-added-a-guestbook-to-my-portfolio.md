@@ -5,9 +5,9 @@ tags: ['Next.js', 'Convex', 'webdev', 'tutorial']
 date: 'November 3, 2023'
 ---
 
-While I was taking a look around at "professional dev" portfolios (that's literally what I googled) and trying to turn inspiration into creation for my new portfolio, I came across [Lee Robinson's Portfolio](https://leerob.io/). I was a big fan of the overall design, but I was far more intrigued with their *guestbook*. I'd never seen a guestbook on a portfolio site, and as soon as I saw it, I knew I had to have one. Luckily, I'd had my fair share of work in setting up authentication and databases, especially after my work on [TTRPCompanion](https://github.com/knlrvr/ttrpcompanion), so I knew it wouldn't be anything too far from my current realm of knowledge. However, I wanted to learn more. It's a portfolio, right? I should be showcasing my skills, or at least my ability to learn new skills quickly. 
+While I was taking a look around at "professional dev" portfolios (that's literally what I googled) and trying to turn inspiration into creation for my new portfolio, I came across [Lee Robinson's Portfolio &nearr;](https://leerob.io/). I was a big fan of the overall design, but I was far more intrigued with their *guestbook*. I'd never seen a guestbook on a portfolio site, and as soon as I saw it, I knew I had to have one. Luckily, I'd had my fair share of work in setting up authentication and databases, especially after my work on [TTRPCompanion &nearr;](https://github.com/knlrvr/ttrpcompanion), so I knew it wouldn't be anything too far from my current realm of knowledge. However, I wanted to learn more. It's a portfolio, right? I should be showcasing my skills, or at least my ability to learn new skills quickly. 
 
-As a (mostly) self-taught dev, I try to keep up with current news, making sure I'm following plenty of accomplished (but reputable!) tech influencers & content creators. In doing so, I saw that [Web Dev Cody](https://www.youtube.com/@WebDevCody/featured) was hosting a hackathon. I wasn't able to participate in the hackathon, but it was based on [Convex](https://www.convex.dev/), a backend platform. The timing was perfect. 
+As a (mostly) self-taught dev, I try to keep up with current news, making sure I'm following plenty of accomplished (but reputable!) tech influencers & content creators. In doing so, I saw that [Web Dev Cody &nearr;](https://www.youtube.com/@WebDevCody/featured) was hosting a hackathon. I wasn't able to participate in the hackathon, but it was based on [Convex &nearr;](https://www.convex.dev/), a backend platform. The timing was perfect. 
 
 I was looking for something to learn, and I'd found it. And it was a **dream** to work with. So, here's how I added a guestbook to my portfolio using Convex.   
 
@@ -220,7 +220,7 @@ const notes = useQuery(api.notes.getNotes);
 
 ###### I used to display the date & time of each message, but I've since removed that feature. 
 
-The complete code for ***notes.tsx*** & ***guestbook.tsx*** can be found below or in the [GitHub Repo for my new portfolio](https://github.com/knlrvr/kanelariviere-new). In the complete code, we can see that I also depended on some react hooks and conditional rendering for the finished product. 
+The complete code for ***notes.tsx*** & ***guestbook.tsx*** can be found below or in the [GitHub Repo for my new portfolio &nearr;](https://github.com/knlrvr/kanelariviere-new). In the complete code, we can see that I also depended on some react hooks and conditional rendering for the finished product. 
 
 ```js 
 // notes.tsx
@@ -360,6 +360,6 @@ export default Guestbook
 ## Conclusion
 And that's how I used Convex to set up a Guestbook in my portfolio! It was a relatively easy set up, and I'm happy to have it now! If you come across it or want to post on it, please do! Again, almost *all* of this information can be found directly in the Convex docs. 
 
-You can also take a look around [the repo of my portfolio](https://github.com/knlrvr/kanelariviere-new) & see how it all works together! 
+You can also take a look around [the repo of my portfolio &nearr;](https://github.com/knlrvr/kanelariviere-new) & see how it all works together! 
 
-To learn more about Convex, visit [convex.dev](https://www.convex.dev/) & **happy coding**!
+To learn more about Convex, visit [convex.dev &nearr;](https://www.convex.dev/) & **happy coding**!
