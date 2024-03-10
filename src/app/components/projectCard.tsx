@@ -7,6 +7,7 @@ interface ProjectCardProps {
     url: string;
     title: string;
     description: string;
+    // tech: string[];
 }
 
 export default function ProjectCard({ url, title, description }: ProjectCardProps) {
