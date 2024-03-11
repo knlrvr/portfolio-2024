@@ -157,7 +157,7 @@ ctrl + alt - r : brew services restart yabai
 I didn't really feel like I *needed* to configure yabai + skhd too much, but after getting used to it in my workflow and updating it as needed, I have no idea how I could ever go back to *not* using it.
 
 ## IDE
-I use VSCode for my IDE. I've tinkered with [Neovim &nearr;](https://neovim.io/), and [Zed &nearr;](https://zed.dev/) and I think either one would be a solid replacement for VSCode. Personally, I'm leaning more towards Neovim lately just because I *really* like the idea of not using a mouse, especially after getting accustomed to skhd. 
+I use VSCode for my IDE. I've tinkered with [Neovim &nearr;](https://neovim.io/), and [Zed &nearr;](https://zed.dev/) and I think either one would be a solid replacement for VSCode. Personally, I'm leaning more towards Neovim. The whole point of 'ricing' for me was to make my machine feel more like *my* machine and that's what Neovim offers. I also *really* like the idea of not using a mouse since getting used to skhd. 
 
 I don't have Neovim on this machine (yet), but here's Zed & VSCode side by side &mdash; 
 
@@ -165,7 +165,7 @@ I don't have Neovim on this machine (yet), but here's Zed & VSCode side by side 
 
 ###### Light - Zed, Dark - VSCode.
 
-As you can see, Zed is familiar. I like what Zed promises, so I definitely plan to use it here and there and continue to learn about it (& Neovim), but VSCode is my go-to for the foreseeable future. 
+As you can see, Zed is familiar. I like what Zed promises, so I definitely plan to use it here and there and continue to learn about it (Neovim too), but VSCode is my go-to for the foreseeable future. 
 
 I use VSCode with the [Vitesse Black &nearr;](https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse) theme. 
 
