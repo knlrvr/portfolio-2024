@@ -15,7 +15,7 @@ export default function Projects() {
                     description='A CLI tool for generating React projects with Next.js, Tailwind, Convex, & Jest.'
                 /> */}
                 <ProjectCard
-                    url='https://github.com/knlrvr/ttrpcompanion'
+                    url='https://github.com/knlrvr/ttrpc'
                     title='TTRPCompanion'
                     description='A gaming utility app that allows users to track full campaign stats in D&D & other TTRPGs.'
                     // tech={['TypeScript', 'Next.js', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright']}
