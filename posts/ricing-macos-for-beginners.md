@@ -216,6 +216,8 @@ Here's what it looks like -
 ###### A screenshot of just the simple-bar. If you're on mobile, I'm so sorry.
 
 ## Conclusion
-I don't think I did as much as I could have, but I really enjoy my experience on my Macbook now. It feels more like I'm using something that belongs to me rather than something that Apple has provided. I don't know that there's much else I would do, but if I find anything, I'll be sure to add updates to this post. 
+I don't think I did as much as I could have, but I really enjoy my experience on my Macbook now. It feels more like I'm using something that belongs to me rather than something that Apple has provided. I don't know that there's much else I would do, but if I find anything, I'll be sure to add updates to this post.
+
+ [Igor Bedesqui &nearr;](https://www.igorbedesqui.com/writing/macos-rice) & [Nexxel &nearr;](https://www.nexxel.dev/blog/ricing-macos/) inspired this endeavor, and I highly recommend reading what they have to say about their processes as they're both miles ahead of me. 
 
 Let me know what you think! & **happy coding**!
