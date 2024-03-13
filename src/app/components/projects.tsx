@@ -21,7 +21,7 @@ export default function Projects() {
                     // tech={['TypeScript', 'Next.js', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright']}
                 />
                 <ProjectCard
-                    url='https://theskyisfake.org'
+                    url='https://github.com/knlrvr/theskyisfake'
                     title='The Sky Is Fake'
                     description='An image sharing platform dedicated to pictures of the sky that just don&apos;t seem real.'
                     // tech={['TypeScript', 'Next.js', 'Tailwind', 'Convex', 'Clerk']}
@@ -33,7 +33,7 @@ export default function Projects() {
                     // tech={['JavaScript', 'Next.js', 'Tailwind', 'MongoDB']}
                 />
                 <ProjectCard
-                    url='https://portfolio-template-knlrvr.vercel.app/'
+                    url='https://github.com/knlrvr/portfolio-template'
                     title='Portfolio Template'
                     description='A portfolio template inspired by Bartosz Jarocki&apos;s Next.js/shadcn CV.'
                     // tech={['HTML', 'CSS', 'JavaScript']}
