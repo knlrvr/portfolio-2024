@@ -11,7 +11,7 @@ import Gallery from "./components/gallery";
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Portfolio',
-  description: 'Kane Lariviere • Software Engineer. Full Stack Developer. Designer.',
+  description: 'Kane Lariviere • Software Developer • Portfolio',
 }
 
 export default function Home() {

@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import getPostMetadata from '@/app/utils/PostMetadata';
 
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
-import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import { srcery } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 

@@ -9,7 +9,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Blog',
-  description: 'Blog | Kane Lariviere',
+  description: 'Kane Lariviere • Software Developer • Blog',
 }
 
 const Blog = () => {
