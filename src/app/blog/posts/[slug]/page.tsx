@@ -4,9 +4,7 @@ import { notFound } from "next/navigation";
 
 import getPostMetadata from '@/app/utils/PostMetadata';
 
-import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
-
-import { srcery } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { CodeBlock } from '@/app/components/codeblock';
 
 import fs from 'fs'
 import matter from "gray-matter";
@@ -35,15 +33,6 @@ interface PostPageProps {
     params: {
         slug: string;
     }
-}
-
-interface CodeBlockProps {
-    language: string;
-    value: string;
-}
-
-const CodeBlock = ({ language, value }: CodeBlockProps) => {
-    return <SyntaxHighlighter language={language} style={srcery}>{value}</SyntaxHighlighter>
 }
 
 export async function generateMetadata({ 
