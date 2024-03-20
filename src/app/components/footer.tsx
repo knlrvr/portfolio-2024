@@ -15,7 +15,14 @@ import {
 } from "react-icons/fa6";
 import { Reveal } from '../utils/reveal';
 
-
+import { 
+    BsTwitterX,
+    BsTwitch,
+    BsThreads,
+    BsLinkedin,
+    BsGithub,
+    BsEnvelope
+} from 'react-icons/bs'
 
 
 export default function Footer() {
@@ -52,24 +59,24 @@ export default function Footer() {
                             <p>Hosted on <Link href="https://vercel.com" target="_blank" aria-label='Vercel Hosting' className="underline underline-offset-4 hover:text-neutral-200 transition-colors duration-200">Vercel</Link>.</p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2 text-lg sm:text-sm">
-                        <Link href="mailto:hello@knlrvr.com" target="_blank" aria-label='Email' className="border border-neutral-500 p-1 rounded-sm hover:text-neutral-200 hover:border-neutral-200 transition-colors duration-200">
-                            <FaEnvelope />
+                    <div className="flex items-center gap-6 text-lg">
+                        <Link href="mailto:hello@knlrvr.com" target="_blank" aria-label='Email' className="hover:text-neutral-200 transition-colors duration-200">
+                            <BsEnvelope />
                         </Link>
-                        <Link href="https://github.com/knlrvr" target="_blank" aria-label='knlrvr on GitHub' className="border border-neutral-500 p-1 rounded-sm hover:text-neutral-200 hover:border-neutral-200 transition-colors duration-200">
-                            <FiGithub />
+                        <Link href="https://github.com/knlrvr" target="_blank" aria-label='knlrvr on GitHub' className="hover:text-neutral-200 transition-colors duration-200">
+                            <BsGithub />
                         </Link>
-                        <Link href="https://www.linkedin.com/in/kane-lariviere" target="_blank" aria-label='LinkedIn' className="border border-neutral-500 p-1 rounded-sm hover:text-neutral-200 hover:border-neutral-200 transition-colors duration-200">
-                            <FiLinkedin />
+                        <Link href="https://www.linkedin.com/in/kane-lariviere" target="_blank" aria-label='LinkedIn' className="hover:text-neutral-200 transition-colors duration-200">
+                            <BsLinkedin />
                         </Link>
-                        <Link href="https://twitter.com/knlrvr" target="_blank" aria-label='Twitter' className="border border-neutral-500 p-1 rounded-sm hover:text-neutral-200 hover:border-neutral-200 transition-colors duration-200">
-                            <FaXTwitter />
+                        <Link href="https://twitter.com/knlrvr" target="_blank" aria-label='Twitter' className="hover:text-neutral-200 transition-colors duration-200">
+                            <BsTwitterX />
                         </Link>
-                        <Link href="https://www.threads.net/@kanelarivieresucks" target="_blank" aria-label='Threads' className="border border-neutral-500 p-1 rounded-sm hover:text-neutral-200 hover:border-neutral-200 transition-colors duration-200">
-                            <FaThreads />
+                        <Link href="https://www.threads.net/@kanelarivieresucks" target="_blank" aria-label='Threads' className="hover:text-neutral-200 transition-colors duration-200">
+                            <BsThreads />
                         </Link>
-                        <Link href="https://www.twitch.tv/knlrvr" target="_blank" aria-label='Twitch' className="border border-neutral-500 p-1 rounded-sm hover:text-neutral-200 hover:border-neutral-200 transition-colors duration-200">
-                            <FaTwitch />
+                        <Link href="https://www.twitch.tv/knlrvr" target="_blank" aria-label='Twitch' className="hover:text-neutral-200 transition-colors duration-200">
+                            <BsTwitch />
                         </Link>
                     </div>
                 </div>
