@@ -5,18 +5,22 @@ import { notFound } from "next/navigation";
 import getPostMetadata from '@/app/utils/PostMetadata';
 
 import { CodeBlock } from '@/app/components/codeblock';
+import { TweetComponent } from '@/app/components/tweet';
 
 import fs from 'fs'
 import matter from "gray-matter";
-import ReactMarkdown from "react-markdown";
+
+import { MDXRemote } from 'next-mdx-remote/rsc'
+
 
 import type { Metadata } from "next";
 import PostPreview from '@/app/components/homepostpreview';
 import AuthorCard from '@/app/components/authorcard';
+import { RxCheck, RxCross2 } from 'react-icons/rx';
 
 const getPostContent = (slug: string) => {
-    const folder = "posts/";
-    const file = `${folder}/${slug}.md`;
+    const folder = "posts";
+    const file = `${folder}/${slug}.mdx`;
     const content = fs.readFileSync(file, 'utf8');
     const matterResult = matter(content);
     return matterResult;
@@ -77,6 +81,37 @@ export async function generateMetadata({
     };
 }
 
+function Disclaimer({ children }: { children: React.ReactNode}) {
+    return (
+      <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
+        <div className="flex items-center mr-4 w-6">⚠️</div>
+        <div className="w-full text-sm text-neutral-500">{children}</div>
+      </div>
+    );
+}
+
+function Success({ children }: {children: React.ReactNode}) {
+    return (
+        <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
+            <div className="flex items-center mr-4 w-6 text-green-500 text-lg">
+                <RxCheck />
+            </div>
+            <div className="w-full text-sm text-neutral-500">{children}</div>
+        </div>
+    );
+}
+
+function Destructive({ children }: {children: React.ReactNode}) {
+    return (
+        <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
+            <div className="flex items-center mr-4 w-6 text-red-500">
+                <RxCross2 />
+            </div>
+            <div className="w-full text-sm text-neutral-500">{children}</div>
+        </div>
+    );
+}
+
 const PostPage = (props: PostPageProps) => {
 
     const slug = props.params.slug;
@@ -85,7 +120,11 @@ const PostPage = (props: PostPageProps) => {
     const components = {
         code: ({ node, inline, className, children, ...props }: any) => (
             <CodeBlock language={props.language} value={children}/>
-        )
+        ),
+        Disclaimer,
+        Success,
+        Destructive,
+        TweetComponent
     }
     
     if (!post) {
@@ -155,14 +194,14 @@ const PostPage = (props: PostPageProps) => {
                                     prose-h4:text-lg prose-h4:tracking-wider prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-medium prose-h3:tracking-wide
                                     prose-h2:font-light prose-h2:tracking-wider
-                                    prose-quoteless prose-blockquote:border prose-blockquote:rounded-2xl prose-blockquote:not-italic prose-blockquote:border-neutral-500 prose-blockquote:bg-neutral-500 prose-blockquote:bg-opacity-10 prose-blockquote:text-xs prose-blockquote:text-neutral-500 prose-blockquote:px-4
                                     prose-hr:border-neutral-500
                                     prose-img:rounded-lg
                 ">
                     <Reveal>
-                        <ReactMarkdown className=""
-                            components={components}
-                        >{post.content}</ReactMarkdown> 
+                        <MDXRemote
+                            source={post.content}
+                            components={{...components}}
+                        /> 
                     </Reveal>
                 </article>
 

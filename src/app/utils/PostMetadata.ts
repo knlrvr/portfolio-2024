@@ -12,7 +12,7 @@ export interface PostMetadata {
 const getPostMetadata = (): PostMetadata[] => {
     const folder = './posts';
     const files = fs.readdirSync(folder);
-    const markdownPosts = files.filter((file) => file.endsWith(".md"));
+    const markdownPosts = files.filter((file) => file.endsWith(".mdx"));
   
     // get data from file 
     const posts = markdownPosts.map((fileName) => {
@@ -23,7 +23,7 @@ const getPostMetadata = (): PostMetadata[] => {
         title: matterResult.data.title,
         date: matterResult.data.date,
         description: matterResult.data.description,
-        slug: fileName.replace(".md", "")
+        slug: fileName.replace(".mdx", "")
       }
     });
   
