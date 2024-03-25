@@ -4,6 +4,8 @@ import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlig
 
 import { srcery } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
 import { RxCopy, RxCheck } from "react-icons/rx";
 import { useState } from "react";
 
@@ -35,7 +37,7 @@ export const CodeBlock = ({ language, value }: CodeBlockProps) => {
                 <div
                 className="flex w-full justify-end text-lg -mb-4 opacity-50 text-[#808080]"><RxCheck /></div>
             )}
-            <SyntaxHighlighter language={language} style={srcery}>{value}</SyntaxHighlighter>
+            <SyntaxHighlighter language={language} style={atomOneDark} customStyle={{ background: '#151515'}}>{value}</SyntaxHighlighter>
         </div>
     )
 }

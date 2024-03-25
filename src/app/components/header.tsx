@@ -14,13 +14,16 @@ export default function Header() {
 
     let path = usePathname();
 
+    let backHref = '/';
+    if (path.includes('/blog/')) {
+        backHref = '/blog';
+    } else if (path === '/guestbook') {
+        backHref = '/';
+    }
+
     return (
         <div className="flex justify-between items-center font-light mb-12 text-neutral-500 text-sm">
-            {path?.includes('/blog') || path?.includes('/guestbook') ? (
-                <Link href="/" className="hover:underline underline-offset-4">&larr; back</Link>
-            ) : (
-                <Link href="/" className="hover:underline underline-offset-4">knlrvr</Link>
-            )}
+            <Link href={backHref} className="hover:underline underline-offset-4">&larr; back</Link>
             <ul className="flex gap-8">
                 {items.map((item) => (
                     <li key={item.href} className="">

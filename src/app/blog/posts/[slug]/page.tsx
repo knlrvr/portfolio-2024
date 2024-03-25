@@ -16,7 +16,9 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import type { Metadata } from "next";
 import PostPreview from '@/app/components/homepostpreview';
 import AuthorCard from '@/app/components/authorcard';
-import { RxCheck, RxCross2 } from 'react-icons/rx';
+
+import { RxCheck, RxCross2, RxExclamationTriangle, RxCube } from 'react-icons/rx';
+import Link from 'next/link';
 
 const getPostContent = (slug: string) => {
     const folder = "posts";
@@ -84,7 +86,9 @@ export async function generateMetadata({
 function Disclaimer({ children }: { children: React.ReactNode}) {
     return (
       <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
-        <div className="flex items-center mr-4 w-6">⚠️</div>
+        <div className="flex items-center mr-4 w-6 text-yellow-600 text-lg">
+            <RxExclamationTriangle />
+        </div>
         <div className="w-full text-sm text-neutral-500">{children}</div>
       </div>
     );
@@ -112,6 +116,41 @@ function Destructive({ children }: {children: React.ReactNode}) {
     );
 }
 
+function Neutral({ children }: { children: React.ReactNode }) {
+    return (
+        <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
+            <div className="flex items-center mr-4 w-6 text-blue-500 text-lg">
+                <RxCube />
+            </div>
+            <div className="w-full text-sm text-neutral-500">{children}</div>
+        </div>
+    );
+}
+
+interface BlogLinkProps {
+    href: string;
+    children: React.ReactNode;
+}
+
+function BlogLink({ href, children }: BlogLinkProps) {
+
+    if (href.startsWith('/')) {
+        return (
+            <Link href={href}
+                className='inline-block'>
+                {children}
+            </Link>
+        )
+    }
+
+    return (
+        <Link href={href} target='_blank' rel="noopener noreferrer" 
+            className="inline-block">
+            {children} 
+        </Link>
+    );
+}
+
 const PostPage = (props: PostPageProps) => {
 
     const slug = props.params.slug;
@@ -124,6 +163,8 @@ const PostPage = (props: PostPageProps) => {
         Disclaimer,
         Success,
         Destructive,
+        Neutral,
+        BlogLink,
         TweetComponent
     }
     
@@ -188,12 +229,12 @@ const PostPage = (props: PostPageProps) => {
                 </div>
 
                 <article className="blog prose text-neutral-200 prose-strong:text-neutral-200 prose-headings:text-neutral-200 max-w-full
-                                    prose-sm prose-code:text-sm prose-pre:bg-[#1c1b19] prose-pre:my-2 prose-a:underline prose-a:underline-offset-4
+                                    prose-sm prose-code:text-sm prose-pre:bg-[#151515] prose-pre:mb-1
                                     prose-h6:text-xs prose-h6:text-neutral-500 prose-p:font-light
                                     prose-h5:text-xs prose-h5:border prose-h5:border-b-none prose-h5:border-neutral-500 prose-h5:p-4 prose-h5:rounded-lg prose-h5:bg-opacity-25 prose-h5:border-opacity-50
                                     prose-h4:text-lg prose-h4:tracking-wider prose-h4:font-normal
-                                    prose-h3:text-xl prose-h3:font-medium prose-h3:tracking-wide
-                                    prose-h2:font-light prose-h2:tracking-wider
+                                    prose-h3:text-xl prose-h3:font-normal prose-h3:tracking-wider
+                                    prose-h2:font-medium prose-h2:tracking-widest
                                     prose-hr:border-neutral-500
                                     prose-img:rounded-lg
                 ">
