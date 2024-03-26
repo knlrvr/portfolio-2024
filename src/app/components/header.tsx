@@ -17,17 +17,15 @@ export default function Header() {
     let backHref = '/';
     if(path.includes('/blog/')) {
         backHref = '/blog'
-    } else if (path.includes('/')) {
-        backHref = '/'
     };
 
     return (
         <div className="flex justify-between items-center font-light mb-12 text-neutral-500 text-sm">
             
             {path.includes('/guestbook') || path.includes('/blog') ? (
-                <Link href={backHref}>&larr; back </Link>
+                <Link href={backHref} className="hover:underline underline-offset-4">&larr; back </Link>
             ) : (
-                <Link href={backHref}>knlrvr</Link>
+                <div className="">knlrvr</div>
             )} 
 
             <ul className="flex gap-8">
