@@ -22,7 +22,7 @@ export default function Header() {
     return (
         <div className="flex justify-between items-center font-light mb-12 text-neutral-500 text-sm">
             
-            {path.includes('/guestbook') || path.includes('/blog') ? (
+            {path.includes('/guestbook') || path.includes('/blog') || path.includes('/tech') ? (
                 <Link href={backHref} className="hover:underline underline-offset-4">&larr; back </Link>
             ) : (
                 <div className="">knlrvr</div>
