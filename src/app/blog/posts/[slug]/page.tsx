@@ -17,7 +17,13 @@ import type { Metadata } from "next";
 import PostPreview from '@/app/components/homepostpreview';
 import AuthorCard from '@/app/components/authorcard';
 
-import { RxCheck, RxCross2, RxExclamationTriangle, RxCube } from 'react-icons/rx';
+import { 
+    RxCheck, 
+    RxCross2, 
+    RxExclamationTriangle, 
+    RxCube,
+    RxPencil1 
+} from 'react-icons/rx';
 import Link from 'next/link';
 
 const getPostContent = (slug: string) => {
@@ -127,6 +133,17 @@ function Neutral({ children }: { children: React.ReactNode }) {
     );
 }
 
+function Edit({ children }: { children: React.ReactNode }) {
+    return (
+        <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
+            <div className="flex items-center mr-4 w-6 text-yellow-300 text-lg">
+                <RxPencil1 />
+            </div>
+            <div className="w-full text-sm text-neutral-500">{children}</div>
+        </div>
+    );
+}
+
 interface BlogLinkProps {
     href: string;
     children: React.ReactNode;
@@ -164,6 +181,7 @@ const PostPage = (props: PostPageProps) => {
         Success,
         Destructive,
         Neutral,
+        Edit,
         BlogLink,
         TweetComponent
     }
