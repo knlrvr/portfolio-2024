@@ -17,6 +17,7 @@
     "@types/react-syntax-highlighter": "^15.5.11",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
+    "class-variance-authority": "^0.7.0",
     "convex": "^1.10.0",
     "framer-motion": "^11.0.6",
     "gray-matter": "^4.0.3",
