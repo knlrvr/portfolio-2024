@@ -1,15 +1,28 @@
 import { Reveal } from "../utils/reveal";
-
+import AuthorCard from "./authorcard";
+import Link from "next/link";
 
 export default function About() {
     return (
         <Reveal>
             {/* <span></span> */}
-            <p className="text-neutral-300 text-sm font-light tracking-wide leading-6 mt-2">
-                Hi! I&apos;m <span className="text-blue-200">Kane</span>. I&apos;m a software developer based in the US. My work is focused on building engaging & memorable experiences
-                for the web while advocating for <em>accessibility</em>, <em>affordability</em>, & <em>equity</em>. 
-                <br />
-            </p>
+            <div className="flex flex-col space-y-16">
+                <AuthorCard />
+
+                <div className="text-sm">
+                    <Reveal>
+                        <span className="font-migra text-xl tracking-widest">About</span>
+                    </Reveal>
+                    
+                    <Reveal>
+                        <p className="text-neutral-300 text-sm font-light tracking-wide leading-6 mt-8">
+                            Hi! I&apos;m <span className="text-blue-200">Kane</span>. I&apos;m a software developer based in the US. My work is focused on building engaging & memorable experiences
+                            for the web while advocating for <em>accessibility</em>, <em>affordability</em>, & <em>equity</em>. 
+                            <br />
+                        </p>
+                    </Reveal>
+                </div>
+            </div>
         </Reveal>
     )
 }

@@ -61,15 +61,15 @@ const OnRepeat: React.FC = () => {
         <div className="flex items-center">
           <BsSpotify 
             className="text-green-500 text-4xl" />
-          <div className="flex flex-col ml-4 group-hover:text-neutral-500 transition-colors duration-200">
-            <p className="font-migra text-sm tracking-widest">On Repeat</p>
-            <p className="font-light text-xs tracking-wide">
+          <div className="flex flex-col ml-4">
+            <p className="font-migra text-sm tracking-widest text-neutral-500">On Repeat</p>
+            <p className="font-light text-xs tracking-wide group-hover:underline underline-offset-4">
               {randomSong ? `${randomSong.title} by ${randomSong.artist}` : 'No song selected'}
             </p>
           </div>
         </div>
         <div className="mr-2">
-          <RxArrowTopRight className="group-hover:text-neutral-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-200" />
+          <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
         </div>
       </Link>
     </Reveal>

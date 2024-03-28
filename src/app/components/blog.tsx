@@ -27,8 +27,8 @@ export default function BlogPreview() {
 
             <Reveal>
                 <Link href="/blog" className="flex items-center gap-1 text-sm text-neutral-500 group">
-                    <span className="underline underline-offset-4 group-hover:text-neutral-200 transition-colors duration-200">All posts</span>
-                    <span className="group-hover:text-neutral-200 group-hover:translate-x-1.5 transition duration-200">
+                    <span className="hover:underline underline-offset-4 ">All posts</span>
+                    <span className="group-hover:translate-x-1.5 transition duration-100">
                         <RxArrowRight />
                     </span>
                 </Link>

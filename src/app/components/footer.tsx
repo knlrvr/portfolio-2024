@@ -34,29 +34,29 @@ export default function Footer() {
                     <div className="flex flex-col space-y-2">
                         <div className="flex items-center gap-1">
                             <FiSmile />
-                            <p>Built by <Link href="https://github.com/knlrvr" target="_blank" aria-label='GitHub' className="underline underline-offset-4 hover:text-neutral-200 transition-colors duration-200">Kane Lariviere</Link>.</p>
+                            <p>Built by <Link href="https://github.com/knlrvr" target="_blank" aria-label='GitHub' className="text-neutral-200 hover:underline underline-offset-4">Kane Lariviere</Link>.</p>
                         </div>
                         <div className="flex items-center gap-1">
                             <FiCode /> 
                             <p>Built with&nbsp;
-                                <Link href="https://nextjs.org/" target="_blank" aria-label='Next.js' className="underline underline-offset-4 hover:text-neutral-200 transition-colors duration-200">
+                                <Link href="https://nextjs.org/" target="_blank" aria-label='Next.js' className="text-neutral-200 hover:underline underline-offset-4">
                                     Next.js
                                 </Link>,&nbsp;
-                                <Link href="https://tailwindcss.com/" target="_blank" aria-label='Tailwind' className="underline underline-offset-4 hover:text-neutral-200 transition-colors duration-200">
+                                <Link href="https://tailwindcss.com/" target="_blank" aria-label='Tailwind' className="text-neutral-200 hover:underline underline-offset-4">
                                     Tailwind
                                 </Link>, &&nbsp;
-                                <Link href="https://www.convex.dev/" target="_blank" aria-label='Convex' className="underline underline-offset-4 hover:text-neutral-200 transition-colors duration-200">
+                                <Link href="https://www.convex.dev/" target="_blank" aria-label='Convex' className="text-neutral-200 hover:underline underline-offset-4">
                                     Convex
                                 </Link>.
                             </p>
                         </div>
                         <div className="flex items-center gap-1">
                             <FiGithub />
-                            <p>Source code available on <Link href="https://github.com/knlrvr/kanelariviere-new" target="_blank" aria-label='Source Code on GitHub' className="underline underline-offset-4 hover:text-neutral-200 transition-colors duration-200">GitHub</Link>.</p>
+                            <p>Source code available on <Link href="https://github.com/knlrvr/kanelariviere-new" target="_blank" aria-label='Source Code on GitHub' className="text-neutral-200 hover:underline underline-offset-4">GitHub</Link>.</p>
                         </div>
                         <div className="flex items-center gap-1">
                             <FiTriangle />
-                            <p>Hosted on <Link href="https://vercel.com" target="_blank" aria-label='Vercel Hosting' className="underline underline-offset-4 hover:text-neutral-200 transition-colors duration-200">Vercel</Link>.</p>
+                            <p>Hosted on <Link href="https://vercel.com" target="_blank" aria-label='Vercel Hosting' className="text-neutral-200 hover:underline underline-offset-4">Vercel</Link>.</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-6 text-lg">
