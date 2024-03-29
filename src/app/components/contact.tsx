@@ -6,11 +6,11 @@ export default function Contact() {
     return (
         <div className="text-sm">
             <Reveal>
-                <span className="font-migra text-xl tracking-widest">Connect</span>
+                <span className="font-medium text-base tracking-wide">Connect</span>
             </Reveal>
             
             <Reveal>
-                <p className="mt-8 font-light tracking-wide">Find me at&nbsp;
+                <p className="mt-4 font-light tracking-wide text-neutral-400">Find me at&nbsp;
                     <Link href="https://twitter.com/knlrvr" target="_blank"
                         className="hover:underline underline-offset-4">@knlrvr</Link> 
                     &nbsp;or&nbsp;

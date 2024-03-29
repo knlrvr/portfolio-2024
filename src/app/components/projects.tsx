@@ -5,10 +5,10 @@ export default function Projects() {
     return (
         <div className="text-sm">
             <Reveal>
-                <span className="font-migra text-xl tracking-widest">Projects</span>
+                <span className="font-medium text-base tracking-wide">Recent Projects</span>
             </Reveal>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 mt-8 gap-8">
+            <div className="grid grid-cols-1 mt-4 gap-8">
                 {/* <ProjectCard
                     url='https://github.com/knlrvr/create-exwind-app'
                     title='create-exwind-app'

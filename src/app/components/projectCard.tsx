@@ -14,8 +14,8 @@ export default function ProjectCard({ url, title, description }: ProjectCardProp
     return (
         <Reveal>
             <div className="flex flex-col space-y-2">
-                <Link href={url} target="_blank" className="flex items-center gap-1 group w-fit">
-                    <span className="group-hover:underline underline-offset-4">{title} </span>
+                <Link href={url} target="_blank" className="flex items-center justify-between gap-1 group text-neutral-300">
+                    <span className="group-hover:underline underline-offset-4 ">&mdash;&nbsp; {title} </span>
                     <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
                 </Link>
                 <p className="text-neutral-500">{description}</p>

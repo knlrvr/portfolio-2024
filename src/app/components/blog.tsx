@@ -18,16 +18,16 @@ export default function BlogPreview() {
     return (
         <div className="text-sm">
             <Reveal>
-                <span className="font-migra text-xl tracking-widest">Blog</span>
+                <span className="font-medium text-base tracking-wide">Blog</span>
             </Reveal>
             
-            <div className="mt-8">
+            <div className="mt-4">
                 {postPreviews}
             </div>
 
             <Reveal>
-                <Link href="/blog" className="flex items-center gap-1 text-sm text-neutral-500 group">
-                    <span className="hover:underline underline-offset-4 ">All posts</span>
+                <Link href="/blog" className="flex items-center gap-1 text-sm text-neutral-500 group w-fit">
+                    <span className="group-hover:underline underline-offset-4 ">All posts</span>
                     <span className="group-hover:translate-x-1.5 transition duration-100">
                         <RxArrowRight />
                     </span>

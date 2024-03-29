@@ -10,7 +10,7 @@ export default function Tech() {
             <div className="mt-8 flex flex-col space-y-8">
 
                 <div>
-                    <span className="font-medium tracking-wide">Office &mdash;</span>
+                    <span className="font-medium tracking-widest">Office &mdash;</span>
                     <ul className="text-sm list-disc ml-4 mt-2 text-neutral-500">
                         <li>M1 Mac Mini (2020)</li>
                         <li>M1 MacBook Air (2020)</li>
@@ -23,7 +23,7 @@ export default function Tech() {
                 </div>
 
                 <div>
-                    <span className="font-medium tracking-wide">Coding &mdash;</span>
+                    <span className="font-medium tracking-widest">Coding &mdash;</span>
                     <ul className="text-sm list-disc ml-4 mt-2 text-neutral-500">
                         <li><strong>Editor</strong>: VSCode </li>
                         <li><strong>Theme</strong>: Vitesse Black</li>
@@ -33,7 +33,7 @@ export default function Tech() {
                 </div>
 
                 <div>
-                    <span className="font-medium tracking-wide">Organization &mdash;</span>
+                    <span className="font-medium tracking-widest">Organization &mdash;</span>
                     <ul className="text-sm list-disc ml-4 mt-2 text-neutral-500">
                         <li>Obsidian</li>
                         <li>Excalidraw</li>
@@ -42,7 +42,7 @@ export default function Tech() {
                 </div>
 
                 <div>
-                    <span className="font-medium tracking-wide">Gaming &mdash;</span>
+                    <span className="font-medium tracking-widest">Gaming &mdash;</span>
                     <ul className="text-sm list-disc ml-4 mt-2 text-neutral-500">
                         <li>Windows 10</li>
                         <li>Intel Core i5 9400F</li>
@@ -58,7 +58,7 @@ export default function Tech() {
                 </div>
 
                 <div>
-                    <span className="font-medium tracking-wide">Audio / Video &mdash;</span>
+                    <span className="font-medium tracking-widest">Audio / Video &mdash;</span>
                     <ul className="text-sm list-disc ml-4 mt-2 text-neutral-500">
                         <li>PreSonus Eris 3.5 Monitors</li>
                         <li>Scarlett 4i4 Interface</li>
@@ -72,7 +72,7 @@ export default function Tech() {
                 </div>
 
                 <div>
-                    <span className="font-medium tracking-wide">Music &mdash;</span>
+                    <span className="font-medium tracking-widest">Music &mdash;</span>
                     <ul className="text-sm list-disc ml-4 mt-2 text-neutral-500">
                         <li>Gibson Les Paul</li>
                         <li>Orange Crush Pro 120 Amp Head + Orange FS2</li>
