@@ -38,12 +38,12 @@ export default function Projects() {
                     description='A portfolio template inspired by Bartosz Jarocki&apos;s Next.js/shadcn CV.'
                     // tech={['HTML', 'CSS', 'JavaScript']}
                 />
-                <ProjectCard
+                {/* <ProjectCard
                     url='https://knlrvr.com'
                     title='knlrvr.com'
                     description='My previous portfolio. Design heavy. Dark mode optional.'
                     // tech={['TypeScript', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex']}
-                />
+                /> */}
             </div>
         </div>
     )

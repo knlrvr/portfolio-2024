@@ -4,10 +4,12 @@ import { usePathname } from "next/navigation"
 
 import Link from 'next/link'
 
+import { LuSquareSlash } from 'react-icons/lu'
 
 const items = [
     { label: 'blog', href: '/blog', },
-    { label: 'guestbook', href: '/guestbook' }
+    { label: 'guestbook', href: '/guestbook' },
+    { label: <LuSquareSlash />, href: '/tech' }
 ]
 
 export default function Header() {
@@ -28,7 +30,7 @@ export default function Header() {
                 <div className="">knlrvr</div>
             )} 
 
-            <ul className="flex gap-8">
+            <ul className="flex items-center gap-8">
                 {items.map((item) => (
                     <li key={item.href} className="">
                         <Link href={item.href} className="hover:underline underline-offset-4">
