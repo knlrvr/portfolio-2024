@@ -13,20 +13,11 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import type { Metadata } from "next";
 
 import PostPreview from '@/app/components/homepostpreview';
-import AuthorCard from '@/app/components/authorcard';
 
 import { CodeBlock } from '@/app/components/codeblock';
 import { TweetComponent } from '@/app/components/tweet';
 
 import Callout from '@/app/components/blog/callout';
-
-// import { 
-//     RxCheck, 
-//     RxCross2, 
-//     RxExclamationTriangle, 
-//     RxCube,
-//     RxPencil1 
-// } from 'react-icons/rx';
 
 import Link from 'next/link';
 
@@ -92,62 +83,6 @@ export async function generateMetadata({
         },
     };
 }
-
-// function Disclaimer({ children }: { children: React.ReactNode}) {
-//     return (
-//       <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
-//         <div className="flex items-center mr-4 w-6 text-yellow-600 text-lg">
-//             <RxExclamationTriangle />
-//         </div>
-//         <div className="w-full text-sm text-neutral-500">{children}</div>
-//       </div>
-//     );
-// }
-
-// function Success({ children }: {children: React.ReactNode}) {
-//     return (
-//         <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
-//             <div className="flex items-center mr-4 w-6 text-green-500 text-lg">
-//                 <RxCheck />
-//             </div>
-//             <div className="w-full text-sm text-neutral-500">{children}</div>
-//         </div>
-//     );
-// }
-
-// function Destructive({ children }: {children: React.ReactNode}) {
-//     return (
-//         <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
-//             <div className="flex items-center mr-4 w-6 text-red-500">
-//                 <RxCross2 />
-//             </div>
-//             <div className="w-full text-sm text-neutral-500">{children}</div>
-//         </div>
-//     );
-// }
-
-// function Neutral({ children }: { children: React.ReactNode }) {
-//     return (
-//         <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
-//             <div className="flex items-center mr-4 w-6 text-blue-500 text-lg">
-//                 <RxCube />
-//             </div>
-//             <div className="w-full text-sm text-neutral-500">{children}</div>
-//         </div>
-//     );
-// }
-
-// function Edit({ children }: { children: React.ReactNode }) {
-//     return (
-//         <div className="px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6">
-//             <div className="flex items-center mr-4 w-6 text-yellow-300 text-lg">
-//                 <RxPencil1 />
-//             </div>
-//             <div className="w-full text-sm text-neutral-500">{children}</div>
-//         </div>
-//     );
-// }
-
 
 interface BlogLinkProps {
     href: string;
@@ -225,19 +160,13 @@ const PostPage = (props: PostPageProps) => {
                                 <span className="mb-4 w-fit font-light tracking-wider text-sm">
                                     {post.data.date}
                                 </span>
-                                {/* <AuthorCard /> */}
                             </div>
                         </div>
                     </Reveal>
                 </div>
 
-                {/* <Reveal>
-                    <AuthorCard />
-                </Reveal> */}
 
                 <div className="flex flex-col mb-8 space-y-2">
-                    {/* <hr className="bg-neutral-500 border-0 h-[0.05rem]"/> */}
-                    {/* <span className="text-xs">Tags &mdash;</span> */}
                     <Reveal>
                         <div className="flex flex-wrap gap-y-2">
                             {post.data.tags.map((tag: string) => (
