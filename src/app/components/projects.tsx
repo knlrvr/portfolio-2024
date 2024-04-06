@@ -5,10 +5,10 @@ export default function Projects() {
     return (
         <div className="text-sm">
             <Reveal>
-                <span className="font-medium text-base tracking-wide">Recent Projects</span>
+                <span className="font-medium text-base tracking-wider">Recent Projects</span>
             </Reveal>
             
-            <div className="grid grid-cols-1 mt-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-4 gap-x-12 gap-y-8">
                 {/* <ProjectCard
                     url='https://github.com/knlrvr/create-exwind-app'
                     title='create-exwind-app'
@@ -29,7 +29,7 @@ export default function Projects() {
                 <ProjectCard
                     url='https://github.com/knlrvr/abstract'
                     title='ABSTRACT Store'
-                    description='Abstract is an ecommerce platform that offers a unique focus on concepts related to consumerism and materialism. This is satire.'
+                    description='An ecommerce platform that offers a unique focus on concepts related to consumerism and materialism. This is satire.'
                     // tech={['JavaScript', 'Next.js', 'Tailwind', 'MongoDB']}
                 />
                 <ProjectCard
@@ -38,12 +38,12 @@ export default function Projects() {
                     description='A portfolio template inspired by Bartosz Jarocki&apos;s Next.js/shadcn CV.'
                     // tech={['HTML', 'CSS', 'JavaScript']}
                 />
-                {/* <ProjectCard
-                    url='https://knlrvr.com'
-                    title='knlrvr.com'
-                    description='My previous portfolio. Design heavy. Dark mode optional.'
+                <ProjectCard
+                    url='https://github.com/knlrvr/portfolio-2024'
+                    title='knlrvr.dev'
+                    description='This portfolio. Minimal. Very nice.'
                     // tech={['TypeScript', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex']}
-                /> */}
+                />
             </div>
         </div>
     )

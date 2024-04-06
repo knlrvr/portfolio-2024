@@ -60,9 +60,9 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="flex items-center gap-6 text-lg">
-                        <Link href="mailto:hello@knlrvr.com" target="_blank" aria-label='Email' className="hover:text-neutral-200 transition-colors duration-200">
+                        {/* <Link href="mailto:hello@knlrvr.com" target="_blank" aria-label='Email' className="hover:text-neutral-200 transition-colors duration-200">
                             <BsEnvelope />
-                        </Link>
+                        </Link> */}
                         <Link href="https://github.com/knlrvr" target="_blank" aria-label='knlrvr on GitHub' className="hover:text-neutral-200 transition-colors duration-200">
                             <BsGithub />
                         </Link>
@@ -71,9 +71,6 @@ export default function Footer() {
                         </Link>
                         <Link href="https://twitter.com/knlrvr" target="_blank" aria-label='Twitter' className="hover:text-neutral-200 transition-colors duration-200">
                             <BsTwitterX />
-                        </Link>
-                        <Link href="https://www.threads.net/@kanelarivieresucks" target="_blank" aria-label='Threads' className="hover:text-neutral-200 transition-colors duration-200">
-                            <BsThreads />
                         </Link>
                         <Link href="https://www.twitch.tv/knlrvr" target="_blank" aria-label='Twitch' className="hover:text-neutral-200 transition-colors duration-200">
                             <BsTwitch />

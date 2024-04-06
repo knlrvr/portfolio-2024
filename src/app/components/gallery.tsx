@@ -76,28 +76,44 @@ const Gallery: React.FC = () => {
     setRandomPictures(selectedPictures);
   }, []);
 
+  useEffect(() => {
+    const selectedPictures: Picture[] = [];
+
+    while (selectedPictures.length < 1) {
+      const randomIndex = Math.floor(Math.random() * pictures.length);
+      const randomPicture = pictures[randomIndex];
+
+      // Ensure the selected picture is not already in the list
+      if (!selectedPictures.some((pic) => pic.url === randomPicture.url)) {
+        selectedPictures.push(randomPicture);
+      }
+    }
+
+    setRandomPictures(selectedPictures);
+  }, []);
+
   return (
     <>
-    <Reveal>
-      <div className="grid gap-x-8 gap-y-12 mb-20">
-        {randomPictures.map((picture, index) => (
-            <div key={index} className="first:col-span-4 first:md:col-span-3 relative group flex justify-center overflow-hidden rounded-2xl shadow-md">
-              <Image 
-                src={picture.url} 
-                alt={`Random Picture ${index + 1} - ${picture.location}`} 
-                width="1000"
-                height="1000"
-                className="h-64 sm:h-96 w-full object-cover rounded-2xl" 
-              />
-              <div className="absolute transform duration-500 -bottom-10 left-2 group-hover:bottom-2">
-                <div className="bg-[#111] p-2 rounded-lg text-sm text-neutral-500">
-                  <p>{picture.location}</p>
+      <Reveal>
+        <div className="grid gap-x-4 gap-y-4 mb-20">
+          {randomPictures.map((picture, index) => (
+              <div key={index} className="relative group flex justify-center overflow-hidden rounded-2xl shadow-md">
+                <Image 
+                  src={picture.url} 
+                  alt={`Random Picture ${index + 1} - ${picture.location}`} 
+                  width="1000"
+                  height="1000"
+                  className="h-full sm:h-96 w-full object-cover rounded-2xl" 
+                />
+                <div className="absolute transform duration-500 -bottom-10 left-2 group-hover:bottom-2">
+                  <div className="bg-[#111] p-2 rounded-lg text-sm text-neutral-500">
+                    <p>{picture.location}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-        ))}
-      </div>
-    </Reveal>
+          ))}
+        </div>
+      </Reveal>
     </>
   );
 };

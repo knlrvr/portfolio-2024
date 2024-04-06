@@ -1,25 +1,21 @@
 import { Reveal } from '@/app/utils/reveal';
-
 import { notFound } from "next/navigation";
-
 import getPostMetadata from '@/app/utils/PostMetadata';
 
 import fs from 'fs'
 import matter from "gray-matter";
-
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
-
 import type { Metadata } from "next";
-
 import PostPreview from '@/app/components/homepostpreview';
 
 import { CodeBlock } from '@/app/components/codeblock';
 import { TweetComponent } from '@/app/components/tweet';
-
 import Callout from '@/app/components/blog/callout';
 
 import Link from 'next/link';
+
+import { RxArrowTopRight } from "react-icons/rx";
 
 const getPostContent = (slug: string) => {
     const folder = "posts";
@@ -94,7 +90,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
     if (href.startsWith('/')) {
         return (
             <Link href={href}
-                className='inline-block'>
+                className='inline-flex items-center text-neutral-200 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-200 transition-colors duration-100'>
                 {children}
             </Link>
         )
@@ -102,8 +98,9 @@ function BlogLink({ href, children }: BlogLinkProps) {
 
     return (
         <Link href={href} target='_blank' rel="noopener noreferrer" 
-            className="inline-block">
+            className=" text-neutral-200 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-200 transition-colors duration-100">
             {children} 
+            <RxArrowTopRight className="inline-block" />
         </Link>
     );
 }

@@ -5,9 +5,9 @@ tags: ['Next.js', 'Convex', 'webdev', 'tutorial']
 date: 'November 3, 2023'
 ---
 
-While I was taking a look around at "professional dev" portfolios (that's literally what I googled) and trying to turn inspiration into creation for my new portfolio, I came across <BlogLink href='https://leerob.io/'>Lee Robinson's Portfolio &nearr;</BlogLink>. I was a big fan of the overall design, but I was far more intrigued with their *guestbook*. I'd never seen a guestbook on a portfolio site, and as soon as I saw it, I knew I had to have one. Luckily, I'd had my fair share of work in setting up authentication and databases, especially after my work on <BlogLink href='https://github.com/knlrvr/ttrpcompanion'>TTRPCompanion &nearr;</BlogLink>, so I knew it wouldn't be anything too far from my current realm of knowledge. However, I wanted to learn more. It's a portfolio, right? I should be showcasing my skills, or at least my ability to learn new skills quickly. 
+While I was taking a look around at "professional dev" portfolios (that's literally what I googled) and trying to turn inspiration into creation for my new portfolio, I came across <BlogLink href='https://leerob.io/'>Lee Robinson's Portfolio</BlogLink>. I was a big fan of the overall design, but I was far more intrigued with their *guestbook*. I'd never seen a guestbook on a portfolio site, and as soon as I saw it, I knew I had to have one. Luckily, I'd had my fair share of work in setting up authentication and databases, especially after my work on <BlogLink href='https://github.com/knlrvr/ttrpcompanion'>TTRPCompanion</BlogLink>, so I knew it wouldn't be anything too far from my current realm of knowledge. However, I wanted to learn more. It's a portfolio, right? I should be showcasing my skills, or at least my ability to learn new skills quickly. 
 
-As a (mostly) self-taught dev & CS student, I try to keep up with current news, making sure I'm following plenty of accomplished (but reputable!) tech influencers & content creators. In doing so, I saw that <BlogLink href='https://www.youtube.com/@WebDevCody/featured'>Web Dev Cody &nearr;</BlogLink> was hosting a hackathon. I wasn't able to participate in the hackathon, but it was based on <BlogLink href='https://www.convex.dev/'>Convex &nearr;</BlogLink>, a backend platform. The timing was perfect. 
+As a (mostly) self-taught dev & CS student, I try to keep up with current news, making sure I'm following plenty of accomplished (but reputable!) tech influencers & content creators. In doing so, I saw that <BlogLink href='https://www.youtube.com/@WebDevCody/featured'>Web Dev Cody</BlogLink> was hosting a hackathon. I wasn't able to participate in the hackathon, but it was based on <BlogLink href='https://www.convex.dev/'>Convex</BlogLink>, a backend platform. The timing was perfect. 
 
 I was looking for something to learn, and I'd found it. And it was a **dream** to work with. So, here's how I added a guestbook to my portfolio using Convex.   
 
@@ -47,7 +47,7 @@ export default function ConvexClientProvider({
 }
 ```
 
-However, this code isn't used at all. **Why?** Since I wanted the functionality of a guestbook, I needed to know *who* was signing it. For this, I needed some kind of authentication. Since I was using Convex, I decided to use [Clerk](https://docs.convex.dev/auth/clerk) for authentication, as they have a super easy setup. Setting the database up with authentication differs slightly from what's provided in the quickstart guide. 
+However, this code isn't used at all. **Why?** Since I wanted the functionality of a guestbook, I needed to know *who* was signing it. For this, I needed some kind of authentication. Since I was using Convex, I decided to use <BlogLink href='https://docs.convex.dev/auth/clerk'>Clerk</BlogLink> for authentication, as they have a super easy setup. Setting the database up with authentication differs slightly from what's provided in the quickstart guide. 
 
 Before doing anything else in the project, I needed to create a new application in Clerk. Within Clerk, I chose the Convex template, and copied the Issuer URL from the Issuer input field, and saved the template. Now, in the **convex** folder, I created **auth.config.js** and pasted the following code from Convex, changing the *domain* to what was actually generated. 
 
@@ -195,32 +195,16 @@ export const getNotes = query({
 const notes = useQuery(api.notes.getNotes);
 
 {notes?.map(note => {
-  const creationTimeMs = note._creationTime;
-  const date = new Date(creationTimeMs);
-
-//  const options: Intl.DateTimeFormatOptions = {
-//    year: 'numeric',
-//    month: 'short',
-//    day: 'numeric',
-//    hour: '2-digit',
-//    minute: '2-digit',
-//  }
-
-  const formattedDate = date.toLocaleDateString('en-US', options);
-
-  return <div key={note._id} className="flex flex-col tracking-wide">
-    <div className="text-xs my-2"> 
+  return <div key={note._id} className="flex flex-col">
+    <div className="text-[0.825rem] my-2"> 
       <span className="text-neutral-500">{note.author}:</span>
-        <span className="">&nbsp;{note.body}</span> 
-      </div>
-      {/* <span className="text-neutral-500 text-xs">{formattedDate}</span> */}
+      <span className="tracking-wide">&nbsp;{note.body}</span> 
     </div>
+  </div>
 })}
 ```
 
-###### I used to display the date & time of each message, but I've since removed that feature. 
-
-The complete code for ***notes.tsx*** & ***guestbook.tsx*** can be found below or in the <BlogLink href='https://github.com/knlrvr/kanelariviere-new'>GitHub Repo for my new portfolio &nearr;</BlogLink>. In the complete code, we can see that I also depended on some react hooks and conditional rendering for the finished product. 
+The complete code for ***notes.tsx*** & ***guestbook.tsx*** can be found below or in the <BlogLink href='https://github.com/knlrvr/kanelariviere-new'>GitHub Repo for my new portfolio</BlogLink>. In the complete code, we can see that I also depended on some react hooks and conditional rendering for the finished product. 
 
 ```js 
 // notes.tsx
@@ -360,4 +344,4 @@ export default Guestbook
 ## Conclusion
 And that's how I used Convex to set up a Guestbook in my portfolio! It was a relatively easy set up, and I'm happy to have it now! If you come across it or want to post on it, please do! Again, almost *all* of this information can be found directly in the Convex docs. 
 
-To learn more about Convex, visit <BlogLink href='https://www.convex.dev/'>convex.dev &nearr;</BlogLink> & as always, **happy coding**!
+To learn more about Convex, visit <BlogLink href='https://www.convex.dev/'>convex.dev</BlogLink> & as always, **happy coding**!

@@ -6,12 +6,12 @@ export default function About() {
     return (
         <Reveal>
             {/* <span></span> */}
-            <div className="flex flex-col space-y-16">
+            <div className="mt-2 flex flex-col space-y-16">
                 <AuthorCard />
 
                 <div className="text-sm">
                     <Reveal>
-                        <span className="font-medium text-base tracking-wide">About</span>
+                        <span className="font-medium text-base tracking-wider">About</span>
                     </Reveal>
                     
                     <Reveal>

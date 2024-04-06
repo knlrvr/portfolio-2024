@@ -18,7 +18,7 @@ export default function BlogPreview() {
     return (
         <div className="text-sm">
             <Reveal>
-                <span className="font-medium text-base tracking-wide">Blog</span>
+                <span className="font-medium text-base tracking-wider">Blog</span>
             </Reveal>
             
             <div className="mt-4">

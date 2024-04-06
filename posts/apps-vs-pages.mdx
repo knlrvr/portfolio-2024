@@ -85,7 +85,9 @@ From my experience, and what I've been able to gather from others, it might seem
 ## Using Both Directories
 The app router works alongside the pages directory to allow for incremental adoption of the new router, so it's really only advised to use both during migration. 
 
-###### Tip &mdash; When using both directories, you do have to be mindful of the different behaviors in layouts, state management, metadata, routing hooks, data fetching, etc. More about that below. 
+<Callout variant='default'>
+**Tip** &mdash; When using both directories, you do have to be mindful of the different behaviors in layouts, state management, metadata, routing hooks, data fetching, etc. More about that below. 
+</Callout>
 
 For example, I used the **pages** directory in my previous portfolio to showcase my projects. This was all handled in a file named **[url].tsx** that was located in the pages directory. Within that file, I use two functions that aren't supported in the app directory &mdash; *getStaticProps* & *getStaticPaths*. 
 
@@ -173,7 +175,7 @@ const fetchWorksData = (url: string): Project => {
 }
 ```
 
-My previous portfolio was migrated to the new app router with the support of <BlogLink href='https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration'>these Next.js docs &nearr;</BlogLink>. It was a relatively easy process, but there are some important notes about behaviors to be mindful of that I went through during the migration. 
+My previous portfolio was migrated to the new app router with the support of <BlogLink href='https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration'>these Next.js docs</BlogLink>. It was a relatively easy process, but there are some important notes about behaviors to be mindful of that I went through during the migration. 
 
 For example, if you changed the theme and then navigated to any of the **/work** pages, the theme would revert to it's default setting, which was dependent on the time of day. The theme wasn't persisting between my projects in the pages router, and the rest of the site in the app router. 
 
@@ -251,12 +253,12 @@ I certainly wouldn't *recommend* using both routers, but it's certainly possible
 
 ## More about Next.js
 **Always read the docs!**   
-For more information about Next.js version 13, visit <BlogLink href='https://nextjs.org/blog/next-13'>nextjs.org &nearr;</BlogLink>.    
-For more information about migrating from Pages to App, visit <BlogLink href='https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration'>the Incremental Adoption Guide from Next.js &nearr;</BlogLink>.  
-For more information about what the app router offers over the pages router, please visit <BlogLink href='https://nextjs.org/'>nextjs.org &nearr;</BlogLink>.
+For more information about Next.js version 13, visit <BlogLink href='https://nextjs.org/blog/next-13'>nextjs.org</BlogLink>.    
+For more information about migrating from Pages to App, visit <BlogLink href='https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration'>the Incremental Adoption Guide from Next.js</BlogLink>.  
+For more information about what the app router offers over the pages router, please visit <BlogLink href='https://nextjs.org/'>nextjs.org</BlogLink>.
 
 ## This Portfolio
-As always, all of my work is open source. Visit <BlogLink href='https://github.com/knlrvr/kanelariviere-new'>the repo for my previous portfolio &nearr;</BlogLink> where you can see these ideas and take a look around!
+As always, all of my work is open source. Visit <BlogLink href='https://github.com/knlrvr/kanelariviere-new'>the repo for my previous portfolio</BlogLink> where you can see these ideas and take a look around!
 
 ## Conclusion 
 Choosing the right tools can make all the difference when creating efficient and scalable applications, and nearly every approach comes with its own set of considerations. It's important to address these considerations and figure out what will work best for you. 
