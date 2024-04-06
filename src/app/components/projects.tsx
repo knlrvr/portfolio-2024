@@ -41,7 +41,7 @@ export default function Projects() {
                 <ProjectCard
                     url='https://github.com/knlrvr/portfolio-2024'
                     title='knlrvr.dev'
-                    description='This portfolio. Minimal. Very nice.'
+                    description='This portfolio. Minimal. Very nice. Please sign the guestbook!'
                     // tech={['TypeScript', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex']}
                 />
             </div>
