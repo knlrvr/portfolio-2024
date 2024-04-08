@@ -14,7 +14,7 @@ import Callout from '@/app/components/blog/callout';
 
 import Link from 'next/link';
 
-import { RxArrowTopRight } from "react-icons/rx";
+import { RxArrowTopRight } from "react-icons/rx"; 
 
 const getPostContent = (slug: string) => {
     const folder = "posts";
