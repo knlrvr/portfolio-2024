@@ -23,7 +23,7 @@ const Blog = () => {
     <div className="">
 
       <Reveal>
-        <div className="flex flex-col mt-2">
+        <div className="flex flex-col mt-2"> 
           {postPreviews}
         </div>
       </Reveal>
