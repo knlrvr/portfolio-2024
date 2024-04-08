@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Header from "./components/header";
 import About from "./components/about";
 import Projects from "./components/projects";
 import BlogPreview from "./components/blog";
@@ -23,7 +21,6 @@ export default function Home() {
       <Contact />
       <Gallery />
       <OnRepeat />
-      {/* <div className="flex flex-grow" /> */}
     </main> 
   );
 }
