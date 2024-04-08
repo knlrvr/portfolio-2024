@@ -22,7 +22,6 @@ export async function GET(req: NextRequest) {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
-          backgroundRepeat: 'no-repeat',
           backgroundImage: 'url(https://knlrvr.dev/og-bg.png)',
         }}
       >
