@@ -7,7 +7,6 @@ import matter from "gray-matter";
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
 import type { Metadata } from "next";
-import PostPreview from '@/app/components/homepostpreview';
 
 import { CodeBlock } from '@/app/components/codeblock';
 import { TweetComponent } from '@/app/components/tweet';
@@ -123,11 +122,11 @@ const PostPage = (props: PostPageProps) => {
         notFound;
     }
 
-    const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    const filteredPostMetadata = postMetadata.filter((p) => p.slug !== slug)
-    const postPreviews = filteredPostMetadata.slice(0, 3).map((filteredPost) => (
-      <PostPreview key={filteredPost.slug} {...filteredPost} />
-    ));
+    // const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    // const filteredPostMetadata = postMetadata.filter((p) => p.slug !== slug)
+    // const postPreviews = filteredPostMetadata.slice(0, 3).map((filteredPost) => (
+    //   <PostPreview key={filteredPost.slug} {...filteredPost} />
+    // ));
 
     return (
         <section>

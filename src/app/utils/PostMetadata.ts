@@ -16,7 +16,7 @@ const getPostMetadata = (): PostMetadata[] => {
   
     // get data from file 
     const posts = markdownPosts.map((fileName) => {
-      const fileContents = fs.readFileSync(`posts/${fileName}`, 'utf8');
+      const fileContents = fs.readFileSync(`./posts/${fileName}`, 'utf8');
       const matterResult = matter(fileContents);
   
       return {
