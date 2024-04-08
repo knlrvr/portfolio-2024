@@ -2,6 +2,8 @@ import { Reveal } from '@/app/utils/reveal';
 import { notFound } from "next/navigation";
 import getPostMetadata from '@/app/utils/PostMetadata';
 
+import HomePostPreview from '@/app/components/homepostpreview';
+
 import fs from 'fs'
 import matter from "gray-matter";
 import { MDXRemote } from 'next-mdx-remote/rsc'
@@ -122,11 +124,11 @@ const PostPage = (props: PostPageProps) => {
         notFound;
     }
 
-    // const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    // const filteredPostMetadata = postMetadata.filter((p) => p.slug !== slug)
-    // const postPreviews = filteredPostMetadata.slice(0, 3).map((filteredPost) => (
-    //   <PostPreview key={filteredPost.slug} {...filteredPost} />
-    // ));
+    const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const filteredPostMetadata = postMetadata.filter((p) => p.slug !== slug)
+    const postPreviews = filteredPostMetadata.slice(0, 3).map((filteredPost) => (
+      <HomePostPreview key={filteredPost.slug} {...filteredPost} />
+    ));
 
     return (
         <section>
@@ -189,6 +191,12 @@ const PostPage = (props: PostPageProps) => {
                     </Reveal>
                 </article>
 
+                {/* <div className="mt-32 flex flex-col space-y-8 border-t border-neutral-500 pt-16">
+                    <span className="font-medium text-base tracking-wider">More Posts</span>
+                    <div>
+                        {postPreviews}
+                    </div>
+                </div> */}
             </div>
         </section>
     )
