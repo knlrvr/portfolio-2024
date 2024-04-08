@@ -27,14 +27,14 @@ export async function GET(req: NextRequest) {
       >
         <div 
           style={{
-            marginLeft: 100,
+            marginLeft: 60,
             marginRight: 190,
-            marginBottom: 120,
+            marginBottom: 100,
             display: 'flex',
-            fontSize: 130,
+            fontSize: 100,
             letterSpacing: '-0.025em',
             color: 'white',
-            lineHeight: '130px',
+            lineHeight: '105px',
             whiteSpace: 'pre-wrap',
           }}
         >
@@ -43,8 +43,8 @@ export async function GET(req: NextRequest) {
       </div>
     ),
     {
-      width: 1920,
-      height: 1080,
+      width: 1200,
+      height: 630,
       fonts: [
         {
           name: 'Migra Extralight',
