@@ -22,6 +22,7 @@ export async function GET(req: NextRequest) {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
+          backgroundRepeat: 'no-repeat',
           backgroundImage: 'url(https://knlrvr.dev/og-bg.png)',
         }}
       >
@@ -43,8 +44,8 @@ export async function GET(req: NextRequest) {
       </div>
     ),
     {
-      width: 1200,
-      height: 630,
+      width: 1920,
+      height: 1080,
       fonts: [
         {
           name: 'Migra Extralight',
