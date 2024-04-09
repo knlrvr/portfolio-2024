@@ -6,7 +6,6 @@ export const runtime = 'edge';
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const postTitle = searchParams.get('title');
-
   const font = fetch(
     new URL('../../../public/fonts/Migra-Extralight.otf', import.meta.url)
   ).then((res) => res.arrayBuffer());

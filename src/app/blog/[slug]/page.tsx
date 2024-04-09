@@ -50,6 +50,7 @@ export async function generateMetadata({
 
     let {
         title,
+        date: publishedTime,
         description,
         image,
     } = post;
@@ -65,6 +66,7 @@ export async function generateMetadata({
             title, 
             description,
             type: 'article',
+            publishedTime,
             url: `https://knlrvr.dev/blog/${post.slug}`,
             images: [
                 {
@@ -192,13 +194,6 @@ const PostPage = (props: PostPageProps) => {
                         /> 
                     </Reveal>
                 </article>
-
-                {/* <div className="mt-32 flex flex-col space-y-8 border-t border-neutral-500 pt-16">
-                    <span className="font-medium text-base tracking-wider">More Posts</span>
-                    <div>
-                        {postPreviews}
-                    </div>
-                </div> */}
             </div>
         </section>
     )
