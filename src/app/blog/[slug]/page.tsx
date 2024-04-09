@@ -13,6 +13,7 @@ import type { Metadata } from "next";
 import { CodeBlock } from '@/app/components/codeblock';
 import { TweetComponent } from '@/app/components/tweet';
 import Callout from '@/app/components/blog/callout';
+import Edit from '@/app/components/blog/edit';
 
 import Link from 'next/link';
 
@@ -117,9 +118,10 @@ const PostPage = (props: PostPageProps) => {
 
     const components = {
         code: ({ node, inline, className, children, ...props }: any) => (
-            <CodeBlock language={props.language} value={children}/>
+            <CodeBlock language={props.language} value={children} />
         ),
         Callout,
+        Edit,
         BlogLink,
         TweetComponent
     }

@@ -22,8 +22,8 @@ export default function Callout({ variant, children }: { variant: Variant; child
     const { icon, color } = variantStyles[variant];
 
     return (
-        <div className={`px-4 flex gap-2 border border-neutral-500 border-opacity-20 rounded-md bg-[#222] bg-opacity-20 my-6`}>
-            <div className={`flex items-center mr-4 w-6 ${color} text-lg`}>
+        <div className={`px-4 flex gap-2 rounded-md bg-[#222] bg-opacity-20 my-6`}>
+            <div className={`flex items-center mr-4 w-6 ${color} text-xl`}>
                 {icon}
             </div>
             <div className="w-full text-sm text-neutral-500">{children}</div>

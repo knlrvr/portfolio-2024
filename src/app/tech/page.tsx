@@ -6,7 +6,7 @@ export default function Tech() {
         <div>
             <Reveal>
                 <span className="text-neutral-300 text-sm font-light tracking-wide leading-6 mt-2">
-                    Since you found my <em className="text-blue-200">super secret</em> page, here&apos;s a list of the things I use nearly every day.
+                    Here&apos;s a list of the things I use nearly every day.
                 </span>
             </Reveal>
 

@@ -26,7 +26,7 @@ export const CodeBlock = ({ language, value }: CodeBlockProps) => {
     };
 
     return (
-        <div>
+        <div className="">
             {!isCopied ? (
                 <button onClick={() => {
                     copyCode();
@@ -37,7 +37,14 @@ export const CodeBlock = ({ language, value }: CodeBlockProps) => {
                 <div
                 className="flex w-full justify-end text-lg -mb-4 opacity-50 text-[#808080]"><RxCheck /></div>
             )}
-            <SyntaxHighlighter language={language} style={atomOneDark} customStyle={{ background: '#151515'}}>{value}</SyntaxHighlighter>
+            <SyntaxHighlighter 
+                language={language} 
+                style={atomOneDark} 
+                customStyle={{ 
+                    background: '#151515',
+                }}
+            >{value}
+            </SyntaxHighlighter>
         </div>
     )
 }
