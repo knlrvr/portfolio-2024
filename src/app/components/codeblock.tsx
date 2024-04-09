@@ -2,8 +2,6 @@
 
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 
-import { srcery } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 import { RxCopy, RxCheck } from "react-icons/rx";

@@ -93,7 +93,7 @@ interface BlogLinkProps {
 
 function BlogLink({ href, children }: BlogLinkProps) {
 
-    if (href.startsWith('/')) {
+    if (href.startsWith('#' || '/')) {
         return (
             <Link href={href}
                 className='inline-flex items-center text-neutral-200 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-200 transition-colors duration-100'>
@@ -137,7 +137,7 @@ const PostPage = (props: PostPageProps) => {
     ));
 
     return (
-        <section>
+        <section className="">
             <script
                 type='application/ld+json'
                 suppressHydrationWarning
@@ -182,7 +182,7 @@ const PostPage = (props: PostPageProps) => {
 
                 <article className="blog prose text-neutral-200 prose-strong:text-neutral-200 prose-headings:text-neutral-200 max-w-full
                                     prose-sm prose-code:text-sm prose-pre:bg-[#151515] prose-pre:mb-1
-                                    prose-h6:text-xs prose-h6:text-neutral-500 prose-p:font-light
+                                    prose-h6:text-xs prose-h6:text-neutral-600 prose-p:font-light
                                     prose-h4:text-lg prose-h4:tracking-wider prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-normal prose-h3:tracking-wider
                                     prose-h2:font-medium prose-h2:tracking-widest

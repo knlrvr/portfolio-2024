@@ -1,0 +1,247 @@
+---
+title: Reworking My Portfolio For 2024
+description: New year, new portfolio
+date: April 9, 2024
+tags: ['webdev', 'Next.js', 'MDX']
+---
+
+![side by side](/blog-images/old-v-new.png)
+###### Side by side of my old portfolio & my new portfolio.
+
+
+This year (2024), I rebuilt my personal website. My previous sites focused more on design, rather than functionality and 
+content, and I made the decision to focus more on the code this time around. In doing so, I think I still settled on a simple but *clean* design, and I was able to accomplish what I set out for.
+
+Rather than exploring each sweeping change I made, I want to focus on the things that I struggled with the most. Here's a look at them &mdash;
+
+- <BlogLink href='#content'>Content</BlogLink>
+- <BlogLink href='#mdx'>Converting MD to MDX</BlogLink>
+- <BlogLink href='#components'>Using custom components in MDX</BlogLink>
+- <BlogLink href='#env'>Losing&nbsp;*very important*&nbsp;environment variables</BlogLink>
+- <BlogLink href='#issues'>Unknown Issues In Deployment</BlogLink>
+- <BlogLink href='#more-issues'>Even more issues</BlogLink>
+
+<Callout variant='neutral'>
+**Simplicity** - It's worth noting that there are a *ton* of options for what I needed to solve, but.. I'm lazy. Whenever possible, I will choose the simplest solution I can find that doesn't break what I build. 
+</Callout>
+
+<a name='content'></a>
+## Content
+The main focus here was delivering information in a straight forward and digestable way. On my previous portfolio, each project had its own page with details and links to view live/code. The issue I was having was that visitors just weren't visiting those pages. I reworked the projects to include the title and a brief description up-front, with links that will take visitors tothe repository if they're interested in learning more. 
+
+I liked having certain information readily available on my own site, but those pages weren't visited *nearly* as often as the blog or guestbook. I also condensed the about & contact information and moved it to the home page, rather than having its own dedicated page. 
+
+The bulk of information is now readily available for anyone just skimming through the site. 
+
+<a name='mdx'></a>
+## Converting MD to MDX
+This ended up being the biggest pain with the easiest fix. In my defense, this was done late at night after a long day of job hunting (*In the 2024 market, no less*). I wanted the option to use custom components on my blog. Updates or edits, callouts, tips, etc. Changing every file name from 'md' to 'mdx' was obviously a no-brainer. 
+
+To utilize MDX with Next.js, there's a few boxes to check. You have to install the **@next/mdx** package so that Next.js can actually process the markdown. Then you have to create a **mdx-components.tsx** file at the root of the application (usually **src/**, but it'll be the parent folder of **app/**). This file is *required* to use MDX in Next.js. 
+
+```tsx
+import type { MDXComponents } from 'mdx/types'
+
+export function useMDXComponents(components: MDXComponents): MDXComponents {
+	return {
+		...components,
+	}
+}
+```
+
+###### mdx-components.tsx file contents. 
+
+Since I was using Markdown, I already had a component that parsed the Markdown into React elements. I chose <BlogLink href="">react-markdown</BlogLink> specifically because of it's safety in altering markdown. Now that I needed MDX support, the *simplest* solution was to use **next-mdx-remote** instead. 
+
+```tsx
+import { MDXRemote } from 'next-mdx-remote/rsc'
+
+const PostPage = (props: PostPageProps) => {
+	return (
+		<MDXRemote
+			source={post.content}
+			components={{...components}} // more about this below
+		/>
+	)
+}
+```
+
+###### dynamic MDXRemote component
+
+<a name='components'></a>
+## Using Custom Components In MDX
+Now that I had everything set up, I needed to build the custom components! Again, the immediate need was for callouts of some kind, including edits, disclaimers, tips, etc. 
+
+### Callout 
+Here's the **Callout.tsx** &mdash;
+
+```tsx
+import {
+	RxCaretRight,
+	RxCheck, 
+	RxCross2,
+	RxExclamationTriangle,
+	RxCube,
+} from 'react-icons/rx'
+
+type Variant = 'default' | 'success' | 'destructive' | 'disclaimer' | 'neutral';
+
+const variantStyles = Record<Variant, { icon: JSX.Elment; color: string }> = {
+	'default': { icon: <RxCaretRight />, color: 'text-neutral-500' },
+	'success': { icon: <RxCheck />, color: 'text-green-500' },
+	'destructive': { icon: <RxCross2 />, color: 'text-red-500' },
+	'disclaimer': { icon: <RxExlamationTriangle />, color: 'text-orange-500' },
+	'neutral': { icon: <RxCube />, color: 'text-blue-500' },
+};
+
+export default function Callout({ variant, children}: { variant: Variant; children: React.ReactNode }) {
+	const {icon, color} = variantStyles[variant];
+
+	return (
+		<div className="px-4 flex gap-2 rounded-md bg-[#222] bg-opacity-20 my-6">
+			<div className={`flex items-center mr-4 w-6 text-xl ${color}`}
+				{icon}
+			</div>
+			<div className="w-full text-sm text-neutral-500">
+				{children}
+			</div
+		</div>
+	)
+}
+```
+
+###### Callout component
+
+I wanted a *lot* of functionality out of this callout, so establishing variants was important to me. After all, components are supposed to be reusable, right? 
+
+### Edit
+I also have a habit of revisiting old pieces of writing. If I do that, I want to be as transparent as I can be about it. So I built an **Edit** component. 
+
+```tsx
+import { RxPencil1 } from 'react-icons/rx'
+
+export default function Edit({ children }: { children: React.ReactNode }) {
+	return (
+		<div className="px-4 flex gap-2 rounded-md bg-[#222] bg-opacity-20 my-6 relative">
+			<div className="absolute -left-2 -top-2 text-lg border rounded-full text-yellow-500 border-yellow-500 bg-[#111]">
+				<RxPencil1 />
+			</div>
+			<div className="w-full text-sm text-neutral-500 ml-[2.8rem]">
+				{children}
+			</div>
+		</div>
+	)
+}
+```
+
+###### Edit Component
+
+These were the most important components, but I also built **BlogLink** and **Tweet** components, as well. I'd been having trouble with styling links with **tailwind/typography**, and I have a few blog ideas inspired by tweets that I'd like to reference, which is ridiculously easy with **react-tweet**. 
+
+### CodeBlock
+Everyone referencing blocks of code in their blog or other writing needs syntax highlighting. For syntax highlighting, I use **react-syntax-highlighter**. 
+
+```tsx
+'use client' 
+
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight'
+import {atomOneDark} from 'react-syntax-highlighter/dist/esm/styles/hljs'
+
+import { RxCopy, RxCheck } from 'react-icons/rx'
+
+import { useState } from 'react'
+
+interface CodeBlockProps {
+	language: string;
+	value: string;
+}
+
+export const CodeBlock = ({ language, value}: CodeBlockProps) => {
+	const [isCopied, setIsCopied] = useState<boolean>(false);
+
+	const copyCode = () => {
+		navigator.clipboard.writeText(value);
+		setTimeout(() => {
+			setIsCopied(false);
+		}, 3000);
+	};
+	
+	return (
+		<div>
+			{!isCopied ? (
+				<button onClick={() => {
+					copyCode();
+					setIsCopied(true)
+				}}
+				className=""
+				><RxCopy /></button>	
+			) : (
+				<div className=""
+				><RxCheck /></div>
+			)}
+
+			<SyntaxHighlighter
+				language={language}
+				style={atomOneDark}
+				customStyle={{ background: '#151515', }}
+			>{value}</SyntaxHighlighter>
+		</div>
+	)
+}
+```
+
+###### CodeBlock component
+
+<a name='env'></a>
+## Losing Environment Variables
+**Rookie Mistake**. **Skill Issue**. One of the more important yet unrelated tasks was using my MacBook instead of my Mac Mini to build this site. One of the best features is the guestbook, and I didn't want to lose access to that database and have to start over. I mean, some important people from *Convex, the backend of the guestbook*, have left entries! 
+
+At some point, I lost the local files for my portfolio, including **.env**. I don't know how or why, but they were gone. Luckily, I had options. I could have reinitialized the convex app in the new directory, but I ended up just grabbing the environment variables from Vercel on the old portfolio. 
+
+This wasn't a difficult task, it's just *disappointing*. 
+
+<a name='issues'></a>
+### Unknown Issues In Deployment
+Here's where most of my frustration took place, and I still don't quite understand *why* this happened, and I wasn't able to find a lot of information. I ended up making so many minor changes that I'm not even sure what solved it. 
+
+I designed new OG images. One for the main site and one for the blog posts, which uses dynamic data. 
+I deleted the previous images, added the new images, and pushed the commit. I like to watch the build logs on Vercel, so that's what I did. Typically, whenever I make changes, it takes ~45 seconds to redeploy. After ~1 min, I was slightly concerned. 
+
+The build was stuck here &mdash; 
+
+![build log](/blog-images/build-log.png)
+
+What? After ~5 min, I cancelled the deployment. I made a few small changes, and pushed the commit again. I let the new deployment go for ~10 min before I canceled that one, as well. 
+
+*What the hell is going on?*
+
+It was building without issue locally, and *seemed* to build without issue on Vercel, but was getting stuck on **Deploying outputs**. I found <BlogLink href='https://github.com/orgs/vercel/discussions/4032'>this GitHub discussion</BlogLink> with a lot of great info, but *nothing* seemed to do the trick for me. 
+
+### I Think I Fixed It?
+Taking a closer look at the files themselves, I noticed that I had a copy of the **opengraph-image.png** in the public folder. When I deleted it, the next push deployed. 
+
+I wasn't able to find any information about this myself, so the only conclusion I really have is that a duplicate '**opengraph-image.tsx**' was causing *some* kind of issue.
+
+<Callout variant='default'>
+**Updates** &mdash; I've reached out through various support channels, and will update this section of the blog when someone smarter than me (easy) lets me know what might have been going on! 
+</Callout>
+
+<a name='more-issues'></a>
+## Even More Issues
+Once the project was successfully deployed with the new OG images, I realized there were even more issues. The OG image would repeat on the blog pages. 
+
+![repeated og image](/blog-images/og-repeat.png)
+###### Repeating OG Image with dynamic data
+
+The image itself was 1200 x 630, and the hardcoded size in **og/route.tsx** was 1920 x 1080. A hardcoded size of 1920 x 1080 in **og/route.tsx** would cause the 1200 x 630 file to repeat, and a hardcoded size of 1200 x 630 (to match the image) would be zoomed in. 
+
+Solving this issue was just a matter of resizing the image to 1920 x 1080. I was so fed up with the OG images at this point that I considered ditching the dynamic images, but I pushed through! 
+
+## Conclusion
+At the end of the day, there are **far** worse issues to have when building a new project (or rebuilding one), and as frustrated as I was during the process, I'm glad it wasn't worse. Again, this isn't a breakdown of *every* issue I faced or *every* change I made, but these were the noteworthy issues I found myself tackling. 
+
+I'm super happy with the changes I've made. I like the minimal feel of the design, and I'm happy to have spent more time focusing on code than design. 
+
+If you'd like to take a look around, or you want to mess with the code yourself, please do! All of my work is open source and you can find the code here. 
+
+Let me know what you think! & as always **happy coding**! 
