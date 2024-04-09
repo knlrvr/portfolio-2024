@@ -69,14 +69,16 @@ export async function generateMetadata({
             images: [
                 {
                     url: ogImage,
-                }
-            ]
+                },
+            ],
         },
         twitter: {
             card: 'summary_large_image',
             title, 
             description,
-            images: [ogImage]
+            images: [
+                ogImage
+            ]
         },
     };
 }
