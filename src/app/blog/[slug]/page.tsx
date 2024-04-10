@@ -104,7 +104,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
 
     return (
         <Link href={href} target='_blank' rel="noopener noreferrer" 
-            className=" text-neutral-200 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-200 transition-colors duration-100">
+            className="text-neutral-200 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-400 dark:hover:decoration-neutral-200 transition-colors duration-100">
             {children} 
             <RxArrowTopRight className="inline-block" />
         </Link>
@@ -156,8 +156,8 @@ const PostPage = (props: PostPageProps) => {
 
                 <div className="mt-2 mb-2">
                     <Reveal>
-                        <div className="flex flex-col">
-                            <span className="my-2 text-3xl sm:text-4xl tracking-wider">
+                        <div className="flex flex-col text-[var(--text)]">
+                            <span className="my-2 text-3xl sm:text-4xl tracking-tight">
                                 {post.data.title}
                             </span>
                             <div className="flex flex-col justify-between items-start">
@@ -172,7 +172,7 @@ const PostPage = (props: PostPageProps) => {
 
                 <div className="flex flex-col mb-8 space-y-2">
                     <Reveal>
-                        <div className="flex flex-wrap gap-y-2">
+                        <div className="flex flex-wrap gap-y-2"> 
                             {post.data.tags.map((tag: string) => (
                                 <p key={tag} className="mr-4 font-mono text-xs text-neutral-500 underline underline-offset-4">#{tag}</p>
                             ))}
@@ -180,12 +180,12 @@ const PostPage = (props: PostPageProps) => {
                     </Reveal>
                 </div>
 
-                <article className="blog prose text-neutral-200 prose-strong:text-neutral-200 prose-headings:text-neutral-200 max-w-full
+                <article className="blog prose text-neutral-300 prose-headings:text-neutral-200 prose-strong:text-neutral-300 max-w-full
                                     prose-sm prose-code:text-sm prose-pre:bg-[#151515] prose-pre:mb-1
                                     prose-h6:text-xs prose-h6:text-neutral-600 prose-p:font-light
                                     prose-h4:text-lg prose-h4:tracking-wider prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-normal prose-h3:tracking-wider
-                                    prose-h2:font-medium prose-h2:tracking-widest
+                                    prose-h2:font-medium prose-h2:tracking-wide
                                     prose-hr:border-neutral-500
                                     prose-img:rounded-lg
                 ">

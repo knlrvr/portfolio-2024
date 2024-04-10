@@ -18,7 +18,7 @@ export default function BlogPreview() {
     return (
         <div className="text-sm">
             <Reveal>
-                <span className="font-medium text-base tracking-wider">Blog</span>
+                <span className="font-medium text-base tracking-wider text-[var(--text)]">Blog</span>
             </Reveal>
             
             <div className="mt-4">

@@ -25,7 +25,7 @@ export default function Header() {
     return (
         <div className="flex justify-between items-center font-light mb-12 text-neutral-500 text-sm">
             
-            {path.includes('/guestbook') || path.includes('/blog') || path.includes('/tech') ? (
+            {path.includes('/guestbook') || path.includes('/blog') || path.includes('/tech') || path.includes('/works')  ? (
                 <Link href={backHref} className="inline-flex items-center gap-2 hover:underline underline-offset-4"><RxArrowLeft /> back </Link>
             ) : (
                 <div className="">knlrvr</div>

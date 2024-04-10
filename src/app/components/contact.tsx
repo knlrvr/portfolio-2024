@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <div className="text-sm">
             <Reveal>
-                <span className="font-medium text-base tracking-wider">Connect</span>
+                <span className="font-medium text-base tracking-wider ">Connect</span>
             </Reveal>
             
             <Reveal>

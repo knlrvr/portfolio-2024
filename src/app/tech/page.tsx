@@ -6,7 +6,7 @@ export default function Tech() {
         <div>
             <Reveal>
                 <span className="text-neutral-300 text-sm font-light tracking-wide leading-6 mt-2">
-                    Here&apos;s a list of the things I use nearly every day.
+                    Here&apos;s a list of the things I use nearly every day. 
                 </span>
             </Reveal>
 

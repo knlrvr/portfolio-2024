@@ -38,8 +38,9 @@ export const CodeBlock = ({ language, value }: CodeBlockProps) => {
             <SyntaxHighlighter 
                 language={language} 
                 style={atomOneDark} 
-                customStyle={{ 
-                    background: '#151515',
+                customStyle={{  
+                    background: 'var(--code)',
+                    color: 'var(--text)'
                 }}
             >{value}
             </SyntaxHighlighter>

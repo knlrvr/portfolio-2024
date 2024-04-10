@@ -15,31 +15,31 @@ export default function Projects() {
                     description='A CLI tool for generating React projects with Next.js, Tailwind, Convex, & Jest.'
                 /> */}
                 <ProjectCard
-                    url='https://github.com/knlrvr/ttrpc'
+                    url='ttrpc'
                     title='TTRPCompanion'
                     description='A gaming utility app that allows users to track full campaign stats in D&D & other TTRPGs.'
                     // tech={['TypeScript', 'Next.js', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright']}
                 />
                 <ProjectCard
-                    url='https://github.com/knlrvr/theskyisfake'
+                    url='theskyisfake'
                     title='The Sky Is Fake'
                     description='An image sharing platform dedicated to pictures of the sky that just don&apos;t seem real.'
                     // tech={['TypeScript', 'Next.js', 'Tailwind', 'Convex', 'Clerk']}
                 />
                 <ProjectCard
-                    url='https://github.com/knlrvr/abstract'
+                    url='abstract'
                     title='ABSTRACT Store'
                     description='An ecommerce platform that offers a unique focus on concepts related to consumerism and materialism. This is satire.'
                     // tech={['JavaScript', 'Next.js', 'Tailwind', 'MongoDB']}
                 />
                 <ProjectCard
-                    url='https://github.com/knlrvr/portfolio-template'
+                    url='templateportfolio'
                     title='Portfolio Template'
                     description='A portfolio template inspired by Bartosz Jarocki&apos;s Next.js/shadcn CV.'
                     // tech={['HTML', 'CSS', 'JavaScript']}
                 />
                 <ProjectCard
-                    url='https://github.com/knlrvr/portfolio-2024'
+                    url='personalportfolio'
                     title='knlrvr.dev'
                     description='This portfolio. Minimal. Very nice. Please sign the guestbook!'
                     // tech={['TypeScript', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex']}
