@@ -249,7 +249,7 @@ const fetchWorksData = (url: string): Work => {
           height: 1000,
           className: 'w-full h-full'
         },
-        git: 'https://github.com/knlrvr/kanelariviere',
+        git: 'https://github.com/knlrvr/portfolio-2024',
         live: '',
         title: 'My Personal Portfolio',
         category: 'Misc',
