@@ -83,7 +83,7 @@ export default async function WorksPage(
             </Reveal>
   
           <Reveal>
-            <div className="flex flex-col space-y-12">
+            <div className="flex flex-col space-y-12 mb-12">
               <div className="font-light">
                   <span className="font-medium tracking-wide text-xl">Overview</span>
                   <p key={projects?.title} className="blog text-sm mt-4">
@@ -129,7 +129,7 @@ export default async function WorksPage(
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <div className="font-light mt-12">
                   <span className="font-medium tracking-wide text-xl">More Info</span>
                   <p className="blog text-sm mt-4">
@@ -138,7 +138,7 @@ export default async function WorksPage(
                     ))}
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </Reveal>
   
@@ -186,7 +186,7 @@ const fetchWorksData = (url: string): Work => {
         overview: 'TTRPCompanion is a gaming utility app that allows users to track their character\'s stats in D&D or other TTRPG Campaigns. Typically, other available tools weigh on the very basic stats of characters like total HP, ability scores, etc. while TTRPCompanion allows users to track stats that blur the lines between player & character. These stats include total sessions, total time played, total damage dealt, & more! TTRPCompanion allows you to immerse yourself in your own gameplay, without taking you away from your character. Previous version built with tRPC, Prisma, NextAuth, & Supabase.',
         tags: ['TypeScipt', 'React', 'Next.js', 'Tailwind', 'Convex', 'Clerk', 'Jest'],
         year: '2023 ~',
-        more: 'I\'m an avid D&D player, and there wasn\'t a single tool that I found that was able to accomplish what I wanted. So I built it! TTRPCompanion is the consolidation of my favorite tools, and what they were missing.\n The tech I used to build TTRPC were chosen specifically for the DX. I wanted to enjoy the build, not just the finished product. The front end is built with TypeScript, Next.js, & Tailwind with shadcn/ui. I chose Next.js because it\'s feature-rich out-of-the-box, so I was able to accomplish . I chose shadcn/ui so that I could style quickly and efficiently and focus more on the functionality of the app, rather than how it looked.\n In the first version of TTRPCompanion, I used tRPC, Prisma, and Supabase for the back end. I never had any issues with it, but I wanted to explore other options as it became apparent that those technologies weren\'t meeting the needs of the project. In the newest version, I chose Convex for it\'s strong type safety and realtime updates. TTRPCompanion is highly collaborative, so I didn\'t want there to be any question in what users were seeing.',
+        more: '',
         next: '/works/theskyisfake',
         nextTitle: 'The Sky Is Fake'
       },
@@ -207,7 +207,7 @@ const fetchWorksData = (url: string): Work => {
         overview: 'The Sky Is Fake is a full stack social media/image sharing app. Users can sign in through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery showcases images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.',
         tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Convex', 'Clerk'],
         year: '2023 ~',
-        more: 'My family had a group chat where we would often send each other pictures of the sky and say \'the sky is fake\', which my brother had started. A few years ago, my brother passed, but we would still send each other these pictures. I decided I wanted to extend that sentiment to others with The Sky Is Fake.\n The Sky Is Fake lets visitors sign in through various platforms with authentication handled by Clerk, and upload their images. The backend, including file upload & storage, is handled entirely by Convex.',
+        more: '',
         next: '/works/abstract',
         nextTitle: 'Abstract'
       },
@@ -228,7 +228,7 @@ const fetchWorksData = (url: string): Work => {
         overview: 'Abstract is an innovative ecommerce store that offers a unique focus on concepts related to consumerism and materialism. Instead of traditional physical products, Abstract specializes in selling these thought-provoking concepts themselves. By challenging conventional notions of commerce, Abstract provides customers with an intellectual and philosophical exploration of consumerism and materialism.',
         tags: ['JavaScript', 'React', 'Next.js', 'Tailwind', 'MongoDB'],
         year: '2023',
-        more: 'I didn\'t want to make another generic ecommerce experience, so I decided to use concepts rather than actual products, but still deliver them to visitors as actual products.\n The front end is built with JavaScript, React, and Tailwind. The back end utilizes MongoDB. I chose MongoDB because I wanted to experiment with document-oriented databases and their flexibility.',
+        more: '',
         next: '/works/templateportfolio',
         nextTitle: 'Portfolio Template'
       },
@@ -249,7 +249,7 @@ const fetchWorksData = (url: string): Work => {
         overview: 'This portfolio template is a clone of Bartosz Jarocki\'s Next.js + shadcn/ui CV. Anyone who wants to use this can fork the repo and edit the JSON, and they\'re good to go!',
         tags: ['HTML', 'CSS', 'JavaScript'],
         year: '2024 ~',
-        more: 'I came across a CV built with Next.js & shadcn/ui by Bartosz Jarocki. As much as I loved it, as well as what it was built with, it seemed like overengineering. So I rebuilt & slightly altered the design with HTML + CSS. Then I rebuilt it again to pull the information from a JSON file so that anyone who liked it would be able to use it!\n My favorite part about this template is that projects have an \'online\' or \'offline\' key. \'Offline\' projects are rendered in a muted container, and \'online\' projects are rendered in a link container with a little more styling so that users may be more inclined to view them.\n',
+        more: '',
         next: '/works/personalportfolio',
         nextTitle: 'Personal Portfolio'
       },
@@ -270,7 +270,7 @@ const fetchWorksData = (url: string): Work => {
         overview: 'My personal portfolio is where you are now! Take a look around! If you\'d like, you can navigate to the Guestbook page and leave me a note!',
         tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex'],
         year: '2023',
-        more: 'I spent a lot of time trying to design my previous portfolios. This year, 2024, I decided to focus more on the code and let the design come second. In doing so, I settled on a minimal design that still delivers content in a digestible way, and I was able to spend more time optimizing performance, SEO, etc.\n The front end is built with TypeScript, Next.js, & Tailwind. The backend (only utilized by the guestbook) is built with Convex.',
+        more: '',
         next: '/works/ttrpc',
         nextTitle: 'TTRPCompanion'
       },
