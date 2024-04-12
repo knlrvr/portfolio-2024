@@ -136,6 +136,25 @@ const PostPage = (props: PostPageProps) => {
       <HomePostPreview key={filteredPost.slug} {...filteredPost} />
     ));
 
+
+    function getTimeSincePost(postDate: string) {
+        const currentDate = new Date();
+        const postDateObj = new Date(postDate);
+        const timeDifference = currentDate.getTime() - postDateObj.getTime();
+    
+        const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
+        const monthsDifference = Math.floor(daysDifference / 30);
+        const yearsDifference = Math.floor(monthsDifference / 12);
+    
+        if (yearsDifference > 0) {
+            return `${yearsDifference}yr ago`;
+        } else if (monthsDifference > 0) {
+            return `${monthsDifference}mo ago`;
+        } else {
+            return `${daysDifference}d ago`;
+        }
+    }
+
     return (
         <section className="">
             <script
@@ -161,9 +180,9 @@ const PostPage = (props: PostPageProps) => {
                                 {post.data.title}
                             </span>
                             <div className="flex flex-col justify-between items-start">
-                                <span className="mb-4 w-fit font-light tracking-wider text-sm">
-                                    {post.data.date}
-                                </span>
+                                <p className="mb-4 w-fit font-light tracking-wider text-sm">
+                                    {post.data.date} <span className="text-neutral-500">({getTimeSincePost(post.data.date)})</span>
+                                </p>
                             </div>
                         </div>
                     </Reveal>
