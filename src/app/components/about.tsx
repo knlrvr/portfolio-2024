@@ -1,6 +1,6 @@
 import { Reveal } from "../utils/reveal";
 import AuthorCard from "./authorcard";
-import Link from "next/link";
+import Availability from "./availability";
 
 export default function About() {
     return (
@@ -8,6 +8,8 @@ export default function About() {
             {/* <span></span> */}
             <div className="mt-2 flex flex-col space-y-16">
                 <AuthorCard />
+
+                <Availability />
 
                 <div className="text-sm">
                     <Reveal>
