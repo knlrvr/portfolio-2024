@@ -175,10 +175,11 @@ const PostPage = (props: PostPageProps) => {
 
                 <div className="mt-2 mb-2">
                     <Reveal>
-                        <div className="flex flex-col text-[var(--text)]">
-                            <span className="my-2 text-3xl sm:text-4xl tracking-tight">
+                        <div className="flex flex-col space-y-2 text-[var(--text)]">
+                            <span className="text-3xl sm:text-4xl tracking-tight">
                                 {post.data.title}
                             </span>
+                            {/* <p className="text-neutral-400 text-sm my-4">{post.data.description}</p> */}
                             <div className="flex flex-col justify-between items-start">
                                 <p className="mb-4 w-fit font-light tracking-wider text-sm">
                                     {post.data.date} <span className="text-neutral-500">({getTimeSincePost(post.data.date)})</span>
@@ -187,6 +188,7 @@ const PostPage = (props: PostPageProps) => {
                         </div>
                     </Reveal>
                 </div>
+
 
 
                 <div className="flex flex-col mb-8 space-y-2">
