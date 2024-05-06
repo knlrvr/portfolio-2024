@@ -1,0 +1,47 @@
+---
+title: Hoisting In JavaScript
+description: A brief explanation of hoisting in JavaScript
+date: May 6, 2024
+tags: ['JavaScript', 'webdev']
+---
+
+A few weeks ago while I was brushing up on JavaScript for an interview, 
+I thought of a few examples that I believe do a good job of explaining hoisting in JavaScript, so I wanted to share them here!
+
+## Example One &mdash;
+```js
+console.log(foo);
+foo = 1;
+```
+In this example, we'll actually see an *error* in the console.
+
+### Why? 
+Before the assignment *'foo = 1'*, there's an attempt to access the value of *'foo'*. However, *'foo'* has not been declared or initialized yet. This is where something called the **Temporal Dead Zone (TDZ)** comes into play. 
+
+When using *'var'*, variables are hoisted to the top of their scope, but they're not initialized until their actual declaration is reached. So, during the time between hoisting and initialization, the TDZ exists, where trying to access the variable results in an error. 
+
+## Example Two &mdash;
+```js
+console.log(foo);
+var foo = 2;
+```
+In this example, we'll see *undefined* in the console. 
+
+### Why?
+Because of hoisting, *'var foo;'* is moved to the top of the function scope. *It's important to note that only the **variable** itself is hoisted, not it's **assignment**.* Then, the function attempts to log the value of *'foo'*. At this point, the variable is recognized, but no value exists yet. So, rather than an error, we see *undefined*. 
+
+## Example Three &mdash;
+```js
+foo = 3;
+console.log(foo);
+var foo;
+```
+In the third example, we'll see *3* in the console. 
+
+### Why?
+Just as in the second example, *'var foo;'* is moved to the top of the function scope. So our variable has been initialized. It's then immediately assigned a value - *'3'*. So when it comes time to log the variable, it does log the proper value. 
+
+## Conclusion
+Understanding hoisting can become complex as complexity grows in your code, but hopefully these examples and explanations help you along in understanding it! 
+
+Thanks for reading! & as always, **happy coding**! 
