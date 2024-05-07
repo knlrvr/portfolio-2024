@@ -179,7 +179,6 @@ const PostPage = (props: PostPageProps) => {
                             <span className="text-3xl sm:text-4xl tracking-tight">
                                 {post.data.title}
                             </span>
-                            {/* <p className="text-neutral-400 text-sm my-4">{post.data.description}</p> */}
                             <div className="flex flex-col justify-between items-start">
                                 <p className="mb-4 w-fit font-light tracking-wider text-sm">
                                     {post.data.date} <span className="text-neutral-500">({getTimeSincePost(post.data.date)})</span>

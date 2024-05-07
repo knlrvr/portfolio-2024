@@ -5,7 +5,6 @@ import {
     motion, 
     useInView,
     useAnimation,
-    useIsPresent 
 } from 'framer-motion'
 
 interface Props {
@@ -23,7 +22,7 @@ export const Reveal = ({ children}: Props) => {
     if (isInView) {
         mainControls.start('visible');
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <div ref={ref} style={{ position: 'relative', width: 'full', overflow: 'visible' }}>
