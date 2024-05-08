@@ -11,8 +11,8 @@ export default function Availability() {
             
             <Reveal>
                 <p className="flex items-center gap-2 text-neutral-400 text-sm font-light tracking-wide leading-6 mt-4 italic">
-                    <span className="h-2 w-2 rounded-full bg-green-500 inline-flex"></span>
-                    Currently Available
+                    <span className="h-2 w-2 rounded-full bg-red-500 inline-flex"></span>
+                    Currently Unavailable
                 </p>
             </Reveal>
         </div>

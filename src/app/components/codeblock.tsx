@@ -20,7 +20,7 @@ export const CodeBlock = ({ language, value }: CodeBlockProps) => {
         navigator.clipboard.writeText(value);
         setTimeout(() => {
             setIsCopied(false);
-        }, 3000);
+        }, 1000);
     };
 
     return (
@@ -30,10 +30,12 @@ export const CodeBlock = ({ language, value }: CodeBlockProps) => {
                     copyCode();
                     setIsCopied(true);
                 }}
-                className="flex w-full justify-end text-lg -mb-4 opacity-50 text-[#808080]"><RxCopy /></button>
+                className="flex w-full justify-end text-lg -mb-4 opacity-50 text-[#808080]
+                           hover:text-neutral-200 transition-colors duration-200
+                "><RxCopy /></button>
             ) : (
                 <div
-                className="flex w-full justify-end text-lg -mb-4 opacity-50 text-[#808080]"><RxCheck /></div>
+                className="flex w-full justify-end text-lg -mb-4 opacity-50 text-green-500"><RxCheck /></div>
             )}
             <SyntaxHighlighter 
                 language={language} 
