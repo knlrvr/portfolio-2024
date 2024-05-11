@@ -31,10 +31,10 @@ export default function Tech() {
                     <div>
                         <span className="font-medium tracking-widest">Coding &mdash;</span>
                         <ul className="text-sm list-disc ml-4 mt-2 text-neutral-500">
-                            <li><strong>Editor</strong>: VSCode </li>
-                            <li><strong>Theme</strong>: Vitesse Black</li>
-                            <li><strong>Terminal</strong>: Warp</li>
-                            <li><strong>Exploring</strong>: Neovim & Zed</li>
+                            <li><strong className="text-neutral-400">Editor</strong>: VSCode </li>
+                            <li><strong className="text-neutral-400">Theme</strong>: Vitesse Black</li>
+                            <li><strong className="text-neutral-400">Terminal</strong>: Warp</li>
+                            <li><strong className="text-neutral-400">Exploring</strong>: Neovim & Zed</li>
                         </ul>
                     </div>
                 </Reveal>

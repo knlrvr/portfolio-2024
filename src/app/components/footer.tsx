@@ -3,25 +3,17 @@ import {
     FiCode, 
     FiGithub, 
     FiSmile, 
+    FiHeart,
     FiTriangle,
-    FiLinkedin
 } from 'react-icons/fi'
 
-import { 
-    FaXTwitter,
-    FaThreads,
-    FaTwitch,
-    FaEnvelope,
-} from "react-icons/fa6";
 import { Reveal } from '../utils/reveal';
 
 import { 
     BsTwitterX,
     BsTwitch,
-    BsThreads,
     BsLinkedin,
     BsGithub,
-    BsEnvelope
 } from 'react-icons/bs'
 
 
@@ -33,7 +25,7 @@ export default function Footer() {
                 <div className="mt-10 border-t border-neutral-500 flex flex-col sm:flex-row space-y-12 sm:space-y-0 justify-between items-start pt-8 text-xs font-light tracking-wider text-neutral-500">
                     <div className="flex flex-col space-y-2">
                         <div className="flex items-center gap-1">
-                            <FiSmile />
+                            <FiHeart />
                             <p>Built by <Link href="https://github.com/knlrvr" target="_blank" aria-label='GitHub' className="text-neutral-200 hover:underline underline-offset-4">Kane Lariviere</Link>.</p>
                         </div>
                         <div className="flex items-center gap-1">
@@ -60,9 +52,6 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="flex items-center gap-6 text-lg">
-                        {/* <Link href="mailto:hello@knlrvr.com" target="_blank" aria-label='Email' className="hover:text-neutral-200 transition-colors duration-200">
-                            <BsEnvelope />
-                        </Link> */}
                         <Link href="https://github.com/knlrvr" target="_blank" aria-label='knlrvr on GitHub' className="hover:text-neutral-200 transition-colors duration-200">
                             <BsGithub />
                         </Link>

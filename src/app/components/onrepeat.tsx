@@ -13,9 +13,9 @@ import {
 
 const songs = [
   {
-    title: 'Big Blind',
+    title: 'Letterman',
     artist: 'The Story So Far',
-    link: 'https://open.spotify.com/track/5IiyHmNFsTx6PLI2diNH98?si=af2946545b9548c1'
+    link: 'https://open.spotify.com/track/0m2vqOw4QJ4VOe9Q7MgJFH?si=ea4fd8a819844543'
   },
   {
     title: 'Overcome',
@@ -28,19 +28,19 @@ const songs = [
     link: 'https://open.spotify.com/track/6mKFrX61Q81ie7KA5iXVcu?si=70cfa7daf7554ec5'
   },
   {
-    title: 'Chemical',
-    artist: 'Post Malone',
-    link: 'https://open.spotify.com/track/5w40ZYhbBMAlHYNDaVJIUu?si=e83419a0e4b9470f'
+    title: 'ALL GAS',
+    artist: 'Bilmuri',
+    link: 'https://open.spotify.com/track/3g6hGmC8kAXMEh3U8ZpK5S?si=e7aa1df35fef4643'
   },
   {
-    title: '234',
-    artist: 'Driveways',
-    link: 'https://open.spotify.com/track/2kXs5h6xwYvzbYmYlXRK3E?si=6c501bc756044ca2'
+    title: 'The Ghost of Billy Royalton',
+    artist: 'Dance Gavin Dance',
+    link: 'https://open.spotify.com/track/2GOvqxof7rXEN8u1FrQLwr?si=5907707f1f4d415f'
   },
   {
-    title: 'Everywhere, Everything',
-    artist: 'Noah Kahan',
-    link: 'https://open.spotify.com/track/7rn89zBlXChGFTNHFZA8un?si=2a1dd7ebb38a4d66'
+    title: 'NIGHTMARE',
+    artist: 'Cody Ko, Young Nut',
+    link: 'https://open.spotify.com/track/3II25HAiRQ5dGlcFYpVrHy?si=99d1af30e6d24e69'
   }
 ];
 
