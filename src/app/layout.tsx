@@ -21,15 +21,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <body className={inter.className}>
       <ClerkProvider publishableKey='pk_test_dml0YWwtZG9yeS01OC5jbGVyay5hY2NvdW50cy5kZXYk'>
           <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
-              <div className="max-w-2xl mx-auto py-4 flex flex-col min-h-screen">
-                <Header />
+              <div 
+                className="max-w-2xl mx-auto py-4 flex flex-col min-h-screen">
+              <Header />
                 {children}
-              <div className="flex grow" />
               <Footer />
               <Analytics />
               <SpeedInsights />
