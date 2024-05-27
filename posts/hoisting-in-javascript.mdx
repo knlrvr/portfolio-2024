@@ -13,7 +13,7 @@ I thought of a few examples that I believe do a good job of explaining hoisting 
 console.log(foo);
 foo = 1;
 ```
-In this example, we'll see an **error** in the console. 
+In this example, we'll see an *error* in the console. 
 
 ### Why? 
 Before the assignment '*foo = 1*', there's an attempt to access the value of '*foo*'. However, '*foo*' has not been declared or initialized yet. This is where something called the **Temporal Dead Zone (TDZ)** can come into play.
