@@ -13,12 +13,14 @@ I thought of a few examples that I believe do a good job of explaining hoisting 
 console.log(foo);
 foo = 1;
 ```
-In this example, we'll actually see an *error* in the console.
+In this example, we'll see an **error** in the console. 
 
 ### Why? 
-Before the assignment *'foo = 1'*, there's an attempt to access the value of *'foo'*. However, *'foo'* has not been declared or initialized yet. This is where something called the **Temporal Dead Zone (TDZ)** comes into play. 
+Before the assignment 'foo = 1', there's an attempt to access the value of 'foo'. However, 'foo' has not been declared or initialized yet. This is where something called the Temporal Dead Zone (TDZ) can come into play.
 
-When using *'var'*, variables are hoisted to the top of their scope, but they're not initialized until their actual declaration is reached. So, during the time between hoisting and initialization, the TDZ exists, where trying to access the variable results in an error. 
+Variables are hoisted to the top of their scope, but they're not initialized until their actual declaration is reached. So, during the time between hoisting and initialization, the TDZ exists, where trying to access the variable results in an error.
+
+It's worth noting that the **TDZ** only exists for variables declared with '*let*' and '*const*', and not for variables declared with '*var*'. But let's not go *too* deep into that. 
 
 ## Example Two &mdash;
 ```js
