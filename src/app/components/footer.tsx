@@ -44,7 +44,7 @@ export default function Footer() {
                         </div>
                         <div className="flex items-center gap-1">
                             <FiGithub />
-                            <p>Source code available on <Link href="https://github.com/knlrvr/kanelariviere-new" target="_blank" aria-label='Source Code on GitHub' className="text-neutral-200 hover:underline underline-offset-4">GitHub</Link>.</p>
+                            <p>Source code available on <Link href="https://github.com/knlrvr/portfolio-2024" target="_blank" aria-label='Source Code on GitHub' className="text-neutral-200 hover:underline underline-offset-4">GitHub</Link>.</p>
                         </div>
                         <div className="flex items-center gap-1">
                             <FiTriangle />
