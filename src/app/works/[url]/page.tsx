@@ -183,7 +183,7 @@ const fetchWorksData = (url: string): Work => {
         live: 'https://studico.vercel.app/',
         title: 'Studico',
         category: 'Music Production',
-        overview: 'Studico is a web-based music production assistance suite that empowers users to create, collaborate, and share their music. Studico offers a robust tracking system for various aspects of music production, including tasks, file upload and storage, and messaging.',
+        overview: 'Studico is a web-based music production assistance suite that empowers users to create, collaborate, and share their music. Studico offers a robust tracking system for various aspects of music production, including tasks, file upload and storage, and messaging. Studico is meant for small to medium-sized teams, and allows them to have everything they need in one place.',
         tags: ['TypeScipt', 'React', 'Next.js', 'Tailwind', 'shadcn/ui', 'Convex', 'Clerk'],
         year: '2024 ~',
         more: '',
