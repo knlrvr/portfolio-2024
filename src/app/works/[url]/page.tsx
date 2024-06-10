@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 }
 
 import {
-    RxArrowRight,
     RxArrowTopRight
 } from 'react-icons/rx'
 
@@ -158,6 +157,7 @@ export default async function WorksPage(
 
 export async function generateStaticParams() {
     return [
+        { url: "studico" },
         { url: "ttrpc" },
         { url: "theskyisfake" },
         { url: "abstract" },
@@ -170,6 +170,27 @@ const fetchWorksData = (url: string): Work => {
     // Create an object that maps the project URLs to their respective data
     const projectDataMap: { [key: string]: Work } = {
       
+      studico: {
+        url: 'studico',
+        brand: {
+          src: '/brand/studico-brand.png',
+          alt: 'studico logo',
+          width: 1000,
+          height: 1000,
+          className: 'w-full h-full'
+        },
+        git: 'https://github.com/knlrvr/studico',
+        live: 'https://studico.vercel.app/',
+        title: 'Studico',
+        category: 'Music Production',
+        overview: 'TTRPCompanion is a web-based music production assistance suite that empowers users to create, collaborate, and share their music. Studico offers a robust tracking system for various aspects of music production, including tasks, file upload and storage, and messaging.',
+        tags: ['TypeScipt', 'React', 'Next.js', 'Tailwind', 'shadcn/ui', 'Convex', 'Clerk'],
+        year: '2024 ~',
+        more: '',
+        next: '/works/ttrpc',
+        nextTitle: 'TTRPCompanion'
+      },
+
       ttrpc: {
         url: 'ttrpc',
         brand: {
@@ -271,8 +292,8 @@ const fetchWorksData = (url: string): Work => {
         tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex'],
         year: '2023',
         more: '',
-        next: '/works/ttrpc',
-        nextTitle: 'TTRPCompanion'
+        next: '/works/studico',
+        nextTitle: 'Studico'
       },
     };
 

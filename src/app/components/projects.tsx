@@ -9,11 +9,12 @@ export default function Projects() {
             </Reveal>
             
             <div className="grid grid-cols-1 md:grid-cols-2 mt-4 gap-x-12 gap-y-8">
-                {/* <ProjectCard
-                    url='https://github.com/knlrvr/create-exwind-app'
-                    title='create-exwind-app'
-                    description='A CLI tool for generating React projects with Next.js, Tailwind, Convex, & Jest.'
-                /> */}
+                <ProjectCard
+                    url='studico'
+                    title='Studico'
+                    description='A web-based music production assistance suite that empowers users to create, collaborate, and share their music.'
+                    // tech={['TypeScript', 'Next.js', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright']}
+                />
                 <ProjectCard
                     url='ttrpc'
                     title='TTRPCompanion'
