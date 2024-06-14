@@ -173,7 +173,7 @@ const fetchWorksData = (url: string): Work => {
       studico: {
         url: 'studico',
         brand: {
-          src: '/brand/studico-brand.png',
+          src: '/brand/studico-brand-2.png',
           alt: 'studico logo',
           width: 1000,
           height: 1000,
@@ -270,27 +270,6 @@ const fetchWorksData = (url: string): Work => {
         overview: 'This portfolio template is a clone of Bartosz Jarocki\'s Next.js + shadcn/ui CV. Anyone who wants to use this can fork the repo and edit the JSON, and they\'re good to go!',
         tags: ['HTML', 'CSS', 'JavaScript'],
         year: '2024 ~',
-        more: '',
-        next: '/works/personalportfolio',
-        nextTitle: 'Personal Portfolio'
-      },
-  
-      personalportfolio: {
-        url: 'personalportfolio',
-        brand: {
-          src: '/brand/logo-new.png',
-          alt: 'Personal Portfolio',
-          width: 1000,
-          height: 1000,
-          className: 'w-full h-full'
-        },
-        git: 'https://github.com/knlrvr/portfolio-2024',
-        live: '',
-        title: 'My Personal Portfolio',
-        category: 'Misc',
-        overview: 'My personal portfolio is where you are now! Take a look around! If you\'d like, you can navigate to the Guestbook page and leave me a note!',
-        tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex'],
-        year: '2023',
         more: '',
         next: '/works/studico',
         nextTitle: 'Studico'
