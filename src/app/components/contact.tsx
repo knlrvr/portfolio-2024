@@ -6,18 +6,56 @@ export default function Contact() {
     return (
         <div className="text-sm">
             <Reveal>
-                <span className="font-medium text-base tracking-wider ">Connect</span>
+                <span className="font-medium text-base tracking-wider ">Links</span>
             </Reveal>
             
-            <Reveal>
-                <p className="mt-4 font-light tracking-wide text-neutral-400">Find me at&nbsp;
-                    <Link href="https://twitter.com/knlrvr" target="_blank"
-                        className="hover:underline underline-offset-4 hover:text-neutral-200 decoration-neutral-200 transition-colors duration-100">@knlrvr</Link> 
-                    &nbsp;or&nbsp;
-                    <Link href="mailto:hello@knlrvr.com" target="_blank"
-                        className="hover:underline underline-offset-4 hover:text-neutral-200 decoration-neutral-200 transition-colors duration-100">hello@knlrvr.com</Link> 
-                </p>
-            </Reveal>
+
+            <div className="flex flex-col space-y-4 mt-4">
+                <Reveal>
+                    <div className="flex justify-between">
+                        <p className="text-neutral-500">
+                            GitHub
+                        </p>
+                        <Link className="hover:underline underline-offset-4 font-medium tracking-wide" 
+                            href='https://github.com/knlrvr' target="_blank">
+                            @knlrvr
+                        </Link>
+                    </div>
+                </Reveal>
+                <Reveal>
+                    <div className="flex justify-between">
+                        <p className="text-neutral-500">
+                            Twitter
+                        </p>
+                        <Link className="hover:underline underline-offset-4 font-medium tracking-wide" 
+                            href='https://twitter.com/knlrvr' target="_blank">
+                            @knlrvr
+                        </Link>
+                    </div>
+                </Reveal>
+                <Reveal>
+                    <div className="flex justify-between">
+                        <p className="text-neutral-500">
+                            LinkedIn
+                        </p>
+                        <Link className="hover:underline underline-offset-4 font-medium tracking-wide" 
+                            href='https://linkedin.com/in/kane-lariviere' target="_blank">
+                            kane-lariviere
+                        </Link>
+                    </div>
+                </Reveal>
+                <Reveal>
+                    <div className="flex justify-between">
+                        <p className="text-neutral-500">
+                            Email
+                        </p>
+                        <Link className="hover:underline underline-offset-4 font-medium tracking-wide" 
+                            href='mailto:hello@knlrvr.com' target="_blank">
+                            hello@knlrvr.com
+                        </Link>
+                    </div>
+                </Reveal>
+            </div>
         </div>
     )
 }

@@ -22,7 +22,7 @@ export default function Footer() {
         <Reveal>
             <div className="flex flex-col">
                 <div className="grow"></div>
-                <div className="mt-10 border-t border-neutral-500 flex flex-col sm:flex-row space-y-12 sm:space-y-0 justify-between items-start pt-8 text-xs font-light tracking-wider text-neutral-500">
+                <div className="mt-10 border-t border-neutral-500 flex justify-between items-start pt-10 text-xs font-light tracking-wider text-neutral-500">
                     <div className="flex flex-col space-y-2">
                         <div className="flex items-center gap-1">
                             <FiHeart />
@@ -51,7 +51,7 @@ export default function Footer() {
                             <p>Hosted on <Link href="https://vercel.com" target="_blank" aria-label='Vercel Hosting' className="text-neutral-200 hover:underline underline-offset-4">Vercel</Link>.</p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-6 text-lg">
+                    {/* <div className="flex items-center gap-6 text-lg">
                         <Link href="https://github.com/knlrvr" target="_blank" aria-label='knlrvr on GitHub' className="hover:text-neutral-200 transition-colors duration-200">
                             <BsGithub />
                         </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
                         <Link href="https://www.twitch.tv/knlrvr" target="_blank" aria-label='Twitch' className="hover:text-neutral-200 transition-colors duration-200">
                             <BsTwitch />
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Reveal>
