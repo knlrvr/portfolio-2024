@@ -13,35 +13,25 @@ import {
 
 const songs = [
   {
-    title: 'Letterman',
+    title: 'All This Time',
     artist: 'The Story So Far',
-    link: 'https://open.spotify.com/track/0m2vqOw4QJ4VOe9Q7MgJFH?si=ea4fd8a819844543'
+    link: 'https://open.spotify.com/track/5vl4Nfr9bPT1DKZRiQejQr?si=4d4e2246a7a340f0'
   },
   {
-    title: 'Overcome',
-    artist: 'Nothing But Thieves',
-    link: 'https://open.spotify.com/track/18q5OmlDTbSm8w9J1i17dT?si=d03902ace3c9482a'
+    title: 'ANABOLIC SPUDSMAN',
+    artist: 'Bilmuri, Spencer Stewart',
+    link: 'https://open.spotify.com/track/2ZNnF1YqMZiZjJYUKa2Be9?si=41ab285a315e4048'
   },
   {
-    title: 'Seasonal',
-    artist: 'glasslight',
-    link: 'https://open.spotify.com/track/6mKFrX61Q81ie7KA5iXVcu?si=70cfa7daf7554ec5'
+    title: 'Really Big Shrimp',
+    artist: 'Arm\'s Length',
+    link: 'https://open.spotify.com/track/1HrlVqg8nu86YRdMIGOGzT?si=68b8832b0f6e48ac'
   },
   {
-    title: 'ALL GAS',
-    artist: 'Bilmuri',
-    link: 'https://open.spotify.com/track/3g6hGmC8kAXMEh3U8ZpK5S?si=e7aa1df35fef4643'
+    title: 'You\'re Gonna Go Far',
+    artist: 'Noah Kahan',
+    link: 'https://open.spotify.com/track/4nHJcUtNSUVjXRnjdP29Bk?si=c5a66e67171e4175'
   },
-  {
-    title: 'The Ghost of Billy Royalton',
-    artist: 'Dance Gavin Dance',
-    link: 'https://open.spotify.com/track/2GOvqxof7rXEN8u1FrQLwr?si=5907707f1f4d415f'
-  },
-  {
-    title: 'NIGHTMARE',
-    artist: 'Cody Ko, Young Nut',
-    link: 'https://open.spotify.com/track/3II25HAiRQ5dGlcFYpVrHy?si=99d1af30e6d24e69'
-  }
 ];
 
 const OnRepeat: React.FC = () => {
