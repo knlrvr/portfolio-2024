@@ -23,7 +23,7 @@ export default function Contact() {
                     </div>
                 </Reveal>
                 <Reveal>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between"> 
                         <p className="text-neutral-500">
                             Twitter
                         </p>
