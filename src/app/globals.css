@@ -102,3 +102,11 @@ body {
 .tweet div[class*="mediaWrapper"] {
   max-height: 250px;
 }
+
+.hide-scroll {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scroll::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}

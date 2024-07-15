@@ -38,12 +38,14 @@ export const CodeBlock = ({ language, value }: CodeBlockProps) => {
                 className="flex w-full justify-end text-lg -mb-4 opacity-50 text-green-500"><RxCheck /></div>
             )}
             <SyntaxHighlighter 
+                className="hide-scroll"
                 language={language} 
                 style={atomOneDark} 
                 customStyle={{  
                     background: 'var(--code)',
                     color: 'var(--text)'
                 }}
+                
             >{value}
             </SyntaxHighlighter>
         </div>
