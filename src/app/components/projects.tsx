@@ -12,39 +12,28 @@ export default function Projects() {
                 <ProjectCard
                     url='studico'
                     title='Studico'
-                    description='A web-based music production assistance suite that empowers users to create, collaborate, and share their music.'
-                    // tech={['TypeScript', 'Next.js', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright']}
+                    description='A web-based music production assistance suite that empowers small to medium teams to create, collaborate, and share their music.'
                 />
-                <ProjectCard
+                {/* <ProjectCard
                     url='ttrpc'
                     title='TTRPCompanion'
                     description='A gaming utility app that allows users to track full campaign stats in D&D & other TTRPGs.'
-                    // tech={['TypeScript', 'Next.js', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright']}
-                />
+                /> */}
                 <ProjectCard
                     url='theskyisfake'
                     title='The Sky Is Fake'
                     description='An image sharing platform dedicated to pictures of the sky that just don&apos;t seem real.'
-                    // tech={['TypeScript', 'Next.js', 'Tailwind', 'Convex', 'Clerk']}
                 />
-                <ProjectCard
+                {/* <ProjectCard
                     url='abstract'
                     title='ABSTRACT Store'
                     description='An ecommerce platform that offers a unique focus on concepts related to consumerism and materialism. This is satire.'
-                    // tech={['JavaScript', 'Next.js', 'Tailwind', 'MongoDB']}
-                />
+                /> */}
                 <ProjectCard
                     url='templateportfolio'
                     title='Portfolio Template'
-                    description='A portfolio template inspired by Bartosz Jarocki&apos;s Next.js/shadcn CV.'
-                    // tech={['HTML', 'CSS', 'JavaScript']}
+                    description='An HTML + CSS portfolio template inspired by Bartosz Jarocki&apos;s Next.js/shadcn CV.'
                 />
-                {/* <ProjectCard
-                    url='personalportfolio'
-                    title='knlrvr.dev'
-                    description='This portfolio. Minimal. Very nice. Please sign the guestbook!'
-                    // tech={['TypeScript', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex']}
-                /> */}
             </div>
         </div>
     )
