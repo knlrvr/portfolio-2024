@@ -1,0 +1,361 @@
+---
+title: Let's Center A Div
+description: The best & most optimal ways to center a div, based on popular algorithms
+date: July 18, 2024
+tags: ['HTML', 'CSS', 'JavaScript']
+---
+
+We should all know how to center an element. At the very least, we should all have a go-to bookmark for when we forget. 
+
+There's a ton of different ways to center an element. There's probably even a handful of certain design patterns that feel *obvious*. But let's go beyond those patterns. Let's forget our intuition. Let's forget best practices. Let's forget the very nature of HTML & CSS. 
+
+Let's use **JavaScript**. 
+
+Hold on. I know what you're thinking &mdash;
+
+"This is the **worst** idea I've ever heard. This is the **worst** thing I'm going to see. Why can't JS devs just be **normal**? Why couldn't they have stuck with Java or C and **contributed something real** to the field?"
+
+You may be right..
+
+Anyway, these are the top 5 most optimal, straight-forward, and simple ways to center an element, based on real math.
+
+## The Set Up
+
+We're going to use some boilerplate HTML, CSS, and JavaScript in these examples. Something like this &mdash;
+
+```html
+<!-- HTML -->
+
+<div id="div-id"></div>
+```
+
+###### &mdash; Boilerplate HTML
+
+```css
+/* CSS */
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: #222;
+	border-radius: 10px;
+}
+```
+
+###### &mdash; Boilerplate CSS
+
+Again, everything we'll be doing to center this div will be handled by the JavaScript, so the styling is just to see *how* it's handled. 
+
+```js
+// JavaScript 
+
+document.addEventListener('DOMContentLoaded', function() {
+	
+})
+```
+
+###### &mdash; Boilerplate JavaScript
+
+Our JavaScript boilerplate essentially just ensures that the DOM has loaded *before* it executes any of the functions we provide. 
+
+Let's dive in! 
+
+## Method 1 - Binary Search
+
+This method essentially searches for the center of the screen to position the div by applying binary search (*or at least something kind of similar*) to the viewport. It repeatedly divides the search space in half, checking if the div is centered within the viewport and adjusting the position accordingly.
+
+You can use binary search for spatial positioning, right?
+
+```js
+document.addEventListener('DOMContentLoaded', function() {
+
+    const div = document.getElementById('binary-div');
+
+    function calculateCenter(total, size) {
+        let start = 0;
+        let end = total - size;
+        while (end - start > 1) {
+            let mid = Math.floor((start + end) / 2);
+            if (mid + size / 2 < total / 2) {
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+        return Math.floor((start + end) / 2);
+    }
+
+    function centerDiv() {
+
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        const divWidth = div.offsetWidth;
+        const divHeight = div.offsetHeight;
+
+        const leftPosition = calculateCenter(viewportWidth, divWidth);
+        const topPosition = calculateCenter(viewportHeight, divHeight);
+
+        div.style.left = leftPosition + 'px';
+        div.style.top = topPosition + 'px';
+    }
+
+    centerDiv();
+    window.addEventListener('resize', centerDiv);
+}); 
+```
+
+
+## Method 2 - Pixel by Pixel
+
+This method moves the div one pixel at a time from the top-left corner until it reaches the center. We don't take chances with JavaScript, so we have to make sure we have all of our bases covered. 
+
+```js
+document.addEventListener('DOMContentLoaded', function() {
+
+	const div = document.getElementById('pixel-div');
+
+	function centerDivByPixel() {
+		div.style.left = '0px';
+		div.style.top = '0px';
+
+		function moveDiv() {
+			const rect = div.getBoundingClientRect();
+			const centerX = Math.floor(window.innerWidth / 2 - rect.width / 2);
+			const centerY = Math.floor(window.innerHeight / 2 - rect.height / 2);
+
+			let moved = false;
+
+			if (Math.floor(rect.left) < centerX) {
+				div.style.left = (rect.left + 1) + 'px';
+				moved = true;
+			} 
+			if (Math.floor(rect.left) > centerX) {
+				div.style.left = (rect.left - 1) + 'px';
+				moved = true;
+			}
+			if (Math.floor(rect.top) < centerY) {
+				div.style.top = (rect.top + 1) + 'px';
+				moved = true;
+			}
+			if (Math.floor(rect.top) > centerY) {
+				div.style.top = (rect.top - 1) + 'px';
+				moved = true;
+			}
+
+			if (moved) {
+				requestAnimationFrame(moveDiv);
+			} else {
+				console.log('centered')
+			}
+		}
+
+		moveDiv();
+		
+	}
+
+	centerDivByPixel(div);
+	window.addEventListener('resize', () => centerDivByPixel(div));
+})
+```
+
+
+## Method 3 - Trigonometric Spiral
+
+This method moves the div in a spiral to the center using trigonometric functions (*sine & cosine*). This is probably the easiest of the five methods. 
+
+```js
+document.addEventListener('DOMContentLoaded', function() {
+    const div = document.getElementById('spiral-div');
+
+    function spiralCenter(div) {
+        div.style.position = 'absolute';
+        let angle = 0;
+        let radius = Math.max(window.innerWidth, window.innerHeight);
+        
+        function spiral() {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            const x = centerX + radius * Math.cos(angle);
+            const y = centerY + radius * Math.sin(angle);
+            
+            div.style.left = (x - div.offsetWidth / 2) + 'px';
+            div.style.top = (y - div.offsetHeight / 2) + 'px';
+            
+            angle += 0.1;
+            radius *= 0.99;  // Decrease radius by 1% each iteration
+            
+            if (Math.abs(x - centerX) < 1 && Math.abs(y - centerY) < 1) {
+                console.log('Centered!');
+            } else {
+                requestAnimationFrame(spiral);
+            }
+        }
+        
+        spiral();
+    }
+
+    spiralCenter(div);
+    window.addEventListener('resize', () => spiralCenter(div));
+});
+```
+
+
+## Method 4 - Monte Carlo
+
+Remember in Method 2 when I said, 'We don't take chances with JavaScript'? 
+
+Let's do it anyway. I think it's time that we *trusted* the code. We can give it all of the tools it needs to center itself and see what happens. 
+
+This method uses a Monte Carlo approach. It randomly positions the div and checks if it's centered, repeating until it succeeds or reaches the maximum number of attempts. 
+
+```js
+document.addEventListener('DOMContentLoaded', function() {
+
+    function monteCarloCenter() {
+        const div = document.getElementById('monte-carlo');
+
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        const divWidth = div.offsetWidth;
+        const divHeight = div.offsetHeight;
+
+        function randomPosition() {
+            div.style.left = Math.random() * (viewportWidth - divWidth) + 'px';
+            div.style.top = Math.random() * (viewportHeight - divHeight) + 'px';
+        }
+
+        function isCentered() {
+            const rect = div.getBoundingClientRect();
+            const centerX = viewportWidth / 2;
+            const centerY = viewportHeight / 2;
+            const divCenterX = rect.left + rect.width / 2;
+            const divCenterY = rect.top + rect.height / 2;
+            
+            return Math.abs(divCenterX - centerX) < 1 &&
+                   Math.abs(divCenterY - centerY) < 1;
+        }
+
+        let attempts = 0;
+        const maxAttempts = 1000000;
+        let animationId;
+
+        function attemptCenter() {
+            randomPosition();
+            attempts++;
+
+            if (isCentered()) {
+                console.log(`Centered after ${attempts} attempts`);
+                div.textContent = `Centered! (${attempts} attempts)`;
+                cancelAnimationFrame(animationId);
+            } else if (attempts < maxAttempts) {
+                animationId = requestAnimationFrame(attemptCenter);
+            } else {
+                console.log(`Failed to center after ${maxAttempts} attempts`);
+                div.textContent = "Failed to center";
+            }
+        }
+
+        attemptCenter();
+    }
+
+    monteCarloCenter();
+    window.addEventListener('resize', monteCarloCenter);
+});
+```
+
+To be honest, this method succeeded a total of two times out of the five times I ran the function. Once after 10,981 attempts, and again after 172,101 attempts. That's twice out of 4,183,082 attempts. This gives the Monte Carlo method a success rate of **0.0000472%**, which is pretty good, if you ask me. 
+
+
+## Method 5 - Genetic
+
+The method simulates evolution to find the center. It creates a 'population' of potential positions, evaluates their fitness (*proximity to the center*), and evolves a better position over generations. We're essentially using natural selection to find the center. Really basic stuff. 
+
+```js
+document.addEventListener('DOMContentLoaded', function() {
+
+	const div = document.getElementById('genetic-div');
+
+	function centerGeneticDiv(div) {
+		div.style.position = 'absolute';
+
+		const targetX = Math.round((window.innerWidth - div.offsetWidth) / 2);
+		const targetY = Math.round((window.innerHeight - div.offsetHeight) / 2);
+
+		function createIndividual() {
+			return {
+				left: Math.round(Math.random() * (window.innerWidth - div.offsetWidth)),
+				top: Math.round(Math.random() * (window.innerHeight - div.offsetHeight))
+			};
+		}
+
+		function calculateFitness(individual) {
+			const dx = individual.left - targetX;
+			const dy = individual.top - targetY;
+			return 1 / (1 + Math.abs(dx) + Math.abs(dy));
+		}
+
+		function mutate(individual) {
+			const mutationAmount = Math.max(1, Math.round(Math.random() * 10));
+			if (Math.random() < 0.5) {
+				individual.left += Math.random() < 0.5 ? mutationAmount : -mutationAmount;
+			} else {
+				individual.top += Math.random() < 0.5 ? mutationAmount : -mutationAmount;
+			}
+			individual.left = Math.max(0, Math.min(individual.left, window.innerWidth - div.offsetWidth));
+			individual.top = Math.max(0, Math.min(individual.top, window.innerHeight - div.offsetHeight));
+			return individual;
+		}
+
+		let bestIndividual = createIndividual();
+		let bestFitness = calculateFitness(bestIndividual);
+		let generation = 0;
+
+		function evolve() {
+			if (bestFitness === 1 || generation >= 100) {
+				div.style.left = bestIndividual.left + 'px';
+				div.style.top = bestIndividual.top + 'px';
+				div.textContent = `${generation}`;
+				console.log(`Centered after ${generation} generations.`);
+				return;
+			} 
+
+			for (let i = 0; i < 10; i++) {
+				let newIndividual = mutate({...bestIndividual});
+				let newFitness = calculateFitness(newIndividual);
+				
+				if (newFitness > bestFitness) {
+					bestIndividual = newIndividual;
+					bestFitness = newFitness;
+				}
+			}
+
+			if (generation % 10 === 0) {
+				if (bestIndividual.left < targetX) bestIndividual.left++;
+				else if (bestIndividual.left > targetX) bestIndividual.left--;
+				if (bestIndividual.top < targetY) bestIndividual.top++;
+				else if (bestIndividual.top > targetY) bestIndividual.top--;
+			}
+
+			generation++;
+			requestAnimationFrame(evolve);
+		}
+
+		evolve();
+	}
+
+	centerGeneticDiv(div);
+	window.addEventListener('resize', () => centerGeneticDiv(div));
+})
+```
+
+
+## Conclusion 
+
+So, what exactly did we learn from trying to center a div with JavaScript loosely based on various algorithms, other than the fact that JS devs are out of their minds?
+
+Probably not much. This whole experiment was just a reason to procrastinate doing Calculus. If I'm having to worry about math, I'm going to have some fun with it first. 
+
+Did these methods help you? ( *i hope not* )    
+Do you have anything to add? ( *god, i hope not* )    
+
+ Let me know what you think! & as always, **happy coding**! 
