@@ -95,7 +95,7 @@ const Gallery: React.FC = () => {
   return (
     <>
       <Reveal>
-        <div className="grid gap-x-4 gap-y-4 mb-20">
+        <div className="grid gap-x-4 gap-y-4">
           {randomPictures.map((picture, index) => (
               <div key={index} className="relative group flex justify-center overflow-hidden rounded-2xl shadow-md">
                 <Image 
