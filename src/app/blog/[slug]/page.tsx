@@ -137,22 +137,24 @@ const PostPage = (props: PostPageProps) => {
     ));
 
 
-    function getTimeSincePost(postDate: string) {
+    function getTimeSincePost(postDate: string): string {
         const currentDate = new Date();
         const postDateObj = new Date(postDate);
         const timeDifference = currentDate.getTime() - postDateObj.getTime();
-    
-        const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
-        const monthsDifference = Math.floor(daysDifference / 30);
-        const yearsDifference = Math.floor(monthsDifference / 12);
-    
-        if (yearsDifference > 0) {
-            return `${yearsDifference}yr ago`;
-        } else if (monthsDifference > 0) {
-            return `${monthsDifference}mo ago`;
-        } else {
-            return `${daysDifference}d ago`;
+
+        const millisecondsPerDay = 1000 * 60 * 60 * 24;
+        const daysDifference = Math.floor(timeDifference / millisecondsPerDay);
+        if (daysDifference < 30) {
+            return `${daysDifference}d ago`
         }
+
+        const monthsDifference = Math.floor(daysDifference / 30.44);
+        if (monthsDifference < 12) {
+            return `${monthsDifference}m ago`
+        }
+
+        const yearsDifference = Math.floor(daysDifference / 365.25); 
+        return `${yearsDifference}y ago`;
     }
 
     return (

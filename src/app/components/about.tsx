@@ -9,8 +9,6 @@ export default function About() {
             <div className="mt-2 flex flex-col space-y-16">
                 <AuthorCard />
 
-                <Availability />
-
                 <div className="text-sm">
                     <Reveal>
                         <span className="font-medium text-base tracking-wider">About</span>

@@ -1,21 +1,12 @@
 import Link from 'next/link'
 import { 
     FiCode, 
-    FiGithub, 
-    FiSmile, 
+    FiGithub,  
     FiHeart,
     FiTriangle,
 } from 'react-icons/fi'
 
 import { Reveal } from '../utils/reveal';
-
-import { 
-    BsTwitterX,
-    BsTwitch,
-    BsLinkedin,
-    BsGithub,
-} from 'react-icons/bs'
-
 
 export default function Footer() {
     return (
