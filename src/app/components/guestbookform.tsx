@@ -76,7 +76,7 @@ const GuestbookForm = () => {
             return <div key={note._id} className="flex flex-col">
               <div className="text-[0.825rem] my-2"> 
                 <span className="text-neutral-500">{note.author}:</span>
-                <span className="tracking-wider">&nbsp;{note.body}</span> 
+                <span className="font-light tracking-wide leading-6 mt-4">&nbsp;{note.body}</span> 
               </div>
             </div>
           })}
