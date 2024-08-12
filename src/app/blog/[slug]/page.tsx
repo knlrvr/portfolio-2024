@@ -111,6 +111,14 @@ function BlogLink({ href, children }: BlogLinkProps) {
     );
 }
 
+function InlineCode({ children }: { children: React.ReactNode}) {
+    return (
+        <span className="font-mono">
+            &nbsp;`<span className="text-blue-400">{children}</span>`&nbsp;
+        </span>
+    )
+}
+
 const PostPage = (props: PostPageProps) => {
 
     const slug = props.params.slug;
@@ -123,7 +131,8 @@ const PostPage = (props: PostPageProps) => {
         Callout,
         Edit,
         BlogLink,
-        TweetComponent
+        TweetComponent,
+        InlineCode
     }
     
     if (!post) {
