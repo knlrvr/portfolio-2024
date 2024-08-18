@@ -1,6 +1,7 @@
 import GuestbookForm from "../components/guestbookform";
 
 import type { Metadata } from 'next'
+import { Section } from "../components/section";
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Guestbook',
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 
 export default function Guestbook() {
     return (
-        <GuestbookForm />
+        <Section title="Guestbook">
+            <GuestbookForm />
+        </Section>
     )
 }

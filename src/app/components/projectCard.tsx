@@ -7,10 +7,10 @@ interface ProjectCardProps {
     url: string;
     title: string;
     description: string;
-    // tech: string[];
+    tech: Array<string>;
 }
 
-export default function ProjectCard({ url, title, description }: ProjectCardProps) {
+export default function ProjectCard({ url, title, description, tech }: ProjectCardProps) {
     return (
         <Reveal>
             <div className="flex flex-col space-y-2">
@@ -19,7 +19,8 @@ export default function ProjectCard({ url, title, description }: ProjectCardProp
                     <span className="group-hover:underline underline-offset-4 font-medium tracking-wide">{title} </span>
                     <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
                 </Link>
-                <p className="text-neutral-500">{description}</p>
+                <p className="text-neutral-400">{description}</p>
+                <p className="text-neutral-500 text-xs">{tech}</p>
             </div>
         </Reveal>
     )

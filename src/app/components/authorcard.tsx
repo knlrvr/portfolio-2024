@@ -11,11 +11,12 @@ export default function AuthorCard() {
                     alt="twitter profile picture"
                     width={1000}
                     height={1000}
-                    className="h-12 w-12 rounded-full"
+                    className="h-20 w-20 rounded-full"
                 />
                 <div className="flex flex-col">
-                    <p className="font-medium text-base tracking-wide">Kane Lariviere <em className="text-neutral-400 font-light">( knlrvr )</em></p>
+                    <p className="font-light text-2xl tracking-wide">Kane Lariviere</p>
                     <p className="text-neutral-400 font-light tracking-wide text-sm">Software Developer</p>
+                    <p className="text-neutral-500 tracking-wide text-sm">knlrvr</p>
                 </div>
             </div>
         </Reveal>

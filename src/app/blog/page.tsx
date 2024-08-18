@@ -6,6 +6,7 @@ import getPostMetadata from '../utils/PostMetadata';
 import BlogPostPreview from '../components/blogpostpreview';
 
 import type { Metadata } from 'next';
+import { Section, Subsection } from '../components/section';
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Blog',
@@ -20,15 +21,9 @@ const Blog = () => {
   ));
 
   return (
-    <div className="">
-
-      <Reveal>
-        <div className="flex flex-col mt-2">
-          {postPreviews}
-        </div>
-      </Reveal>
-
-    </div>
+    <Section title="Blog">
+      {postPreviews}
+    </Section>
   )
 }
 
