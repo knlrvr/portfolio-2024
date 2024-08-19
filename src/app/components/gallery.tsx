@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Reveal } from '../utils/reveal';
+import { Section, Subsection } from './section';
 
 const pictures = [
   {
@@ -93,28 +94,24 @@ const Gallery: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <Reveal>
-        <div className="grid gap-x-4 gap-y-4">
-          {randomPictures.map((picture, index) => (
-              <div key={index} className="relative group flex justify-center overflow-hidden rounded-2xl shadow-md">
-                <Image 
-                  src={picture.url} 
-                  alt={`Random Picture ${index + 1} - ${picture.location}`} 
-                  width="1000"
-                  height="1000"
-                  className="h-full sm:h-96 w-full object-cover rounded-2xl" 
-                />
-                <div className="absolute transform duration-500 -bottom-10 left-2 group-hover:bottom-2">
-                  <div className="bg-[#111] p-2 rounded-lg text-sm text-neutral-500">
-                    <p>{picture.location}</p>
-                  </div>
-                </div>
-              </div>
-          ))}
+    <Section title="">
+      {randomPictures.map((picture, index) => (
+        <div key={index} className="relative group flex justify-center overflow-hidden rounded-2xl shadow-md">
+          <Image 
+            src={picture.url} 
+            alt={`Random Picture ${index + 1} - ${picture.location}`} 
+            width="1000"
+            height="1000"
+            className="h-full sm:h-96 w-full object-cover rounded-2xl" 
+          />
+          <div className="absolute transform duration-500 -bottom-10 left-2 group-hover:bottom-2">
+            <div className="bg-[#111] p-2 rounded-lg text-sm text-neutral-500">
+              <p>{picture.location}</p>
+            </div>
+          </div>
         </div>
-      </Reveal>
-    </>
+      ))}
+    </Section>
   );
 };
 

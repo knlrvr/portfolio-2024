@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex flex-col">
                 <div className="grow"></div>
                 <div className="mt-10 border-t border-neutral-500 flex justify-between items-start pt-10 text-xs font-light tracking-wider text-neutral-500">
-                    <div className="flex flex-col space-y-2">
+                    <div className="flex flex-col space-y-2 text-neutral-400">
                         <div className="flex items-center gap-1">
                             <FiHeart />
                             <p>Built by <Link href="https://github.com/knlrvr" target="_blank" aria-label='GitHub' className="text-neutral-200 hover:underline underline-offset-4">Kane Lariviere</Link>.</p>
@@ -42,20 +42,6 @@ export default function Footer() {
                             <p>Hosted on <Link href="https://vercel.com" target="_blank" aria-label='Vercel Hosting' className="text-neutral-200 hover:underline underline-offset-4">Vercel</Link>.</p>
                         </div>
                     </div>
-                    {/* <div className="flex items-center gap-6 text-lg">
-                        <Link href="https://github.com/knlrvr" target="_blank" aria-label='knlrvr on GitHub' className="hover:text-neutral-200 transition-colors duration-200">
-                            <BsGithub />
-                        </Link>
-                        <Link href="https://www.linkedin.com/in/kane-lariviere" target="_blank" aria-label='LinkedIn' className="hover:text-neutral-200 transition-colors duration-200">
-                            <BsLinkedin />
-                        </Link>
-                        <Link href="https://twitter.com/knlrvr" target="_blank" aria-label='Twitter' className="hover:text-neutral-200 transition-colors duration-200">
-                            <BsTwitterX />
-                        </Link>
-                        <Link href="https://www.twitch.tv/knlrvr" target="_blank" aria-label='Twitch' className="hover:text-neutral-200 transition-colors duration-200">
-                            <BsTwitch />
-                        </Link>
-                    </div> */}
                 </div>
             </div>
         </Reveal>

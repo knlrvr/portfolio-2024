@@ -61,9 +61,9 @@ const GuestbookForm = () => {
                 placeholder='Leave a message here!'
               />
               <button
-                className="px-6 uppercase py-1.5 w-20 flex justify-center items-center font-light text-sm border rounded-md hover:text-neutral-500 transition-colors duration-200">sign</button>
+                className="px-6 uppercase py-1.5 w-20 flex justify-center items-center font-light text-sm rounded-md bg-[#e5e5e5] text-[#111] hover:bg-neutral-400 transition-colors duration-200">sign</button>
             </form>
-            <div className=" text-xs text-neutral-500">
+            <div className="text-xs text-neutral-500">
               <SignOutButton />
             </div>
           </div>
@@ -71,7 +71,7 @@ const GuestbookForm = () => {
       )}
       
       <Reveal>
-        <div className="pt-10 text-sm">
+        <div className="pt-6 text-sm">
           {notes?.map(note => {
             return <div key={note._id} className="flex flex-col">
               <div className="text-[0.825rem] my-2"> 
