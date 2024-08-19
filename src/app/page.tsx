@@ -21,8 +21,8 @@ export default function Home() {
       <About />
       <Work />
       <Projects />
-      <BlogPreview />
       <Contact />
+      <BlogPreview />
       <Gallery />
       <OnRepeat />
     </main> 

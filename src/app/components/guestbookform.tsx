@@ -25,7 +25,7 @@ const GuestbookForm = () => {
           <Reveal>
             <div className="mt-4 rounded-full text-sm mb-[2.15rem] w-fit">
               <SignInButton mode='modal' afterSignInUrl='/guestbook'>
-                <div className="flex items-center gap-1 text-sm text-neutral-500 group cursor-pointer">
+                <div className="flex items-center gap-1 text-sm text-neutral-400 group cursor-pointer">
                   <span className="group-hover:underline underline-offset-4">Sign in to leave a message</span>
                   <span className="group-hover:translate-x-1.5 transition duration-100">
                       <RxArrowRight />

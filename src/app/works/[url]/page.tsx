@@ -65,14 +65,14 @@ export default async function WorksPage(
           )}
 
             <Reveal> 
-                <div className="mt-4 mb-8">
+                <div className="mt-4 mb-4">
                     <Reveal>
                         <div className="flex flex-col">
                             <span className="my-2 text-3xl sm:text-4xl tracking-tight">
                                 {projects?.title}
                             </span>
                             <div className="flex flex-col justify-between items-start">
-                                <span className="w-fit font-light tracking-widest text-neutral-400 text-xs rounded-full border px-4 py-1 border-neutral-400">
+                                <span className="w-fit font-light tracking-widest text-neutral-500 text-xs rounded-full border px-4 py-1 border-neutral-500">
                                     {projects?.category}
                                 </span>
                             </div>
@@ -84,7 +84,6 @@ export default async function WorksPage(
           <Reveal>
             <div className="flex flex-col space-y-12 mb-12">
               <div className="font-light">
-                  <span className="font-medium tracking-wide text-xl">Overview</span>
                   <p key={projects?.title} className="blog text-sm mt-4">
                     {projects?.overview}
                   </p>
@@ -92,25 +91,25 @@ export default async function WorksPage(
 
               <div className="text-sm grid grid-cols-1 sm:grid-cols-3 gap-y-6">
                 <div className="w-full flex flex-col">
-                  <span className="font-light tracking-wider text-xs mb-1 text-neutral-400">Year</span>
-                  <span className="border-t border-neutral-500 w-full pt-2 font-light">{projects?.year}</span>
+                  <span className="font-light tracking-wider text-xs mb-1 text-neutral-500">Year</span>
+                  <span className="border-t border-neutral-500 w-full pt-2 font-light text-neutral-400">{projects?.year}</span>
                 </div>
                 <div className="w-full flex flex-col">
-                  <span className="font-light tracking-wider text-xs mb-1 text-neutral-400">Tech</span>
+                  <span className="font-light tracking-wider text-xs mb-1 text-neutral-500">Tech</span>
                     <span className="border-t border-neutral-500 w-full pt-2 flex flex-col space-y-1.5">
                       {projects?.tags && projects?.tags.map((tag, index) => (
-                        <span key={index} className="text-sm flex font-light">
+                        <span key={index} className="text-sm flex font-light text-neutral-400">
                           {tag}
                         </span>
                       ))}
                     </span>
                   </div>
                   <div className="w-full flex flex-col text-sm">
-                    <span className="font-light tracking-wider text-xs mb-1 text-neutral-400">View</span>
+                    <span className="font-light tracking-wider text-xs mb-1 text-neutral-500">View</span>
                     <span className="border-t border-neutral-500 w-full pt-2 flex flex-col space-y-1.5">
                     {projects?.git && ( 
                       <Link href={`${projects?.git}`} target="_blank"
-                        className="flex items-center group">
+                        className="flex items-center group text-neutral-400">
                         <span className="font-light group-hover:underline underline-offset-4 transition duration-100">Open Code</span>
                         <RxArrowTopRight
                           className="ml-3 text-sm group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition duration-100"/>
@@ -118,7 +117,7 @@ export default async function WorksPage(
                     )}
                     {projects?.live && (
                       <Link href={`${projects?.live}`} target="_blank"
-                        className="flex items-center group">
+                        className="flex items-center group text-neutral-400">
                         <span className="font-light group-hover:underline underline-offset-4 transition duration-100">Open Live</span>
                         <RxArrowTopRight
                           className="ml-[1.17rem] text-sm group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition duration-200"/>

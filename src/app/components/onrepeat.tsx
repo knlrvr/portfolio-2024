@@ -52,7 +52,7 @@ const OnRepeat: React.FC = () => {
           <BsSpotify 
             className="text-green-500 text-4xl" />
           <div className="flex flex-col ml-4 space-y-1">
-            <p className="font-medium text-xs tracking-widest text-neutral-500">On Repeat</p>
+            <p className="text-xs tracking-widest text-neutral-500">On Repeat</p>
             <p className="font-light text-xs tracking-wide group-hover:underline underline-offset-4">
               {randomSong ? `${randomSong.title} by ${randomSong.artist}` : 'No song selected'}
             </p>
