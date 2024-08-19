@@ -27,7 +27,7 @@ export function Subsection({
 }) {
     return (
         <Reveal>
-            <div className="grid grid-cols-4 text-sm gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-4 text-sm gap-2 sm:gap-4">
                 <div className="col-span-1 text-neutral-500 font-light tracking-wide">
                     {title}
                 </div>

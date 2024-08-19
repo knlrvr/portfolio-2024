@@ -10,7 +10,6 @@ export default function Projects() {
                         url='studico'
                         title='Studico'
                         description='A web-based music production assistance suite that empowers small to medium teams to create, collaborate, and share their music.'
-                        tech={['TypeScript', ' • ', 'React',' • ',  'Next.js', ' • ', 'Tailwind', ' • ', 'shadcn', ' • ', 'Convex', ' • ', 'Clerk']}
                     />
                 </Subsection>
                 <Subsection title="2023">
@@ -18,7 +17,6 @@ export default function Projects() {
                         url='theskyisfake'
                         title='The Sky Is Fake'
                         description='An image sharing platform dedicated to pictures of the sky that just don&apos;t seem real.'
-                        tech={['TypeScript', ' • ', 'React',' • ',  'Next.js', ' • ', 'Tailwind', ' • ', 'shadcn', ' • ', 'Convex', ' • ', 'Clerk']}
                     />
                 </Subsection>
                 <Subsection title="2023">
@@ -26,7 +24,6 @@ export default function Projects() {
                         url='templateportfolio'
                         title='Portfolio Template'
                         description='An HTML + CSS portfolio template inspired by Bartosz Jarocki&apos;s Next.js/shadcn CV.'
-                        tech={['HTML', ' • ', 'CSS', ' • ', 'JavaScript']}
                     />
                 </Subsection>
             </div>
