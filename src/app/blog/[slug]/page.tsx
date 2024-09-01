@@ -139,12 +139,11 @@ const PostPage = (props: PostPageProps) => {
         notFound;
     }
 
-    const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    const filteredPostMetadata = postMetadata.filter((p) => p.slug !== slug)
-    const postPreviews = filteredPostMetadata.slice(0, 3).map((filteredPost) => (
-      <HomePostPreview key={filteredPost.slug} {...filteredPost} />
-    ));
-
+    // const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    // const filteredPostMetadata = postMetadata.filter((p) => p.slug !== slug)
+    // const postPreviews = filteredPostMetadata.slice(0, 3).map((filteredPost) => (
+    //   <HomePostPreview key={filteredPost.slug} {...filteredPost} />
+    // ));
 
     function getTimeSincePost(postDate: string): string {
         const currentDate = new Date();
@@ -187,7 +186,7 @@ const PostPage = (props: PostPageProps) => {
                 <div className="mt-2 mb-2">
                     <Reveal>
                         <div className="flex flex-col space-y-2 text-[var(--text)]">
-                            <span className="text-3xl sm:text-4xl tracking-tight">
+                            <span className="text-3xl sm:text-4xl tracking-tight font-medium">
                                 {post.data.title}
                             </span>
                             <div className="flex flex-col justify-between items-start">

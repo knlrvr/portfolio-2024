@@ -1,4 +1,6 @@
+import { FiCornerRightDown } from "react-icons/fi"
 import { Reveal } from "../utils/reveal"
+import { LuCornerLeftDown, LuCornerLeftUp, LuCornerRightDown, LuCornerRightUp } from "react-icons/lu"
 
 
 export function Section({
@@ -11,7 +13,10 @@ export function Section({
     return (
         <Reveal>
             <div className="flex flex-col space-y-6 text-sm">
-                <p className="tracking-wide font-medium">{title}</p>
+                <div className="flex gap-2 items-center">
+                    {/* <LuCornerRightUp className="text-neutral-500 rotate-90" /> */}
+                    <p className="tracking-wide font-medium">{title}</p>
+                </div>
                 <div className="">{children}</div>
             </div>
         </Reveal>
