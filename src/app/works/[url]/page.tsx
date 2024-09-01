@@ -128,7 +128,6 @@ export async function generateStaticParams() {
     return [
         { url: "studico" },
         { url: "theskyisfake" },
-        { url: "abstract" },
         { url: "templateportfolio" },
     ] 
 }
