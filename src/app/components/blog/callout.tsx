@@ -22,7 +22,7 @@ export default function Callout({ variant, children }: { variant: Variant; child
     const { icon, color } = variantStyles[variant];
 
     return (
-        <div className={`px-4 flex gap-2 rounded-md bg-neutral-200 dark:bg-[#222] dark:bg-opacity-40 my-6`}>
+        <div className={`px-4 flex gap-2 rounded-md bg-neutral-100 dark:bg-[#222] dark:bg-opacity-40 my-6`}>
             <div className={`flex items-center mr-4 w-6 ${color} text-xl`}>
                 {icon}
             </div>
