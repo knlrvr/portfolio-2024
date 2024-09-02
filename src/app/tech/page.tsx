@@ -19,10 +19,10 @@ export default function Tech() {
 
                 <Subsection title="Coding">
                     <ul className="text-sm">
-                        <li><strong className="text-neutral-500">Editor</strong>: VSCode </li>
-                        <li><strong className="text-neutral-500">Theme</strong>: Vitesse Black</li>
-                        <li><strong className="text-neutral-500">Terminal</strong>: Warp</li>
-                        <li><strong className="text-neutral-500">Exploring</strong>: Neovim & Zed</li>
+                        <li><strong className="text-neutral-500">Editor:</strong> VSCode </li>
+                        <li><strong className="text-neutral-500">Theme:</strong> Vitesse Black</li>
+                        <li><strong className="text-neutral-500">Terminal:</strong> Warp</li>
+                        <li><strong className="text-neutral-500">Exploring:</strong> Neovim & Zed</li>
                     </ul>
                 </Subsection>
 

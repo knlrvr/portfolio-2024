@@ -18,7 +18,7 @@ export default function WorkCard({ title, org, description }: WorkCardProps) {
                         {title} <span className="text-neutral-500 font-normal">&nbsp;&mdash;&nbsp; {org}</span>
                     </p>
                 </div>
-                <p className="text-neutral-400">{description}</p>
+                <p className="text-neutral-600 dark:text-neutral-400">{description}</p>
             </div>
         </Reveal>
     )

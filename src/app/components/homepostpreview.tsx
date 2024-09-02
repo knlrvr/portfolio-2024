@@ -11,7 +11,7 @@ const HomePostPreview = (props: PostMetadata) => {
             <p className="group-hover:underline underline-offset-4 tracking-wide">{props.title}</p>
             <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
           </div>
-          <p className="text-neutral-500 text-sm">{props.date}</p>
+          <p className="text-neutral-600 dark:text-neutral-400 text-sm">{props.date}</p>
       </Link>
     )
 }

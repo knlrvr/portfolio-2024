@@ -24,18 +24,19 @@ export const CodeBlock = ({ language, value }: CodeBlockProps) => {
     };
 
     return (
-        <div className="">
+        <div className="relative">
             {!isCopied ? (
                 <button onClick={() => {
                     copyCode();
                     setIsCopied(true);
                 }}
-                className="flex w-full justify-end text-lg -mb-4 opacity-50 text-[#808080]
+                className="absolute -top-4 -right-1 text-lg opacity-50 text-[#808080]
                            hover:text-neutral-200 transition-colors duration-200
                 "><RxCopy /></button>
             ) : (
                 <div
-                className="flex w-full justify-end text-lg -mb-4 opacity-50 text-green-500"><RxCheck /></div>
+                className="flex w-full justify-end text-lg -mb-4 ml-1 opacity-50 text-green-500"
+                ><RxCheck /></div>
             )}
             <SyntaxHighlighter 
                 className="hide-scroll"

@@ -96,7 +96,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
     if (href.startsWith('#' || '/')) {
         return (
             <Link href={href}
-                className='inline-flex items-center text-neutral-200 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-200 transition-colors duration-100'>
+                className='inline-flex items-center text-[#111] dark:text-neutral-200 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-200 transition-colors duration-100'>
                 {children}
             </Link>
         )
@@ -210,12 +210,12 @@ const PostPage = (props: PostPageProps) => {
                     </Reveal>
                 </div>
 
-                <article className="blog prose text-neutral-300 prose-headings:text-neutral-200 prose-strong:text-neutral-300 max-w-full
+                <article className="blog prose text-[#111] dark:text-neutral-300 prose-headings:text-[#111] dark:prose-headings:text-neutral-200 prose-strong:text-[#111] dark:prose-strong:text-neutral-300 max-w-full
                                     prose-sm prose-code:text-sm prose-pre:bg-[#151515] prose-pre:mb-1
-                                    prose-h6:text-xs prose-h6:text-neutral-600 prose-p:font-light
-                                    prose-h4:text-lg prose-h4:tracking-wider prose-h4:font-normal
-                                    prose-h3:text-xl prose-h3:font-normal prose-h3:tracking-wider
-                                    prose-h2:font-medium prose-h2:tracking-wide
+                                    prose-h6:text-xs prose-h6:text-neutral-400 dark:prose-h6:text-neutral-600 prose-p:font-light
+                                    prose-h4:text-lg prose-h4:tracking-wide prose-h4:font-normal
+                                    prose-h3:text-xl prose-h3:font-normal prose-h3:tracking-normal
+                                    prose-h2:font-medium prose-h2:tracking-tight
                                     prose-hr:border-neutral-500
                                     prose-img:rounded-sm
                 ">

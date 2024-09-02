@@ -8,8 +8,8 @@ const BlogPostPreview = (props: PostMetadata) => {
     <Reveal>
       <Link key={props.slug} className="flex flex-col space-y-2 mb-12 group"
         href={`/blog/${props.slug}`}>
-        <p className="group-hover:underline underline-offset-4 font-medium tracking-wide text-sm">{props.title}</p>
-        <p className="text-sm font-light text-neutral-400">{props.description}</p>
+        <p className="group-hover:underline underline-offset-4 font-medium text-sm">{props.title}</p>
+        <p className="text-sm font-light text-neutral-600 dark:text-neutral-400">{props.description}</p>
         <span className="text-xs tracking-wider text-neutral-500">{props.date}</span>
       </Link>
     </Reveal>

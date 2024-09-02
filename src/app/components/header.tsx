@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 import { LuSquareSlash } from 'react-icons/lu'
 import { RxArrowLeft } from "react-icons/rx";
+import { ThemeToggle } from "./theme-toggle";
 
 const items = [
     { label: 'blog', href: '/blog', },
@@ -29,7 +30,7 @@ export default function Header() {
                 <Link href={backHref} className="inline-flex items-center gap-2 hover:underline underline-offset-4"><RxArrowLeft /> back </Link>
             ) : (
                 <div className="flex items-center gap-2">
-                    knlrvr <div className="w-1 h-1 bg-green-500 rounded-full" />
+                    knlrvr
                 </div>
             )} 
 

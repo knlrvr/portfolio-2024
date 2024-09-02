@@ -105,7 +105,7 @@ const Gallery: React.FC = () => {
             className="h-full sm:h-96 w-full object-cover rounded-2xl" 
           />
           <div className="absolute transform duration-500 -bottom-10 left-2 group-hover:bottom-2">
-            <div className="bg-[#111] p-2 rounded-lg text-sm text-neutral-500">
+            <div className="bg-white dark:bg-[#111] p-2 rounded-lg text-sm text-neutral-500">
               <p>{picture.location}</p>
             </div>
           </div>

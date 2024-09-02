@@ -11,6 +11,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { ConvexReactClient } from 'convex/react'
+import { ThemeProvider } from "./components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,14 +29,21 @@ export default function RootLayout({
       <body className={inter.className}>
       <ClerkProvider publishableKey='pk_test_dml0YWwtZG9yeS01OC5jbGVyay5hY2NvdW50cy5kZXYk'>
           <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
               <div 
                 className="max-w-2xl mx-auto py-4 flex flex-col min-h-screen">
-              <Header />
-                {children}
-              <Footer />
-              <Analytics />
-              <SpeedInsights />
-            </div>
+                <Header />
+                  {children}
+                <Footer />
+                <Analytics />
+                <SpeedInsights />
+              </div>
+            </ThemeProvider>
           </ConvexProviderWithClerk>
         </ClerkProvider>
       </body>
