@@ -35,7 +35,7 @@ export const CodeBlock = ({ language, value }: CodeBlockProps) => {
                 "><RxCopy /></button>
             ) : (
                 <div
-                className="flex w-full justify-end text-lg -mb-4 ml-1 opacity-50 text-green-500"
+                className="absolute -top-4 -right-1 text-lg opacity-50 text-green-500"
                 ><RxCheck /></div>
             )}
             <SyntaxHighlighter 
