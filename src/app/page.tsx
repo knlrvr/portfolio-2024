@@ -19,7 +19,7 @@ export default function Home() {
     <main className="space-y-16">     
       <AuthorCard /> 
       <About />
-      <Work />
+      {/* <Work /> */}
       <Projects />
       <BlogPreview />
       <Contact />
