@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import { Section, Subsection } from "../components/section";
+
+export const metadata: Metadata = {
+    title: 'Kane Lariviere | Tech',
+    description: 'Kane Lariviere • Software Developer • Tech',
+}
 
 export default function Tech() {
     return (
