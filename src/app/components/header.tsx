@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation"
 
 import Link from 'next/link'
 
-import { LuSquareSlash } from 'react-icons/lu'
+import { LuSmile, LuSquareSlash } from 'react-icons/lu'
 import { RxArrowLeft } from "react-icons/rx";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -29,7 +29,7 @@ export default function Header() {
             {path.includes('/guestbook') || path.includes('/blog') || path.includes('/tech') || path.includes('/works')  ? (
                 <Link href={backHref} className="inline-flex items-center gap-2 hover:underline underline-offset-4"><RxArrowLeft /> back </Link>
             ) : (
-                <div className="flex items-center gap-2">
+                <div className="">
                     knlrvr
                 </div>
             )} 
