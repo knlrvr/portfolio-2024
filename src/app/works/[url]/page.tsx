@@ -31,6 +31,18 @@ interface Work {
     year: string;
 }
 
+const toParagraphs = (text: string) => {
+  // Split the text by one or more newline characters
+  const paragraphs = text.split(/\n{2,}/)
+  
+  return paragraphs.map((paragraph, index) => (
+    <p key={index} className="blog text-sm mt-4" style={{ marginTop: index > 0 ? '1.5rem' : '1rem' }}>
+      {paragraph}
+    </p>
+  ))
+}
+
+
 export default async function WorksPage(
 {
     params, 
@@ -76,7 +88,7 @@ export default async function WorksPage(
             <div className="flex flex-col space-y-12 mb-12">
               <div className="font-light">
                   <p key={projects?.title} className="blog text-sm mt-4">
-                    {projects?.overview}
+                    {toParagraphs(projects?.overview)}
                   </p>
               </div>
 
@@ -135,6 +147,23 @@ export async function generateStaticParams() {
 const fetchWorksData = (url: string): Work => {
     const projectDataMap: { [key: string]: Work } = {
       
+      fenili: {
+        url: 'fenili',
+        brand: {
+          src: '/brand/fenili-brand.png',
+          alt: 'fenili logo',
+          width: 1000,
+          height: 1000,
+          className: 'w-full h-full'
+        },
+        live: 'https://fenili-4hsl.vercel.app/',
+        title: 'Fenili Apparel',
+        category: 'Ecommerce',
+        overview: 'Fenili is an apparel and lifestyle brand specializing in custom, made-to-order clothing. This site is a high-performance, server-rendered Next.js application that uses Shopify as a headless CMS and takes full advantage of React Server Components, Server Actions, Suspense, useOptimistic, and more from Next.js to ensure a seamless user & admin experience. \n\n This site is still under construction and is actively contributed to every week.',
+        tags: ['TypeScipt', 'React', 'Next.js', 'Tailwind', 'Shopify', 'ngrok'],
+        year: '2024 ~',
+      },
+
       studico: {
         url: 'studico',
         brand: {

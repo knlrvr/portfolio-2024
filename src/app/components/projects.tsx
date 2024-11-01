@@ -12,6 +12,13 @@ export default function Projects() {
                         description='A web-based music production assistance suite that empowers small to medium teams to create, collaborate, and share their music.'
                     />
                 </Subsection>
+                <Subsection title="2024 ~">
+                    <ProjectCard
+                        url='fenili'
+                        title='Fenili Apparel'
+                        description='An ecommerce storefront for the Fenili apparel & lifestyle brand.'
+                    />
+                </Subsection>
                 <Subsection title="2023">
                     <ProjectCard
                         url='theskyisfake'
