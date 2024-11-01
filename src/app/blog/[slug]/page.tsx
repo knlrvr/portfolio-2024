@@ -96,7 +96,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
     if (href.startsWith('#' || '/')) {
         return (
             <Link href={href}
-                className='inline-flex items-center text-[#111] dark:text-neutral-200 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-200 transition-colors duration-100'>
+                className='inline-flex items-center text-[#111] underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-200 transition-colors duration-100'>
                 {children}
             </Link>
         )
@@ -104,7 +104,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
 
     return (
         <Link href={href} target='_blank' rel="noopener noreferrer" 
-            className="text-neutral-200 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-400 dark:hover:decoration-neutral-200 transition-colors duration-100">
+            className="text-neutral-600 hover:text-neutral-400 dark:text-neutral-300 underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-400 dark:hover:decoration-neutral-200 transition-colors duration-100">
             {children} 
             <RxArrowTopRight className="inline-block" />
         </Link>
@@ -183,29 +183,22 @@ const PostPage = (props: PostPageProps) => {
             />
             <div className="">
 
-                <div className="mt-2 mb-2">
+                <div className="mt-2 mb-12">
                     <Reveal>
-                        <div className="flex flex-col space-y-2 text-[var(--text)]">
-                            <span className="text-3xl sm:text-4xl tracking-tight font-medium">
+                        <div className="flex flex-col space-y-4 text-[var(--text)] -mb-4">
+                            <p className="text-neutral-600 dark:text-neutral-400 text-xs">{post.data.date} <span className="text-neutral-500">({getTimeSincePost(post.data.date)})</span></p>
+                            <h1 className="text-4xl sm:text-5xl tracking-tight font-semibold">
                                 {post.data.title}
-                            </span>
-                            <div className="flex flex-col justify-between items-start">
-                                <p className="mb-4 w-fit font-light tracking-wider text-sm">
-                                    {post.data.date} <span className="text-neutral-500">({getTimeSincePost(post.data.date)})</span>
-                                </p>
+                            </h1>
+                            <p className="text-neutral-500 dark:text-neutral-400 text-sm">
+                                {post.data.description}
+                            </p>
+                            <div className="flex flex-wrap gap-y-2 pb-4"> 
+                                {post.data.tags.map((tag: string) => (
+                                    <p key={tag} className="mr-4 font-mono text-xs text-neutral-500">#{tag}</p>
+                                ))}
                             </div>
-                        </div>
-                    </Reveal>
-                </div>
-
-
-
-                <div className="flex flex-col mb-8 space-y-2">
-                    <Reveal>
-                        <div className="flex flex-wrap gap-y-2"> 
-                            {post.data.tags.map((tag: string) => (
-                                <p key={tag} className="mr-4 font-mono text-xs text-neutral-500 underline underline-offset-4">#{tag}</p>
-                            ))}
+                            <hr className="border-neutral-500" />
                         </div>
                     </Reveal>
                 </div>

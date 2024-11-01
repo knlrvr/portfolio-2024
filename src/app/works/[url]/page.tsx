@@ -63,10 +63,10 @@ export default async function WorksPage(
                 <div className="mt-4 mb-4">
                     <Reveal>
                       <div className="flex justify-between items-center">
-                          <h1 className="text-3xl sm:text-4xl tracking-tight font-medium">
+                          <h1 className="text-3xl sm:text-4xl tracking-tight font-semibold">
                               {projects?.title} &mdash;
                           </h1>
-                          <span className="text-neutral-500">{projects.category}</span>
+                          <span className="text-neutral-600 dark:text-neutral-400">{projects.category}</span>
                       </div>
                     </Reveal>
                 </div>
