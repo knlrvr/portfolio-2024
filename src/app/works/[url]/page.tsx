@@ -157,7 +157,7 @@ const fetchWorksData = (url: string): Work => {
           height: 1000,
           className: 'w-full h-full'
         },
-        live: 'https://fenili-4hsl.vercel.app/',
+        live: 'https://fenili.store/',
         title: 'Fenili Apparel',
         category: 'Ecommerce',
         overview: 'Fenili is an apparel and lifestyle brand specializing in custom, made-to-order clothing. This site is a high-performance, server-rendered Next.js application that uses Shopify as a headless CMS and takes full advantage of React Server Components, Server Actions, Suspense, useOptimistic, and more from Next.js to ensure a seamless user & admin experience. \n\n This site is still under construction and is actively contributed to every week.',
