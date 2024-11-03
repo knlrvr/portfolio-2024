@@ -138,6 +138,7 @@ export default async function WorksPage(
 
 export async function generateStaticParams() {
     return [
+        { url: "fenili" },
         { url: "studico" },
         { url: "theskyisfake" },
         { url: "templateportfolio" },
