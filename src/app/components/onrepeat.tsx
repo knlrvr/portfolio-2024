@@ -13,14 +13,14 @@ import { Section } from './section';
 
 const songs = [
   {
-    title: 'All This Time',
-    artist: 'The Story So Far',
-    link: 'https://open.spotify.com/track/5vl4Nfr9bPT1DKZRiQejQr?si=4d4e2246a7a340f0'
+    title: 'No Shoes in the Coffee Shop (Or Socks)',
+    artist: 'Hot Mulligan',
+    link: 'https://open.spotify.com/track/67BoLcQZhPok0yVe9J0Br8?si=f5e48d5bf06149ed'
   },
   {
-    title: 'ANABOLIC SPUDSMAN',
-    artist: 'Bilmuri, Spencer Stewart',
-    link: 'https://open.spotify.com/track/2ZNnF1YqMZiZjJYUKa2Be9?si=41ab285a315e4048'
+    title: 'THE END',
+    artist: 'Bilmuri',
+    link: 'https://open.spotify.com/track/1u8esuXKqxbKsleihNp7wo?si=fc9792f432d64ba0'
   },
   {
     title: 'maybe it\'s me',
@@ -28,9 +28,14 @@ const songs = [
     link: 'https://open.spotify.com/track/3IQ6lvRicxZpI3AhQaGPI5?si=64616fefc9544995'
   },
   {
-    title: 'You\'re Gonna Go Far',
-    artist: 'Noah Kahan',
-    link: 'https://open.spotify.com/track/4nHJcUtNSUVjXRnjdP29Bk?si=c5a66e67171e4175'
+    title: 'Afraid To Die',
+    artist: 'Movements',
+    link: 'https://open.spotify.com/track/5RpbbEcE5IdL9Dyr6mRZVi?si=a52285752b6a4098'
+  },
+  {
+    title: 'Clash',
+    artist: 'Dave, Stormzy',
+    link: 'https://open.spotify.com/track/2zxEc1GCSCxbHIXTfhraRC?si=32d5df5604a1477e'
   },
 ];
 
