@@ -201,24 +201,6 @@ const fetchWorksData = (url: string): Work => {
         year: '2023 ~',
       },
   
-      // abstract: {
-      //   url: 'abstract',
-      //   brand: {
-      //     src: '/brand/abs-brand-new.png',
-      //     alt: 'Abstract Store',
-      //     width: 1000,
-      //     height: 1000,
-      //     className: 'w-full h-full'
-      //   },
-      //   git: 'https://github.com/knlrvr/abstract',
-      //   live: 'https://abstract-eight.vercel.app/',
-      //   title: 'Abstract',
-      //   category: 'Ecommerce',
-      //   overview: 'Abstract is an innovative ecommerce store that offers a unique focus on concepts related to consumerism and materialism. Instead of traditional physical products, Abstract specializes in selling these thought-provoking concepts themselves. By challenging conventional notions of commerce, Abstract provides customers with an intellectual and philosophical exploration of consumerism and materialism.',
-      //   tags: ['JavaScript', 'React', 'Next.js', 'Tailwind', 'MongoDB'],
-      //   year: '2023',
-      // },
-
       templateportfolio: {
         url: 'templateportfolio',
         brand: {
