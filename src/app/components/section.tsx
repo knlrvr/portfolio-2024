@@ -15,7 +15,7 @@ export function Section({
             <div className="flex flex-col space-y-6 text-sm">
                 <div className="flex gap-2 items-center">
                     {/* <LuCornerRightUp className="text-neutral-500 rotate-90" /> */}
-                    <p className="tracking-wide font-medium">{title}</p>
+                    <p className="tracking-wide font-medium tracking-tighter text-2xl">{title}</p>
                 </div>
                 <div className="">{children}</div>
             </div>
@@ -33,7 +33,7 @@ export function Subsection({
     return (
         <Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-4 text-sm gap-2 sm:gap-4">
-                <div className="col-span-1 text-neutral-500 font-light tracking-wide">
+                <div className="col-span-1 text-neutral-500 font-light tracking-wide mb-2">
                     {title}
                 </div>
                 <div className="col-span-3">

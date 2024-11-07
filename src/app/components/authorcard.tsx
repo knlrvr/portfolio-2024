@@ -4,7 +4,7 @@ import { Reveal } from '../utils/reveal'
 export default function AuthorCard() {
     return (
         <Reveal>
-            <div className="flex items-center gap-4 mt-2">
+            <div className="flex items-center gap-4 mt-2 mb-16">
                 <Image
                     src="/kane.jpg"
                     alt="twitter profile picture"

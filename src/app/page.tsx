@@ -16,10 +16,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="space-y-16">     
-      <AuthorCard /> 
+    <main className="">     
+      <AuthorCard />
+
       <About />
-      {/* <Work /> */}
+      <Work />
       <Projects />
       <BlogPreview />
       <Contact />

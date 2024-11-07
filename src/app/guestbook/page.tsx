@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 
 export default function Guestbook() {
     return (
-        <Section title="Guestbook">
+
             <GuestbookForm />
-        </Section>
     )
 }

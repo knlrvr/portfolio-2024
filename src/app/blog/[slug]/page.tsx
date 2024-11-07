@@ -18,6 +18,7 @@ import Edit from '@/app/components/blog/edit';
 import Link from 'next/link';
 
 import { RxArrowTopRight } from "react-icons/rx"; 
+import { MoveLeft } from 'lucide-react';
 
 const getPostContent = (slug: string) => {
     const folder = "posts";
@@ -185,8 +186,8 @@ const PostPage = (props: PostPageProps) => {
 
                 <div className="mt-2 mb-12">
                     <Reveal>
-                        <div className="flex flex-col space-y-4 text-[var(--text)] -mb-4">
-                            <p className="text-neutral-600 dark:text-neutral-400 text-xs">{post.data.date} <span className="text-neutral-500">({getTimeSincePost(post.data.date)})</span></p>
+                        <div className="flex flex-col space-y-4 text-[var(--text)] -mb-4">                           
+                            <p className="text-neutral-600 dark:text-neutral-400 text-xs"> Published on {post.data.date} <span className="text-neutral-500">({getTimeSincePost(post.data.date)})</span></p>
                             <h1 className="text-4xl sm:text-5xl tracking-tight font-semibold">
                                 {post.data.title}
                             </h1>

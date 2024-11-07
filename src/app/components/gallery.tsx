@@ -96,7 +96,7 @@ const Gallery: React.FC = () => {
   return (
     <Section title="">
       {randomPictures.map((picture, index) => (
-        <div key={index} className="relative group flex justify-center overflow-hidden rounded-2xl shadow-md">
+        <div key={index} className="relative group flex justify-center overflow-hidden rounded-2xl shadow-md mb-16">
           <Image 
             src={picture.url} 
             alt={`Random Picture ${index + 1} - ${picture.location}`} 

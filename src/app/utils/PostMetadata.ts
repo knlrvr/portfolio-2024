@@ -5,6 +5,7 @@ export interface PostMetadata {
     title: string,
     date: string,
     description: string,
+    tags: string[],
     slug: string,
     image?: string,
 }
@@ -23,6 +24,7 @@ const getPostMetadata = (): PostMetadata[] => {
         title: matterResult.data.title,
         date: matterResult.data.date,
         description: matterResult.data.description,
+        tags: matterResult.data.tags,
         slug: fileName.replace(".mdx", "")
       }
     });

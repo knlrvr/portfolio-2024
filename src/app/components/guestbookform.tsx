@@ -23,7 +23,7 @@ const GuestbookForm = () => {
 
         {!user && (
           <Reveal>
-            <div className="mt-4 rounded-full text-sm mb-[2.15rem] w-fit">
+            <div className="rounded-full text-sm mb-[2.15rem] w-fit">
               <SignInButton mode='modal' afterSignInUrl='/guestbook'>
                 <div className="flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-400 group cursor-pointer">
                   <span className="group-hover:underline underline-offset-4">Sign in to leave a message</span>
@@ -50,7 +50,7 @@ const GuestbookForm = () => {
                 });
                 setText('')
               }}
-              className="w-full md:w-1/2 -ml-1 flex py-2"
+              className="w-full -ml-1 flex py-2"
             >
 
               <input 
@@ -61,7 +61,7 @@ const GuestbookForm = () => {
                 placeholder='Leave a message here!'
               />
               <button
-                className="px-6 uppercase py-1.5 w-20 flex justify-center items-center font-light text-sm rounded-md bg-[#e5e5e5] text-[#111] hover:bg-neutral-400 transition-colors duration-200">sign</button>
+                className="px-6 uppercase py-1.5 w-16 flex justify-center items-center font-medium text-sm rounded-md bg-neutral-200 text-[#111] hover:bg-neutral-300 dark:hover:bg-neutral-400 transition-colors duration-200">sign</button>
             </form>
             <div className="text-xs text-neutral-500">
               <SignOutButton />
@@ -76,7 +76,7 @@ const GuestbookForm = () => {
             return <div key={note._id} className="flex flex-col">
               <div className="text-[0.825rem] my-2"> 
                 <span className="text-neutral-500">{note.author}:</span>
-                <span className="font-light tracking-wide leading-6 mt-4">&nbsp;{note.body}</span> 
+                <span className="text-neutral-600 dark:text-neutral-200 mt-4">&nbsp;{note.body}</span> 
               </div>
             </div>
           })}

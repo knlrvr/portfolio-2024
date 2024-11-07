@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function Tech() {
     return (
-        <Section title="What I Use">
-            <div className="space-y-8">
+        <Section title="">
+            <div className="space-y-8 -mt-6">
 
                 <Subsection title="Office">
                         <ul className="text-sm">

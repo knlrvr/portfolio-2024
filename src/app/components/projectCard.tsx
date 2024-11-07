@@ -7,7 +7,6 @@ interface ProjectCardProps {
     url: string;
     title: string;
     description: string;
-    // tech: Array<string>;
 }
 
 export default function ProjectCard({ url, title, description }: ProjectCardProps) {
@@ -20,7 +19,7 @@ export default function ProjectCard({ url, title, description }: ProjectCardProp
                     <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
                 </Link>
                 <p className="text-neutral-600 dark:text-neutral-400">{description}</p>
-                {/* <p className="text-neutral-500 text-xs">{tech}</p> */}
+                {/* <p className="text-neutral-500 text-xs">{timeframe}</p> */}
             </div>
         </Reveal>
     )
