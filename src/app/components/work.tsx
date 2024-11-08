@@ -14,7 +14,7 @@ export default function Work() {
                         title='Software Developer'
                         org='Fenili Apparel'
                         description='Led the design & development of admin tools & e-commerce app. Collaborated closely with CEO & Product Team to track objectives & improve technical directions. '
-                        location="Remote"
+                        tech={['React', '•', 'TypeScript', '•', 'Next.js', '•', 'Shopify', '•', 'Sentry']}
                     />
                 </Subsection>
                 <Subsection title="2022 - 2024">
