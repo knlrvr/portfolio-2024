@@ -13,8 +13,8 @@ export default function Work() {
                         imageUrl='/fenili.png'
                         title='Software Developer'
                         org='Fenili Apparel'
-                        description='Led the design & development of admin tools & e-commerce app. Collaborated closely with CEO & Product Team to track objectives & improve technical directions. '
-                        location="Remote"
+                        description='Led the design & development of admin tools & e-commerce app. Collaborated closely with CEO & Product Team to track objectives & ship frequently. '
+                        tech={['React', '•', 'TypeScript', '•', 'Next.js', '•', 'Shopify', '•', 'Tailwind', '•', 'Sentry']}
                     />
                 </Subsection>
                 <Subsection title="2022 - 2024">
@@ -23,7 +23,7 @@ export default function Work() {
                         title='Software Developer'
                         org='Freelance'
                         description='Worked with a range of small to medium businesses, agencies, start-ups, and individuals to build products, experiences, and improve technical direction.'
-                        location="Remote"
+                        tech={['React', '•', 'Vue', '•', 'Node.js', '•', 'SQL', '•', 'Playwright', '•', 'AWS', '•', 'Figma', '•', 'Illustrator']}
                     />
                 </Subsection>
                 <Subsection title="">

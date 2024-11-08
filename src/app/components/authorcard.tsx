@@ -15,7 +15,7 @@ export default function AuthorCard() {
                 <div className="flex flex-col">
                     <p className="font-light text-2xl tracking-wide">Kane Lariviere</p>
                     <p className="text-neutral-400 font-light tracking-wide text-sm">Software Developer</p>
-                    <p className="text-neutral-500 tracking-wide text-sm">knlrvr</p>
+                    <p className="text-neutral-500 tracking-wide text-sm">@knlrvr</p>
                 </div>
             </div>
         </Reveal>

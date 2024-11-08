@@ -9,19 +9,19 @@ interface WorkCardProps {
     imageUrl: string;
     org: string;
     description: string;
-    location: string;
+    tech: string[],
 }
 
-export default function WorkCard({ title, org, description, location, imageUrl }: WorkCardProps) {
+export default function WorkCard({ title, org, description, imageUrl, tech }: WorkCardProps) {
     return (
         <Reveal>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col justify-center gap-4">
                 <Image
                     src={`${imageUrl}`}
                     alt={`${org} logo`}
                     width={1000}
                     height={1000}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-8 h-8 rounded-lg object-cover"
                 />
                 <div className="flex flex-col space-y-1">
                     <div className="flex items-center">
@@ -30,7 +30,11 @@ export default function WorkCard({ title, org, description, location, imageUrl }
                         </p>
                     </div>
                     <p className="text-neutral-600 dark:text-neutral-400">{description}</p>
-                    <span className="text-neutral-500 text-sm pt-2">{location}</span>
+                    <ul className="text-neutral-500 text-sm pt-2 flex flex-wrap gap-1">
+                        {tech.map((tech) => (
+                            <li key={tech} className="">{tech}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </Reveal>
