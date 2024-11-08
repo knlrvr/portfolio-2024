@@ -13,8 +13,8 @@ export default function Work() {
                         imageUrl='/fenili.png'
                         title='Software Developer'
                         org='Fenili Apparel'
-                        description='Led the design & development of admin tools & e-commerce app. Collaborated closely with CEO & Product Team to track objectives & ship frequently. '
-                        tech={['React', '•', 'TypeScript', '•', 'Next.js', '•', 'Shopify', '•', 'Tailwind', '•', 'Sentry']}
+                        description='Led the design & development of admin tools & e-commerce app. Collaborated closely with CEO & Product Team to track objectives & improve technical directions. '
+                        location="Remote"
                     />
                 </Subsection>
                 <Subsection title="2022 - 2024">
