@@ -12,7 +12,7 @@ const HomePostPreview = (props: PostMetadata) => {
             <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
           </div>
           <p className="pt-1 text-neutral-600 dark:text-neutral-400 ">{props.description}</p>
-          <p className="text-neutral-500 text-sm">{props.date}</p>
+          {/* <p className="text-neutral-500 text-sm">{props.date}</p> */}
       </Link>
     )
 }

@@ -7,13 +7,13 @@ import { Sparkles } from "lucide-react"
 export default function Work() {
     return (
         <Section title="Work">
-            <div className="space-y-8 mb-8">
+            <div className="space-y-8">
                 <Subsection title="2024 - Present">
                     <WorkCard
                         imageUrl='/fenili.png'
                         title='Software Developer'
                         org='Fenili Apparel'
-                        description='Led the design & development of admin tools & e-commerce app. Collaborated closely with CEO & Product Team to track objectives & improve technical directions. '
+                        description='Led the design & development of admin tools & e-commerce app. Collaborated closely with CEO & Product Team to track objectives & ship frequently. '
                         tech={['React', '•', 'TypeScript', '•', 'Next.js', '•', 'Tailwind', '•', 'Shopify', '•', 'Sentry']}
                     />
                 </Subsection>
@@ -27,8 +27,8 @@ export default function Work() {
                     />
                 </Subsection>
                 <Subsection title="">
-                    <Link href="/LariviereKane-2024.pdf" target="_blank" className="flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-400 group w-fit mb-16 border p-2 px-4 rounded-lg hover:bg-neutral-200 dark:hover:bg-[#222] transition-all duration-100">
-                        <span className="flex items-center gap-2"> <Sparkles className="w-3 h-3 text-yellow-500" /> View My Full Resumé</span>
+                    <Link href="/LariviereKane-2024.pdf" target="_blank" className="flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-400 group w-fit mb-16">
+                        <span className="group-hover:underline underline-offset-4 ">View My Full Resumé</span>
                         <span className="group-hover:translate-x-1.5 transition duration-100">
                             <RxArrowRight />
                         </span>

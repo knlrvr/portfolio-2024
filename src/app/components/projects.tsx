@@ -4,7 +4,7 @@ import { Section, Subsection } from "./section"
 export default function Projects() {
     return (
         <Section title="Select Projects">
-            <div className="space-y-12 mb-16">
+            <div className="space-y-8 mb-16">
                 <Subsection title="2024 ~">
                     <ProjectCard
                         imageUrl="/fenili.png"
