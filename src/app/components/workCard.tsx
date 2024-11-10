@@ -21,7 +21,7 @@ export default function WorkCard({ title, org, description, imageUrl, tech }: Wo
                     alt={`${org} logo`}
                     width={1000}
                     height={1000}
-                    className="w-8 h-8 rounded-lg object-cover"
+                    className="w-8 h-8 rounded-full object-cover"
                 />
                 <div className="flex flex-col space-y-1">
                     <div className="flex items-center">
