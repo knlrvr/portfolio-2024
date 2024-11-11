@@ -1,12 +1,10 @@
 import About from "./components/about";
 import Projects from "./components/projects";
 import BlogPreview from "./components/blog";
-import OnRepeat from "./components/onrepeat";
 import Contact from "./components/contact";
 
 import type { Metadata } from 'next'
 import Gallery from "./components/gallery";
-import AuthorCard from "./components/authorcard";
 import Work from "./components/work";
 
 export const metadata: Metadata = {
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="">     
-      <AuthorCard />
 
       <About />
       <Work />
@@ -25,7 +22,6 @@ export default function Home() {
       <BlogPreview />
       <Contact />
       <Gallery />
-      <OnRepeat />
     </main> 
   );
 }

@@ -11,7 +11,7 @@ import { ThemeToggle } from "./theme-toggle";
 const items = [
     { label: 'blog', href: '/blog', },
     { label: 'guestbook', href: '/guestbook' },
-    { label: 'tech', href: '/tech' }
+    { label: 'my tech', href: '/tech' }
 ]
 
 export default function Header() {

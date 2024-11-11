@@ -16,13 +16,13 @@ export default function ProjectCard({ url, title, description, imageUrl }: Proje
         <Reveal>
             <Link href={`/works/${url}`} className="flex items-start justify-between gap-1 group">
             <div className="flex flex-col justify-center gap-4 w-full">
-                <Image
+                {/* <Image
                     src={`${imageUrl}`}
                     alt={`${title} logo`}
                     width={1000}
                     height={1000}
                     className="w-8 h-8 rounded-full object-cover"
-                />
+                /> */}
                 <div className="flex flex-col space-y-1">
                     <div className="flex items-center">
                         <div className="group-hover:underline underline-offset-4 font-medium tracking-wide flex items-center justify-between w-full">

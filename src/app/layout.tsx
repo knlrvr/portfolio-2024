@@ -12,7 +12,8 @@ import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { ConvexReactClient } from 'convex/react'
 import { ThemeProvider } from "./components/theme-provider";
-import Sidenav from "./components/sidenav";
+import { Grain } from "./components/effects/grain";
+import { Fade } from "./components/effects/fade";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,12 +36,13 @@ export default function RootLayout({
               defaultTheme="system"
               enableSystem
             >
+              {/* Page Effects */}
+              <Grain />
+              <Fade />
+
               <div 
                 className="max-w-2xl mx-auto py-4 flex flex-col min-h-screen">
-                {/* <Sidenav /> */}
                 <Header />
-                  {/* layout needs work w sidenav */}
-                  {/* <div className="sm:ml-64 mt-6"></div> */}
                   {children}
                 <Footer />
                 <Analytics />

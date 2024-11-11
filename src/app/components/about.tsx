@@ -1,13 +1,13 @@
-import { Section } from "./section";
+import { Section, Subsection } from "./section";
 
 export default function About() {
     return (
-        <Section title="About">
-            <p className="text-sm tracking-wide mb-16 text-neutral-600 dark:text-neutral-400">
-                Hi! I&apos;m <span className="font-medium tracking-wide text-neutral-700 dark:text-neutral-200">Kane</span>. I&apos;m a software developer based in the US. My work is focused on building engaging & memorable experiences
-                for the web while advocating for <em className="font-medium tracking-wide text-neutral-700 dark:text-neutral-200">accessibility</em>, <em className="font-medium tracking-wide text-neutral-700 dark:text-neutral-200">affordability</em>, & <em className="font-medium tracking-wide text-neutral-700 dark:text-neutral-200">equity</em>. 
-                <br />
-            </p>
+        <Section title="Kane Lariviere">
+            <Subsection title="About">
+                <p className="text-sm tracking-wide mb-16 text-neutral-600 dark:text-neutral-400">
+                    <span className="text-[#111] dark:text-white">Software Developer based in the US.</span> Crafting engaging and memorable experiences. Exploring sustainability & advocating for a greener web. <em className="text-[#111] dark:text-white">Always shipping</em>.
+                </p>
+            </Subsection>
         </Section>
     )
 }
