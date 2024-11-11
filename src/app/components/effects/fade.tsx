@@ -20,7 +20,7 @@ const FadeStrip = ({
   return (
     <div
       className={cn(
-        "to-[#111] fixed z-auto select-none from-transparent blur-[1px] backdrop-filter",
+        "to-neutral-500 dark:to-[#111] fixed z-auto select-none from-transparent blur-[1px] backdrop-filter",
         "w-full",
         "-bottom-px bg-gradient-to-b",
         className

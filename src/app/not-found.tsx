@@ -6,14 +6,17 @@ export default function NotFound() {
   return (
     <div className="flex grow flex-col space-y-8">
             <Reveal>
-                <span className="text-neutral-300 text-sm font-light tracking-wide leading-6 mt-2">
-                    Well, dang. Now you&apos;ve done it. <br /> What were you thinking? <br /> This isn&apos;t real.
+                <span className="text-neutral-600 dark:text-neutral-400 text-sm font-light tracking-wide leading-6 mt-2">
+                    Well, dang. Now you&apos;ve done it. <br /> This isn&apos;t real. <br /> What were you thinking? 
                 </span>
             </Reveal>
 
             <Reveal>
-                <Link href='/' className="inline-flex items-center gap-2 hover:underline underline-offset-4 font-light text-neutral-500 text-sm">
-                    <RxArrowLeft /> get out of here
+                <Link href="/" className="flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-400 group w-fit mb-16">
+                    <span className="group-hover:-translate-x-1.5 transition duration-100">
+                        <RxArrowLeft />
+                    </span>
+                    <span className="group-hover:underline underline-offset-4 ">Turn back now</span>
                 </Link>
             </Reveal>
 
