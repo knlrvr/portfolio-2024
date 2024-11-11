@@ -38,7 +38,7 @@ export default function RootLayout({
             >
               {/* Page Effects */}
               <Grain />
-              <Fade />
+              {/* <Fade /> */}
 
               <div 
                 className="max-w-2xl mx-auto py-4 flex flex-col min-h-screen">

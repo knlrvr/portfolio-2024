@@ -13,6 +13,7 @@ import {
     RxArrowTopRight
 } from 'react-icons/rx'
 import { MoveLeft } from 'lucide-react';
+import { Subsection } from '@/app/components/section';
 
 interface Work {
     url: string;
@@ -87,31 +88,28 @@ export default async function WorksPage(
             </Reveal>
   
           <Reveal>
-            <div className="flex flex-col space-y-12 mb-12">
+            <div className="flex flex-col space-y-12">
               <div className="font-light">
                   <p key={projects?.title} className="blog text-sm mt-4">
                     {toParagraphs(projects?.overview)}
                   </p>
               </div>
 
-              <div className="text-sm grid grid-cols-1 sm:grid-cols-3 gap-y-6">
-                <div className="w-full flex flex-col">
-                  <span className="font-light tracking-wider text-xs mb-1 text-neutral-500">Year</span>
-                  <span className="border-t border-neutral-500 w-full pt-2 font-light">{projects?.year}</span>
-                </div>
-                <div className="w-full flex flex-col">
-                  <span className="font-light tracking-wider text-xs mb-1 text-neutral-500">Tech</span>
-                    <span className="border-t border-neutral-500 w-full pt-2 flex flex-col space-y-1.5">
-                      {projects?.tags && projects?.tags.map((tag, index) => (
-                        <span key={index} className="text-sm flex font-light">
-                          {tag}
-                        </span>
-                      ))}
+              <hr className="border-neutral-500" 
+              />
+              <div className="grid grid-cols-3">
+                <Subsection title="Year">
+                  <span className="font-light text-neutral-600 dark:text-neutral-400">{projects?.year}</span>
+                </Subsection>
+                <Subsection title="Tech">
+                  {projects?.tags && projects?.tags.map((tag, index) => (
+                    <span key={index} className=" text-neutral-600 dark:text-neutral-400 mb-2 text-sm flex font-light">
+                      {tag}
                     </span>
-                  </div>
-                  <div className="w-full flex flex-col text-sm">
-                    <span className="font-light tracking-wider text-xs mb-1 text-neutral-500">View</span>
-                    <span className="border-t border-neutral-500 w-full pt-2 flex flex-col space-y-1.5">
+                  ))}
+                </Subsection>
+                <Subsection title="View">
+                  <div className="space-y-2 text-neutral-600 dark:text-neutral-400">
                     {projects?.git && ( 
                       <Link href={`${projects?.git}`} target="_blank"
                         className="flex items-center group">
@@ -128,9 +126,10 @@ export default async function WorksPage(
                           className="ml-[1.17rem] text-sm group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition duration-200"/>
                       </Link>
                     )}
-                  </span>
-                </div>
+                  </div>
+                </Subsection>
               </div>
+             
             </div>
           </Reveal>
         </div>
