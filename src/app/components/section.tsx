@@ -15,7 +15,7 @@ export function Section({
             <div className="flex flex-col space-y-6 text-sm">
                 <div className="flex gap-2 items-center">
                     {/* <LuCornerRightUp className="text-neutral-500 rotate-90" /> */}
-                    <p className="tracking-wide font-medium tracking-tighter text-2xl">{title}</p>
+                    <p className="font-medium tracking-tighter text-2xl">{title}</p>
                 </div>
                 <div className="">{children}</div>
             </div>

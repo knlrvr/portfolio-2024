@@ -209,7 +209,7 @@ const PostPage = (props: PostPageProps) => {
                                     prose-h6:text-xs prose-h6:text-neutral-400 dark:prose-h6:text-neutral-600 prose-p:font-light
                                     prose-h4:text-lg prose-h4:tracking-wide prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-normal prose-h3:tracking-normal
-                                    prose-h2:tracking-wide prose-h2:font-medium prose-h2:tracking-tighter prose-h2:text-2xl
+                                    prose-h2:font-medium prose-h2:tracking-tighter prose-h2:text-2xl
                                     prose-hr:border-neutral-500
                                     prose-img:rounded-sm
                 ">
