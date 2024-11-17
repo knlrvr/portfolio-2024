@@ -6,13 +6,11 @@ import Image from 'next/image';
 
 interface WorkCardProps {
     title: string;
-    imageUrl: string;
     org: string;
     description: string;
-    tech: string[],
 }
 
-export default function WorkCard({ title, org, description, imageUrl, tech }: WorkCardProps) {
+export default function WorkCard({ title, org, description }: WorkCardProps) {
     return (
         <Reveal>
             <div className="flex flex-col justify-center gap-4">
@@ -30,11 +28,6 @@ export default function WorkCard({ title, org, description, imageUrl, tech }: Wo
                         </p>
                     </div>
                     <p className="text-neutral-600 dark:text-neutral-400">{description}</p>
-                    <ul className="text-neutral-500 text-sm pt-2 flex flex-wrap gap-1">
-                        {tech.map((tech) => (
-                            <li key={tech} className="text-xs">{tech}</li>
-                        ))}
-                    </ul>
                 </div>
             </div>
         </Reveal>
