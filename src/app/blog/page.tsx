@@ -21,8 +21,8 @@ const Blog = () => {
   ));
 
   return (
-    <Section title="">
-      <div className="-mt-6">
+    <Section title="Blog">
+      <div className="">
         {postPreviews}
       </div>
     </Section>
