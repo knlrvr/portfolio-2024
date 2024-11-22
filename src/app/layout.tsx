@@ -37,7 +37,7 @@ export default function RootLayout({
               enableSystem
             >
               {/* Page Effects */}
-              <Grain />
+              {/* <Grain /> */}
               
               <div 
                 className="max-w-2xl mx-auto py-4 flex flex-col min-h-screen">
