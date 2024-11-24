@@ -5,7 +5,7 @@ export default function About() {
         <Section title="About">
             <Subsection title="Kane Lariviere ~">
                 <p className="text-sm tracking-wide mb-16 text-neutral-600 dark:text-neutral-400">
-                    <span className="text-[#111] dark:text-white">Software Developer based in the US.</span> Crafting engaging and memorable experiences. Exploring sustainability & advocating for a greener web. <em className="text-[#111] dark:text-white">Always shipping</em>.
+                    <span className="text-[#111] dark:text-white">Software Developer based in Charlotte, North Carolina.</span> Crafting engaging and memorable experiences. Exploring sustainability & advocating for a greener web. <em className="text-[#111] dark:text-white">Always shipping</em>.
                 </p>
             </Subsection>
         </Section>
