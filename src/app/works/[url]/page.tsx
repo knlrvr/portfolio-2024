@@ -90,7 +90,7 @@ export default async function WorksPage(
           <Reveal>
             <div className="flex flex-col space-y-12">
               <div className="font-light">
-                  <p key={projects?.title} className="blog text-sm mt-4">
+                  <p key={projects?.title} className="blog text-sm mt-4 text-neutral-600 dark:text-neutral-400">
                     {toParagraphs(projects?.overview)}
                   </p>
               </div>

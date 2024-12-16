@@ -12,6 +12,7 @@ import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { ConvexReactClient } from 'convex/react'
 import { ThemeProvider } from "./components/theme-provider";
+
 import { Grain } from "./components/effects/grain";
 import { Fade } from "./components/effects/fade";
 

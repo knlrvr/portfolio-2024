@@ -2,8 +2,6 @@ import { Reveal } from '@/app/utils/reveal';
 import { notFound } from "next/navigation";
 import getPostMetadata from '@/app/utils/PostMetadata';
 
-import HomePostPreview from '@/app/components/homepostpreview';
-
 import fs from 'fs'
 import matter from "gray-matter";
 import { MDXRemote } from 'next-mdx-remote/rsc'
@@ -18,7 +16,6 @@ import Edit from '@/app/components/blog/edit';
 import Link from 'next/link';
 
 import { RxArrowTopRight } from "react-icons/rx"; 
-import { MoveLeft } from 'lucide-react';
 
 const getPostContent = (slug: string) => {
     const folder = "posts";
@@ -94,7 +91,7 @@ interface BlogLinkProps {
 
 function BlogLink({ href, children }: BlogLinkProps) {
 
-    if (href.startsWith('#' || '/')) {
+    if (href.startsWith('/')) {
         return (
             <Link href={href}
                 className='inline-flex items-center text-[#111] underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-200 transition-colors duration-100'>
@@ -139,12 +136,6 @@ const PostPage = (props: PostPageProps) => {
     if (!post) {
         notFound;
     }
-
-    // const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    // const filteredPostMetadata = postMetadata.filter((p) => p.slug !== slug)
-    // const postPreviews = filteredPostMetadata.slice(0, 3).map((filteredPost) => (
-    //   <HomePostPreview key={filteredPost.slug} {...filteredPost} />
-    // ));
 
     function getTimeSincePost(postDate: string): string {
         const currentDate = new Date();
@@ -206,7 +197,7 @@ const PostPage = (props: PostPageProps) => {
 
                 <article className="blog prose text-[#111] dark:text-neutral-300 prose-headings:text-[#111] dark:prose-headings:text-neutral-200 prose-strong:text-[#111] dark:prose-strong:text-neutral-300 max-w-full
                                     prose-sm prose-code:text-sm prose-pre:bg-[#151515] prose-pre:mb-1
-                                    prose-h6:text-xs prose-h6:text-neutral-400 dark:prose-h6:text-neutral-600 prose-p:font-light
+                                    prose-h6:text-xs prose-h6:text-neutral-400 dark:prose-h6:text-neutral-600 prose-p:font-normal
                                     prose-h4:text-lg prose-h4:tracking-wide prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-normal prose-h3:tracking-normal
                                     prose-h2:font-medium prose-h2:tracking-tighter prose-h2:text-2xl

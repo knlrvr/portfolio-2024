@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { LuSmile, LuSquareSlash } from 'react-icons/lu'
 import { RxArrowLeft } from "react-icons/rx";
 import { ThemeToggle } from "./theme-toggle";
+import { SquareChevronRight } from "lucide-react";
 
 const items = [
     { label: 'blog', href: '/blog', },
@@ -29,8 +30,9 @@ export default function Header() {
             {path.includes('/guestbook') || path.includes('/blog') || path.includes('/tech') || path.includes('/works')  ? (
                 <Link href={backHref} className="inline-flex items-center gap-2 hover:underline underline-offset-4"><RxArrowLeft /> back </Link>
             ) : (
-                <div className="">
-                    knlrvr
+                <div className="flex items-center gap-2">
+                    <SquareChevronRight className="w-4 h-4 text-neutral-600 dark:text-neutral-400" />
+                    <h2>knlrvr</h2>
                 </div>
             )} 
 
