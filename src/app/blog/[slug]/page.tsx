@@ -111,9 +111,9 @@ function BlogLink({ href, children }: BlogLinkProps) {
 
 function InlineCode({ children }: { children: React.ReactNode}) {
     return (
-        <span className="font-mono">
+        <>
             &nbsp;`<span className="text-blue-400">{children}</span>`&nbsp;
-        </span>
+        </>
     )
 }
 

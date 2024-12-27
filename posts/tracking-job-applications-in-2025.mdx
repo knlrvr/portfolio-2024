@@ -1,0 +1,127 @@
+---
+title: Tracking Job Applications in 2025
+description: Changing my workflow for job applications to something more exciting
+date: December 27, 2024
+tags: ['workflow', 'webdev']
+---
+
+You know what's worse than job hunting? Tracking your job applications in a spreadsheet. 
+
+There's something uniquely *soul-crushing* about opening a spreadsheet after each job application 
+to log yet another entry into the void. Every time I opened that spreadsheet in 2024, it felt less 
+like organizing my job search and more like *documenting my rejection journey*. 
+
+So, I did what any reasonable software developer would do &mdash; I massively over-engineered a different 
+solution. 
+
+
+## The "Better" Way (TL;DR)
+
+Instead of using any of the perfectly suitable apps (like Numbers, Excel, or even Sheets), I built 
+a workflow in GitHub that automatically updates a <InlineCode>README.md</InlineCode> file via a Node.js script in <InlineCode>update-readme.js</InlineCode> whenever I 
+add a new job object to <InlineCode>jobs.json</InlineCode>. 
+
+Instead of opening a spreadsheet, picture this &mdash;
+- Open the code editor 
+- Update the JSON file
+- Commit and push to GitHub
+- GitHub Actions runs the Node.js script
+- The README is updated with a table of all json content
+
+Is it efficient? Absolutely not. Is it fun? Well, it's at least more fun that staring at a color-coded spreadsheet. 
+
+
+## The Technical Bits
+
+### jobs.json
+
+This is where the data is. Each job is an object with fields like company name, role, etc. It looks something like this &mdash;
+
+```
+[
+  {
+    "company_name": "Company A", 
+    "role": "Software Engineer ",
+    "locations": [
+      "NYC"
+    ],
+    "date_applied": "12/26/24",
+    "url": "url-to-candidate-portal",
+    "company_url": "url-to-company-website"
+  }
+]
+```
+
+View the file <BlogLink href="https://github.com/knlrvr/job-tracker-template/blob/main/jobs.json">here</BlogLink>.
+
+### README.md 
+
+This is where the data gets displayed. This file contains a description of the project, but it also contains special 'flags' that tell the script where to inject the table. 
+
+```md
+<!-- START_TABLE -->
+<!-- END_TABLE -->
+```
+
+View the file <BlogLink href="https://github.com/knlrvr/job-tracker-template/blob/main/README.md">here</BlogLink>.
+
+
+### update-readme.js
+
+This is where the magic happens! We're doing quite a bit here &mdash;
+   - Validate that all files exist. 
+   - Read & validate the JSON (because who hasn't accidentally written invalid JSON?)
+   - Generate the markdown table
+   - Update the table in the README while preserving everything else
+
+Here's a bit of the <InlineCode>update-readme.js</InlineCode> file &mdash;
+
+```js
+    let jobs;
+    try {
+      jobs = JSON.parse(jobsData);
+      if (!Array.isArray(jobs)) {
+        throw new Error('Jobs data is not an array');
+      }
+    } catch (e) {
+      throw new Error(`Failed to parse jobs.json: ${e.message}`);
+    }
+
+    let markdownTable = '| Company | Role | Location | Date Applied | Portal |\n';
+    markdownTable += '| ------- | ---- | -------- | ------------ | ------ |\n';
+    
+    for (const job of jobs) {
+      const requiredFields = ['company_name', 'role', 'locations', 'date_applied', 'url', 'company_url'];
+      for (const field of requiredFields) {
+        if (!job[field]) {
+          throw new Error(`Missing required field "${field}" in job for ${job.company_name || 'unknown company'}`);
+        }
+      }
+
+      markdownTable += `| [${job.company_name}](${job.company_url}) | ${job.role} | ${Array.isArray(job.locations) ? job.locations.join(', ') : job.locations} | ${job.date_applied} | [Portal](${job.url}) |\n`;
+}
+```
+
+View the file <BlogLink href="https://github.com/knlrvr/job-tracker-template/blob/main/update-readme.js">here</BlogLink>. 
+
+
+### GitHub Actions workflow
+
+Automation. Every time <InlineCode>jobs.json</InlineCode> changes, it runs the script and updates the <InlineCode>README.md</InlineCode> with the new table.
+
+View the file <BlogLink href="https://github.com/knlrvr/job-tracker-template/blob/main/.github/workflows/update.yml">here</BlogLink>. 
+
+## The Actual Benefit
+
+This might seem like a ridiculous way to track job applications, but it actually has some benefits &mdash;
+- **Automation Practice**: It's a playground for GitHub Actions and automation (I used JavaScript but you could use another language). 
+- **Portfolio Piece**: It's a real-world project that showcases knowledge in automated workflows and handling data (and maybe a sense of humor?)
+
+
+## Conclusion
+
+Is this the worst way to track job applications? Probably. But sometimes the worst solutions are the most fun to build. At the end of the day, at least it's not a fucking spreadsheet. 
+
+You can check out the full repo <BlogLink href="https://github.com/knlrvr/job-tracker-template/tree/main">here</BlogLink>. 
+
+Let me know what you think! & as always, **happy coding**!
