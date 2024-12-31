@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Reveal } from '../utils/reveal';
 import { Section, Subsection } from './section';
 
 const pictures = [
@@ -96,13 +95,13 @@ const Gallery: React.FC = () => {
   return (
     <Section title="">
       {randomPictures.map((picture, index) => (
-        <div key={index} className="relative group flex justify-center overflow-hidden rounded-2xl shadow-md mb-16">
+        <div key={index} className="relative group flex justify-center overflow-hidden shadow-md mb-16">
           <Image 
             src={picture.url} 
             alt={`Random Picture ${index + 1} - ${picture.location}`} 
             width="1000"
             height="1000"
-            className="h-full sm:h-96 w-full object-cover rounded-2xl" 
+            className="h-full sm:h-96 w-full object-cover rounded-md" 
           />
           <div className="absolute transform duration-500 -bottom-10 left-2 group-hover:bottom-2">
             <div className="bg-white dark:bg-[#111] p-2 rounded-lg text-sm text-neutral-500">
