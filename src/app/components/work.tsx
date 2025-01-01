@@ -9,7 +9,8 @@ export default function Work() {
                     <WorkCard
                         title='Software Developer'
                         org='Fenili Apparel'
-                        description='Led the design & development of admin tools & e-commerce app. Collaborated closely with CEO & Product Team to track objectives & ship frequently. '
+                        description='Lead the design & development of admin tools & e-commerce storefront. Collaborating closely with CEO & Product Team to track objectives & ship frequently. '
+                        tech={['TypeScript', '•', 'Next.js','•', 'Tailwind', '•', 'Shopify', '•', 'GraphQL']}
                     />
                 </Subsection>
                 <Subsection title="2022 - 2024">
@@ -17,6 +18,7 @@ export default function Work() {
                         title='Software Developer'
                         org='Freelance'
                         description='Worked with a range of small to medium businesses, agencies, start-ups, and individuals to build products, experiences, and improve technical direction.'
+                        tech={['JavaScript', '•', 'TypeScript', '•', 'Java', '•', 'SQL', '•', 'Postgres', '•', 'AWS', '•', 'Figma']}
                     />
                 </Subsection>
             </div>
