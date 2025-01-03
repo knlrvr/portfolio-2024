@@ -25,10 +25,8 @@ export default function Tech() {
 
                 <Subsection title="Coding">
                     <ul className="text-sm">
-                        <li><strong className="text-neutral-500">Editor:</strong> VSCode </li>
-                        <li><strong className="text-neutral-500">Theme:</strong> Vitesse Black</li>
-                        <li><strong className="text-neutral-500">Terminal:</strong> Warp</li>
-                        <li><strong className="text-neutral-500">Exploring:</strong> Neovim & Zed</li>
+                        <li><strong className="text-neutral-500">Editor:</strong> VSCode & Neovim</li>
+                        <li><strong className="text-neutral-500">Terminal:</strong> Ghostty</li>
                     </ul>
                 </Subsection>
 
@@ -50,8 +48,6 @@ export default function Tech() {
                         <li>Corsair K55 RGB Pro Keyboard</li>
                         <li>Corsair M65 RGB ULTRA Mouse</li>
                         <li>Corsair VOID RGB ELITE Headset</li>
-                        <li>Streamlabs</li>
-                        <li>Nintendo Switch</li>
                     </ul>
                 </Subsection>
 

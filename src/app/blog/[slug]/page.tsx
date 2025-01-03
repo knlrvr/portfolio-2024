@@ -190,7 +190,7 @@ const PostPage = (props: PostPageProps) => {
                                     <p key={tag} className="mr-4 font-mono text-xs text-neutral-500">#{tag}</p>
                                 ))}
                             </div>
-                            <hr className="border-neutral-500" />
+                            <hr className="border-[#111] dark:border-neutral-100" />
                         </div>
                     </Reveal>
                 </div>
