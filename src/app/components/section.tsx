@@ -9,9 +9,9 @@ export function Section({
 }) {
     return (
         <Reveal>
-            <div className="flex flex-col space-y-6 text-sm">
+            <div className="flex flex-col space-y-6 text-sm mb-16">
                 <div className="flex gap-2 items-center">
-                    <p className="tracking-tight text-2xl text-neutral-600 dark:text-neutral-400">{title}</p>
+                    <p className="tracking-tight text-2xl text-neutral-600 dark:text-neutral-400 uppercase text-sm">{title}</p>
                 </div>
                 <div className="">{children}</div>
             </div>

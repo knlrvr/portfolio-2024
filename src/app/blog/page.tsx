@@ -1,12 +1,10 @@
 import React from 'react'
 
-import { Reveal } from '../utils/reveal';
-
 import getPostMetadata from '../utils/PostMetadata';
 import BlogPostPreview from '../components/blogpostpreview';
 
 import type { Metadata } from 'next';
-import { Section, Subsection } from '../components/section';
+import { Section } from '../components/section';
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Blog',

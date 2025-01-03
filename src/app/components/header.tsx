@@ -4,9 +4,7 @@ import { usePathname } from "next/navigation"
 
 import Link from 'next/link'
 
-import { LuSmile, LuSquareSlash } from 'react-icons/lu'
 import { RxArrowLeft } from "react-icons/rx";
-import { ThemeToggle } from "./theme-toggle";
 import { SquareChevronRight } from "lucide-react";
 
 const items = [
@@ -31,7 +29,7 @@ export default function Header() {
                 <Link href={backHref} className="inline-flex items-center gap-2 hover:underline underline-offset-4"><RxArrowLeft /> back </Link>
             ) : (
                 <div className="flex items-center gap-2">
-                    <SquareChevronRight className="w-4 h-4 text-neutral-600 dark:text-neutral-400" />
+                    <SquareChevronRight className="w-4 h-4 text-orange-400" />
                     <h2>knlrvr</h2>
                 </div>
             )} 

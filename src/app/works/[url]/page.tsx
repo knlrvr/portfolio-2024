@@ -10,9 +10,10 @@ export const metadata: Metadata = {
 }
 
 import {
+  RxArrowRight,
     RxArrowTopRight
 } from 'react-icons/rx'
-import { MoveLeft } from 'lucide-react';
+
 import { Subsection } from '@/app/components/section';
 
 interface Work {
@@ -24,6 +25,7 @@ interface Work {
       height: number;
       className: string;
     };
+    num: string;
     git?: string;
     live?: string;
     title: string;
@@ -31,6 +33,7 @@ interface Work {
     overview: string;
     tags?: string[];
     year: string;
+    next: string;
 }
 
 const toParagraphs = (text: string) => {
@@ -58,11 +61,18 @@ export default async function WorksPage(
 
     return (
         <div className="">  
+
+          <div className="flex justify-end font-mono text-xs flex items-center gap-2">
+            <p className="">{projects.num} / 04 </p>
+            <Link href={`/works/${projects.next}`} className="">
+              <RxArrowRight />
+            </Link>
+          </div>
           
           {projects?.brand && (
             <Reveal>
               <div className={`flex justify-center mt-8`}>
-  
+
                 <Image 
                   src={projects?.brand.src}
                   alt={projects?.brand.alt}
@@ -158,12 +168,14 @@ const fetchWorksData = (url: string): Work => {
           height: 1000,
           className: 'w-full h-full'
         },
+        num: '01',
         live: 'https://fenili.store/',
         title: 'Fenili Apparel',
         category: 'Ecommerce',
         overview: 'Fenili is an apparel and lifestyle brand specializing in custom, made-to-order clothing. This site is a high-performance, server-rendered Next.js application that uses Shopify as a headless CMS and takes full advantage of React Server Components, Server Actions, Suspense, useOptimistic, and more from Next.js to ensure a seamless user & admin experience. \n\n This site is still under construction and is actively contributed to every week.',
         tags: ['TypeScipt', 'React', 'Next.js', 'Tailwind', 'Shopify', 'ngrok'],
         year: '2024 ~',
+        next: '/studico'
       },
 
       studico: {
@@ -175,6 +187,7 @@ const fetchWorksData = (url: string): Work => {
           height: 1000,
           className: 'w-full h-full'
         },
+        num: '02',
         git: 'https://github.com/knlrvr/studico',
         live: 'https://studico.vercel.app/',
         title: 'Studico',
@@ -182,6 +195,7 @@ const fetchWorksData = (url: string): Work => {
         overview: 'Studico is a web-based music production assistance suite that empowers users to create, collaborate, and share their music. Studico offers a robust tracking system for various aspects of music production, including tasks, file upload and storage, and messaging. Studico is meant for small to medium-sized teams, and allows them to have everything they need in one place. \n\n If you\'re interested in a demo of the site, demo login details can be found in the github repository.',
         tags: ['TypeScipt', 'React', 'Next.js', 'Tailwind', 'shadcn/ui', 'Convex', 'Clerk'],
         year: '2024 ~',
+        next: '/theskyisfake'
       },
 
       theskyisfake: {
@@ -193,6 +207,7 @@ const fetchWorksData = (url: string): Work => {
           height: 1000,
           className: 'w-full h-full'
         },
+        num: '03',
         git: 'https://github.com/knlrvr/theskyisfake',
         live: 'https://www.theskyisfake.org',
         title: 'The Sky Is Fake',
@@ -200,6 +215,7 @@ const fetchWorksData = (url: string): Work => {
         overview: 'The Sky Is Fake is a full stack social media/image sharing app. Users can sign in through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery showcases images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.',
         tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Convex', 'Clerk'],
         year: '2023 ~',
+        next: '/templateportfolio'
       },
   
       templateportfolio: {
@@ -211,6 +227,7 @@ const fetchWorksData = (url: string): Work => {
           height: 1000,
           className: 'w-full h-full'
         },
+        num: '04',
         git: 'https://github.com/knlrvr/portfolio-template',
         live: 'https://portfolio-template-knlrvr.vercel.app/',
         title: 'Portfolio Template',
@@ -218,6 +235,7 @@ const fetchWorksData = (url: string): Work => {
         overview: 'This portfolio template is a clone of Bartosz Jarocki\'s Next.js + shadcn/ui CV. Anyone who wants to use this can fork the repo and edit the JSON, and they\'re good to go!',
         tags: ['HTML', 'CSS', 'JavaScript'],
         year: '2024 ~',
+        next: '/fenili'
       },
     };
 

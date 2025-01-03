@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Section, Subsection } from './section';
+import { Section } from './section';
 
 const pictures = [
   {
@@ -95,7 +95,7 @@ const Gallery: React.FC = () => {
   return (
     <Section title="">
       {randomPictures.map((picture, index) => (
-        <div key={index} className="relative group flex justify-center overflow-hidden shadow-md mb-16">
+        <div key={index} className="relative group flex justify-center overflow-hidden shadow-md">
           <Image 
             src={picture.url} 
             alt={`Random Picture ${index + 1} - ${picture.location}`} 
