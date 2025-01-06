@@ -29,7 +29,7 @@ export default function Header() {
                 <Link href={backHref} className="inline-flex items-center gap-2 hover:underline underline-offset-4"><RxArrowLeft /> back </Link>
             ) : (
                 <div className="flex items-center gap-2">
-                    <SquareChevronRight className="w-4 h-4 text-green-400" />
+                    <SquareChevronRight className="w-4 h-4 text-[#2E8B57]" />
                     <h2>knlrvr</h2>
                 </div>
             )} 
