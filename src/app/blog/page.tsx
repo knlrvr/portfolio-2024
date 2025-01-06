@@ -19,7 +19,7 @@ const Blog = () => {
   ));
 
   return (
-    <Section title="Blog">
+    <Section title="Writing">
       <div className="">
         {postPreviews}
       </div>

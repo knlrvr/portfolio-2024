@@ -18,7 +18,7 @@ export default function BlogPreview() {
 
     return (
         <>
-        <Section title="Blog">
+        <Section title="Writing">
             <Subsection title="Recent ~">
                 <div>{postPreviews}</div>
                 <Link href="/blog" className="flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-400 group w-fit mt-4">

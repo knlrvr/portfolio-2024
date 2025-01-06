@@ -62,7 +62,7 @@ export default async function WorksPage(
     return (
         <div className="">  
 
-          <div className="flex justify-end font-mono text-xs flex items-center gap-2">
+          <div className="flex justify-end font-mono text-xs flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
             <p className="">{projects.num} / 04 </p>
             <Link href={`/works/${projects.next}`} className="">
               <RxArrowRight />
@@ -107,19 +107,23 @@ export default async function WorksPage(
 
               <hr className="border-neutral-500" 
               />
+
               <div className="grid grid-cols-3">
+
                 <Subsection title="Year">
-                  <span className="font-light text-neutral-600 dark:text-neutral-400">{projects?.year}</span>
+                  <span className="font-light">{projects?.year}</span>
                 </Subsection>
+
                 <Subsection title="Tech">
                   {projects?.tags && projects?.tags.map((tag, index) => (
-                    <span key={index} className=" text-neutral-600 dark:text-neutral-400 mb-2 text-sm flex font-light">
+                    <span key={index} className="mb-1 text-sm flex font-light">
                       {tag}
                     </span>
                   ))}
                 </Subsection>
+
                 <Subsection title="View">
-                  <div className="space-y-2 text-neutral-600 dark:text-neutral-400">
+                  <div className="space-y-2">
                     {projects?.git && ( 
                       <Link href={`${projects?.git}`} target="_blank"
                         className="flex items-center group">

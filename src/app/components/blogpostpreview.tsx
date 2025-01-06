@@ -10,9 +10,9 @@ const BlogPostPreview = (props: PostMetadata) => {
         href={`/blog/${props.slug}`}>
           <div className="flex items-center justify-between">
             <p className="group-hover:underline underline-offset-4 font-medium text-sm">{props.title}</p>
-            <p className="text-neutral-600 dark:text-neutral-400">{props.date}</p>
+            <p className="text-neutral-500 text-right">{props.date}</p>
           </div>
-        <p className="text-sm font-light text-neutral-500">{props.description}</p>
+        <p className="text-sm font-light text-neutral-600 dark:text-neutral-400">{props.description}</p>
       </Link>
     </Reveal>
     )

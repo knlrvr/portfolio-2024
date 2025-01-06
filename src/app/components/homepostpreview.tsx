@@ -10,7 +10,7 @@ const HomePostPreview = (props: PostMetadata) => {
             <p className="group-hover:underline underline-offset-4 font-medium tracking-wide">{props.title}</p>
             <p className="text-neutral-500 text-sm text-right">{props.date}</p>
           </div>
-          {/* <p className="pt-1 text-neutral-600 dark:text-neutral-400 ">{props.description}</p> */}
+          <p className="pt-1 text-neutral-600 dark:text-neutral-400 ">{props.description}</p>
       </Link>
     )
 }

@@ -8,7 +8,7 @@ import { RxArrowLeft } from "react-icons/rx";
 import { SquareChevronRight } from "lucide-react";
 
 const items = [
-    { label: 'blog', href: '/blog', },
+    { label: 'writing', href: '/blog', },
     { label: 'guestbook', href: '/guestbook' },
     { label: 'my tech', href: '/tech' }
 ]
@@ -29,7 +29,7 @@ export default function Header() {
                 <Link href={backHref} className="inline-flex items-center gap-2 hover:underline underline-offset-4"><RxArrowLeft /> back </Link>
             ) : (
                 <div className="flex items-center gap-2">
-                    <SquareChevronRight className="w-4 h-4 text-orange-400" />
+                    <SquareChevronRight className="w-4 h-4 text-green-400" />
                     <h2>knlrvr</h2>
                 </div>
             )} 
