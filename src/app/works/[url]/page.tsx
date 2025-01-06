@@ -123,7 +123,7 @@ export default async function WorksPage(
                 </Subsection>
 
                 <Subsection title="View">
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     {projects?.git && ( 
                       <Link href={`${projects?.git}`} target="_blank"
                         className="flex items-center group">
