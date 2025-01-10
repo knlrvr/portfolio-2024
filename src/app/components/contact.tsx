@@ -7,7 +7,7 @@ import { RxArrowTopRight } from "react-icons/rx"
 export default function Contact() {
     return (
         <Section title="Links">
-            <div className="space-y-4 mb-16">
+            <div className="space-y-4">
                 <Subsection title="GitHub">
                     <Link className="group hover:underline underline-offset-4 font-medium tracking-wide flex justify-between items-center" 
                         href='https://github.com/knlrvr' target="_blank">
