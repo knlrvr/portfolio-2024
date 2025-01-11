@@ -13,7 +13,7 @@ export default function Footer() {
         <Reveal>
             <div className="flex flex-col">
                 <div className="grow"></div>
-                <div className="mt-4 border-t border-neutral-500 flex justify-between items-start pt-10 text-xs font-light tracking-wider text-neutral-500">
+                <div className="mt-10 border-t border-neutral-500 flex justify-between items-start pt-10 text-xs font-light tracking-wider text-neutral-500">
                     <div className="flex flex-col space-y-2 text-neutral-600 dark:text-neutral-400">
                         <div className="flex items-center gap-2">
                             <FiHeart className='text-neutral-500'/>
