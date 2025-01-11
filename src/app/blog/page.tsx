@@ -4,7 +4,7 @@ import getPostMetadata from '../utils/PostMetadata';
 import BlogPostPreview from '../components/blogpostpreview';
 
 import type { Metadata } from 'next';
-import { Section } from '../components/section';
+import { Section, Subsection } from '../components/section';
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Blog',
@@ -19,11 +19,11 @@ const Blog = () => {
   ));
 
   return (
-    <Section title="Writing">
+    <Subsection title="Writing">
       <div className="">
         {postPreviews}
       </div>
-    </Section>
+    </Subsection>
   )
 }
 

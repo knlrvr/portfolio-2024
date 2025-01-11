@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Tech() {
     return (
-        <Section title="What I Use">
+        <Subsection title="What I Use">
             <div className="space-y-8">
 
                 <Subsection title="Office">
@@ -74,6 +74,6 @@ export default function Tech() {
                 </Subsection>
                 
             </div>
-        </Section>
+        </Subsection>
     )
 }

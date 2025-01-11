@@ -77,13 +77,12 @@ const Gallery: React.FC = () => {
   }, []);
 
   return (
-    <Section title="Gallery">
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {randomPictures.map((picture, index) => (
           <div 
             key={index} 
             className={`relative group overflow-hidden shadow-md rounded-md ${
-              index === 0 ? 'col-span-2' : 'col-span-1'
+              index === 0 ? 'col-span-1 sm:col-span-2' : 'hidden sm:block sm:col-span-1'
             }`}
           >
             <Image 
@@ -101,8 +100,8 @@ const Gallery: React.FC = () => {
           </div>
         ))}
       </div>
-    </Section>
   );
 };
 
 export default Gallery;
+

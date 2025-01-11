@@ -28,13 +28,11 @@ export function Subsection({
 }) {
     return (
         <Reveal>
-            <div className="flex flex-col text-sm space-y-2">
-                <div className="text-neutral-500">
-                    {title}
-                </div>
+            <div className="grid grid-cols-1 gap-4">
                 <div className="">
-                    {children}
+                    <p className="tracking-tight text-sm text-neutral-500">{title}</p>
                 </div>
+                <div className="sm:col-span-5">{children}</div>
             </div>
         </Reveal>
     )
