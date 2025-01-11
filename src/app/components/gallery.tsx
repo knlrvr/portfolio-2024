@@ -63,23 +63,7 @@ const Gallery: React.FC = () => {
   useEffect(() => {
     const selectedPictures: Picture[] = [];
 
-    while (selectedPictures.length < 1) {
-      const randomIndex = Math.floor(Math.random() * pictures.length);
-      const randomPicture = pictures[randomIndex];
-
-      // Ensure the selected picture is not already in the list
-      if (!selectedPictures.some((pic) => pic.url === randomPicture.url)) {
-        selectedPictures.push(randomPicture);
-      }
-    }
-
-    setRandomPictures(selectedPictures);
-  }, []);
-
-  useEffect(() => {
-    const selectedPictures: Picture[] = [];
-
-    while (selectedPictures.length < 1) {
+    while (selectedPictures.length < 2) {
       const randomIndex = Math.floor(Math.random() * pictures.length);
       const randomPicture = pictures[randomIndex];
 
@@ -93,23 +77,30 @@ const Gallery: React.FC = () => {
   }, []);
 
   return (
-    <Section title="">
-      {randomPictures.map((picture, index) => (
-        <div key={index} className="relative group flex justify-center overflow-hidden shadow-md">
-          <Image 
-            src={picture.url} 
-            alt={`Random Picture ${index + 1} - ${picture.location}`} 
-            width="1000"
-            height="1000"
-            className="h-full sm:h-96 w-full object-cover rounded-md" 
-          />
-          <div className="absolute transform duration-500 -bottom-10 left-2 group-hover:bottom-2">
-            <div className="bg-white dark:bg-[#111] p-2 rounded-lg text-sm text-neutral-500">
-              <p>{picture.location}</p>
+    <Section title="Gallery">
+      <div className="grid grid-cols-3 gap-4">
+        {randomPictures.map((picture, index) => (
+          <div 
+            key={index} 
+            className={`relative group overflow-hidden shadow-md rounded-md ${
+              index === 0 ? 'col-span-2' : 'col-span-1'
+            }`}
+          >
+            <Image 
+              src={picture.url} 
+              alt={`Random Picture ${index + 1} - ${picture.location}`} 
+              width={1000}
+              height={1000}
+              className="h-full w-full object-cover" 
+            />
+            <div className="absolute transform duration-500 -bottom-10 left-2 group-hover:bottom-2">
+              <div className="bg-white dark:bg-[#111] p-2 rounded-lg text-sm text-neutral-500">
+                <p>{picture.location}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </Section>
   );
 };

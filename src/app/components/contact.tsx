@@ -7,35 +7,27 @@ import { RxArrowTopRight } from "react-icons/rx"
 export default function Contact() {
     return (
         <Section title="Links">
-            <div className="space-y-4">
-                <Subsection title="GitHub">
+            <div className="space-y-4 text-sm">
                     <Link className="group hover:underline underline-offset-4 font-medium tracking-wide flex justify-between items-center" 
                         href='https://github.com/knlrvr' target="_blank">
-                            <p>@knlrvr</p>
+                            <p>@knlrvr <span className="text-neutral-500">( GitHub )</span></p>
                             <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
                     </Link>
-                </Subsection>
-                <Subsection title="Twitter">
                     <Link className="group hover:underline underline-offset-4 font-medium tracking-wide flex justify-between items-center" 
                         href='https://twitter.com/knlrvr' target="_blank">
-                            <p>@knlrvr</p>
+                            <p>@knlrvr <span className="text-neutral-500">( Twitter )</span></p>
                             <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
                         </Link>
-                </Subsection>
-                <Subsection title="LinkedIn">
                     <Link className="group hover:underline underline-offset-4 font-medium tracking-wide flex justify-between items-center" 
                         href='https://linkedin.com/in/kane-lariviere' target="_blank">
-                            <p>kane-lariviere</p>
+                            <p>kane-lariviere <span className="text-neutral-500">( LinkedIn )</span></p>
                             <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
                     </Link>
-                </Subsection>
-                <Subsection title="Email">
                     <Link className="group hover:underline underline-offset-4 font-medium tracking-wide flex justify-between items-center" 
                         href='mailto:hello@knlrvr.com' target="_blank">
-                            <p>hello@knlrvr.com</p>
+                            <p>hello@knlrvr.com <span className="text-neutral-500">( Email )</span></p>
                             <RxArrowTopRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-100" />
                     </Link>
-                </Subsection>
             </div>
         </Section>
     )

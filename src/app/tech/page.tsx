@@ -34,7 +34,7 @@ export default function Tech() {
                     <ul className="text-sm">
                         <li>Obsidian</li>
                         <li>Excalidraw</li>
-                        <li>Notion <em>(sometimes)</em></li>
+                        <li>Notion <em className="text-neutral-600 dark:text-neutral-400">(sometimes)</em></li>
                     </ul>
                 </Subsection>
 
