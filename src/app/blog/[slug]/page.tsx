@@ -203,6 +203,7 @@ const PostPage = (props: PostPageProps) => {
                                     prose-h2:font-medium prose-h2:tracking-tighter prose-h2:text-2xl
                                     prose-hr:border-neutral-500
                                     prose-img:rounded-sm
+                                    prose-sup 
                 ">
                     <Reveal>
                         <MDXRemote
