@@ -1,9 +1,11 @@
 import { PostMetadata } from '../utils/PostMetadata';
 
 import Link from 'next/link'
+import { Subsection } from './section';
 
 const HomePostPreview = (props: PostMetadata) => {
     return (
+      <Subsection>
       <Link key={props.slug} className="flex flex-col space-y-1 group py-4 first:pt-0"
         href={`/blog/${props.slug}`}>
           <div className="flex justify-between">
@@ -12,6 +14,7 @@ const HomePostPreview = (props: PostMetadata) => {
           </div>
           <p className="pt-1 text-neutral-600 dark:text-neutral-400 ">{props.description}</p>
       </Link>
+      </Subsection>
     )
 }
 

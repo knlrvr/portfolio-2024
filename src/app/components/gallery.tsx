@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Section } from './section';
+import { Section, Subsection } from './section';
 
 const pictures = [
   {
@@ -77,6 +77,7 @@ const Gallery: React.FC = () => {
   }, []);
 
   return (
+    <Subsection>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {randomPictures.map((picture, index) => (
           <div 
@@ -100,6 +101,7 @@ const Gallery: React.FC = () => {
           </div>
         ))}
       </div>
+    </Subsection>
   );
 };
 

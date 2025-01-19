@@ -14,7 +14,7 @@ import {
     RxArrowTopRight
 } from 'react-icons/rx'
 
-import { Subsection } from '@/app/components/section';
+import { InfoSection, Subsection } from '@/app/components/section';
 
 interface Work {
     url: string;
@@ -63,7 +63,7 @@ export default async function WorksPage(
         <div className="">  
 
           <div className="flex justify-end font-mono text-xs flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
-            <p className="">{projects.num} / 04 </p>
+            <p className="">{projects?.num} / 04 </p>
             <Link href={`/works/${projects.next}`} className="">
               <RxArrowRight />
             </Link>
@@ -100,9 +100,9 @@ export default async function WorksPage(
           <Reveal>
             <div className="flex flex-col space-y-12">
               <div className="font-light">
-                  <p key={projects?.title} className="blog text-sm mt-4 text-neutral-600 dark:text-neutral-400">
+                  <div key={projects?.title} className="blog text-sm mt-4 text-neutral-600 dark:text-neutral-400">
                     {toParagraphs(projects?.overview)}
-                  </p>
+                  </div>
               </div>
 
               <hr className="border-neutral-500" 
@@ -110,19 +110,19 @@ export default async function WorksPage(
 
               <div className="grid grid-cols-3">
 
-                <Subsection title="Year">
+                <InfoSection title="Year">
                   <span className="font-light">{projects?.year}</span>
-                </Subsection>
+                </InfoSection>
 
-                <Subsection title="Tech">
+                <InfoSection title="Tech">
                   {projects?.tags && projects?.tags.map((tag, index) => (
                     <span key={index} className="mb-1 text-sm flex font-light">
                       {tag}
                     </span>
                   ))}
-                </Subsection>
+                </InfoSection>
 
-                <Subsection title="View">
+                <InfoSection title="View">
                   <div className="space-y-1">
                     {projects?.git && ( 
                       <Link href={`${projects?.git}`} target="_blank"
@@ -141,7 +141,7 @@ export default async function WorksPage(
                       </Link>
                     )}
                   </div>
-                </Subsection>
+                </InfoSection>
               </div>
              
             </div>
@@ -156,7 +156,7 @@ export async function generateStaticParams() {
         { url: "fenili" },
         { url: "studico" },
         { url: "theskyisfake" },
-        { url: "templateportfolio" },
+        { url: "personalportfolio" },
     ] 
 }
 
@@ -177,7 +177,7 @@ const fetchWorksData = (url: string): Work => {
         title: 'Fenili Apparel',
         category: 'Ecommerce',
         overview: 'Fenili is an apparel and lifestyle brand specializing in custom, made-to-order clothing. This site is a high-performance, server-rendered Next.js application that uses Shopify as a headless CMS and takes full advantage of React Server Components, Server Actions, Suspense, useOptimistic, and more from Next.js to ensure a seamless user & admin experience. \n\n This site is still under construction and is actively contributed to every week.',
-        tags: ['TypeScipt', 'React', 'Next.js', 'Tailwind', 'Shopify', 'ngrok'],
+        tags: ['TypeScipt', 'React', 'Next.js', 'Tailwind', 'Shopify', 'ngrok', 'Sentry'],
         year: '2024 ~',
         next: '/studico'
       },
@@ -222,22 +222,21 @@ const fetchWorksData = (url: string): Work => {
         next: '/templateportfolio'
       },
   
-      templateportfolio: {
-        url: 'templateportfolio',
+      personalportfolio: {
+        url: 'personalportfolio',
         brand: {
-          src: '/brand/template.png',
-          alt: 'Portfolio Template',
+          src: '/knlrvr.png',
+          alt: 'knlrvr',
           width: 1000,
           height: 1000,
           className: 'w-full h-full'
         },
         num: '04',
-        git: 'https://github.com/knlrvr/portfolio-template',
-        live: 'https://portfolio-template-knlrvr.vercel.app/',
-        title: 'Portfolio Template',
+        git: 'https://github.com/knlrvr/portfolio-2024',
+        title: 'Personal Portfolio',
         category: 'Portfolio',
-        overview: 'This portfolio template is a clone of Bartosz Jarocki\'s Next.js + shadcn/ui CV. Anyone who wants to use this can fork the repo and edit the JSON, and they\'re good to go!',
-        tags: ['HTML', 'CSS', 'JavaScript'],
+        overview: 'This is my personal portfolio. I try to break it as often as I can by trying new technologies and patterns, and staying aligned with best practices in the ecosystem. I would encourage anyone to do the same. Feel free to fork it and hack around!',
+        tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Convex', 'MDX', 'PostHog'],
         year: '2024 ~',
         next: '/fenili'
       },
