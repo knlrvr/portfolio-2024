@@ -15,7 +15,7 @@ const Blog = () => {
 
   const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const postPreviews = postMetadata.map((post) => (
-    <Subsection><BlogPostPreview key={post.slug} {...post}/></Subsection>
+    <Subsection key={post.slug}><BlogPostPreview {...post}/></Subsection>
   ));
 
   return (
