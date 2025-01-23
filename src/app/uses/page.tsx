@@ -12,8 +12,8 @@ export default function Tech() {
 
                 <SmallSection title="Office">
                         <ul className="text-sm">
-                            <li>M1 Mac Mini (2020)</li>
                             <li>M1 MacBook Air (2020)</li>
+                            <li>M1 Mac Mini (2020)</li>
                             <li>Apple Magic Keyboard</li>
                             <li>Apple Magic Mouse</li>
                             <li>27&quot; Samsung Curved Monitor</li>
@@ -25,14 +25,14 @@ export default function Tech() {
                 <SmallSection title="Coding">
                     <ul className="text-sm">
                         <li><strong className="text-neutral-500">Editor:</strong> VSCode & Neovim</li>
-                        <li><strong className="text-neutral-500">Terminal:</strong> Ghostty</li>
+                        <li><strong className="text-neutral-500">Terminal:</strong> Ghostty with tmux</li>
                     </ul>
                 </SmallSection>
 
-                <SmallSection title="Organization">
+                <SmallSection title="Organization & Productivity">
                     <ul className="text-sm">
+                        <li>Raycast</li>
                         <li>Obsidian</li>
-                        <li>Excalidraw</li>
                         <li>Notion <em className="text-neutral-600 dark:text-neutral-400">(sometimes)</em></li>
                     </ul>
                 </SmallSection>

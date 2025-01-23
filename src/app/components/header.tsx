@@ -10,7 +10,7 @@ import { SquareChevronRight } from "lucide-react";
 const items = [
     { label: 'writing', href: '/blog', },
     { label: 'guestbook', href: '/guestbook' },
-    { label: 'my tech', href: '/tech' }
+    { label: 'uses', href: '/uses' }
 ]
 
 export default function Header() {
