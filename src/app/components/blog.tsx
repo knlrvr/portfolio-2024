@@ -19,7 +19,7 @@ export default function BlogPreview() {
     return (
         <div className="text-sm">
         <Section title="Writing">
-                <div>{postPreviews}</div>
+                <div className="space-y-4">{postPreviews}</div>
                 <Link href="/blog" className="flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-400 group w-fit mt-4">
                     <span className="group-hover:underline underline-offset-4 ">All posts</span>
                     <span className="group-hover:translate-x-1.5 transition duration-100">

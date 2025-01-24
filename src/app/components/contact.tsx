@@ -8,7 +8,7 @@ import { LuGithub, LuLinkedin, LuMail, LuTwitter } from "react-icons/lu"
 export default function Contact() {
     return (
         <Section title="Links">
-            <div className="space-y-4 text-sm">
+            <div className="space-y-6 text-sm">
                 <Subsection>
                     <Link className="group hover:underline underline-offset-4 font-medium tracking-wide flex justify-between items-center" 
                         href='https://github.com/knlrvr' target="_blank">

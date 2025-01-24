@@ -29,7 +29,7 @@ export default function Tech() {
                     </ul>
                 </SmallSection>
 
-                <SmallSection title="Organization & Productivity">
+                <SmallSection title="Productivity">
                     <ul className="text-sm">
                         <li>Raycast</li>
                         <li>Obsidian</li>
