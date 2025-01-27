@@ -219,7 +219,7 @@ const fetchWorksData = (url: string): Work => {
         overview: 'The Sky Is Fake is a full stack social media/image sharing app. Users can sign in through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery showcases images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.',
         tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Convex', 'Clerk'],
         year: '2023 ~',
-        next: '/templateportfolio'
+        next: '/personalportfolio'
       },
   
       personalportfolio: {
